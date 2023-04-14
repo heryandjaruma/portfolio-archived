@@ -7,8 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        neurablue: "#B4BDCB",
-        neuraindigo: "#BAB4CB",
+        primary: "#5348ce",
+        darkprimary: "#352ba5",
+        lightprimary: "#887dfd",
+        blu: "#006af9",
+        darkblu: "#004096",
+        lightblu: "#4896ff",
+        turq: "#14c8c8",
+        darkturq: "#13a6a6",
+        lightturq: "#67e9e9",
       },
       fontFamily: {
         display: ["Inter"],
