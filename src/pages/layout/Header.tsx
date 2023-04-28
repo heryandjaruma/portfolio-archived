@@ -17,10 +17,10 @@ export default function Header({
   return (
     <>
       <nav
-        className="shadow-sm bg-darkprimary"
+        className="shadow-sm bg-[url('/images/particles/bg001-01.png')] bg-fill"
       >
         <div className="container mx-auto flex flex-wrap items-center justify-between p-2">
-          <Link href="/index"><Image src="/images/particles/my_logo.png" alt="my_logo" className="w-10" width={100} height={100}/></Link>
+          <Link href="/index"><Image src="/images/particles/LOGO.svg" alt="my_logo" className="w-10" width={100} height={100}/></Link>
 
           <button
             type="button"
@@ -30,7 +30,7 @@ export default function Header({
             onClick={toggleMobileMenu}
           >
             <span className="sr-only">Open main menu</span>
-            <Image src="/images/particles/menu.png" alt="menu_icon" className="w-8" width={100} height={100} />
+            <Image src="/images/particles/menu.svg" alt="menu_icon" className="w-8" width={100} height={100} />
           </button>
 
           <div

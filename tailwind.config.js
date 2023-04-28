@@ -16,6 +16,10 @@ module.exports = {
         turq: "#14c8c8",
         darkturq: "#13a6a6",
         lightturq: "#67e9e9",
+
+        wht: "#e8ede4",
+        blk: "#242224",
+        blue: "#486cea"
       },
       fontFamily: {
         display: ["Inter"],
