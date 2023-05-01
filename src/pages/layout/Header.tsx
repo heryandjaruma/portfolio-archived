@@ -20,7 +20,7 @@ export default function Header({
         className="shadow-sm bg-[url('/images/particles/bg001-01.png')] bg-fill"
       >
         <div className="container mx-auto flex flex-wrap items-center justify-between p-2">
-          <Link href="/index"><Image src="/images/particles/LOGO.svg" alt="my_logo" className="w-10" width={100} height={100}/></Link>
+          <Link href="/"><Image src="/images/particles/LOGO.svg" alt="my_logo" className="w-10" width={100} height={100}/></Link>
 
           <button
             type="button"
@@ -40,16 +40,16 @@ export default function Header({
             id="navbar-default"
           >
             <ul
-              className={`fixed right-0 flex h-full w-full flex-col items-center justify-center px-5 text-right font-display text-2xl font-bold shadow-lg md:static md:h-10 md:flex-row md:space-y-0 md:space-x-4 md:bg-transparent md:px-0 md:shadow-none ${
+              className={`fixed right-0 flex h-full w-full flex-col items-center justify-center px-5 text-right font-display text-2xl font-bold shadow-lg md:static md:h-10 md:flex-row md:space-y-0 md:space-x-4 md:bg-transparent md:px-0 md:shadow-none text-blue ${
                 state && windowSize.width < 640
-                  ? "bg-darkprimary"
+                  ? "bg-[url('/images/particles/bg001-01.png')] bg-fill"
                   : "bg-transparent"
               }`}
             >
               <li className="w-full rounded-md bg-opacity-25 p-2 md:w-20">
                 <Link
                   href="/"
-                  className="group flex items-center justify-end rounded-md text-gray-200 transition-all duration-300 ease-in-out hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
+                  className="group flex items-center justify-end rounded-md transition-all duration-300 ease-in-out hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
                   aria-current="page"
                 >
                   {/* <svg
@@ -69,8 +69,8 @@ export default function Header({
 
               <li className="w-full rounded-md bg-opacity-25 p-2 md:w-20">
                 <Link
-                  href="/coder"
-                  className="group flex items-center justify-end rounded-md text-gray-200 transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
+                  href="/projects"
+                  className="group flex items-center justify-end rounded-md transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
                 >
                   {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ export default function Header({
                     />
                   </svg> */}
                   <p className="order-first md:order-last md:hidden md:group-hover:block">
-                    Coder
+                    Projects
                   </p>
                 </Link>
               </li>
@@ -93,7 +93,7 @@ export default function Header({
               <li className="w-full rounded-md bg-opacity-25 p-2 md:w-20">
                 <Link
                   href="/learner"
-                  className="group flex items-center justify-end rounded-md text-gray-200 transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
+                  className="group flex items-center justify-end rounded-md transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
                 >
                   {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ export default function Header({
               <li className="w-full rounded-md bg-opacity-25 p-2 md:w-20">
                 <Link
                   href="/musician"
-                  className="group flex items-center justify-end rounded-md text-gray-200 transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
+                  className="group flex items-center justify-end rounded-md transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
                 >
                   {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ export default function Header({
               <li className="w-full rounded-md bg-opacity-25 p-2 md:w-20">
                 <Link
                   href="/content creator"
-                  className="group flex items-center justify-end rounded-md text-gray-200 transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
+                  className="group flex items-center justify-end rounded-md transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
                 >
                   {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
