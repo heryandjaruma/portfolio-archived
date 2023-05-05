@@ -16,21 +16,33 @@ export default function Header({
 
   return (
     <>
-      <nav
-        className="shadow-sm bg-[url('/images/particles/bg001-01.png')] bg-fill"
-      >
+      <nav className="bg-fill bg-[url('/images/particles/bg001-01.png')] shadow-sm">
         <div className="container mx-auto flex flex-wrap items-center justify-between p-2">
-          <Link href="/"><Image src="/images/particles/LOGO.svg" alt="my_logo" className="w-10" width={100} height={100}/></Link>
+          <Link href="/">
+            <Image
+              src="/images/particles/LOGO.svg"
+              alt="my_logo"
+              className="w-10"
+              width={100}
+              height={100}
+            />
+          </Link>
 
           <button
             type="button"
-            className="inline-flex items-center text-white md:hidden h-full"
+            className="inline-flex h-full items-center text-white md:hidden"
             aria-controls="navbar-default"
             aria-expanded="false"
             onClick={toggleMobileMenu}
           >
             <span className="sr-only">Open main menu</span>
-            <Image src="/images/particles/menu.svg" alt="menu_icon" className="w-8" width={100} height={100} />
+            <Image
+              src="/images/particles/menu.svg"
+              alt="menu_icon"
+              className="w-8"
+              width={100}
+              height={100}
+            />
           </button>
 
           <div
@@ -40,9 +52,9 @@ export default function Header({
             id="navbar-default"
           >
             <ul
-              className={`fixed right-0 flex h-full w-full flex-col items-center justify-center px-5 text-right font-display text-2xl font-bold shadow-lg md:static md:h-10 md:flex-row md:space-y-0 md:space-x-4 md:bg-transparent md:px-0 md:shadow-none text-blue ${
+              className={`fixed right-0 flex h-full w-full flex-col items-center justify-center px-5 text-right font-display text-2xl font-bold text-blue shadow-lg md:static md:h-10 md:flex-row md:space-y-0 md:space-x-4 md:bg-transparent md:px-0 md:shadow-none ${
                 state && windowSize.width < 640
-                  ? "bg-[url('/images/particles/bg001-01.png')] bg-fill"
+                  ? "bg-fill bg-[url('/images/particles/bg001-01.png')]"
                   : "bg-transparent"
               }`}
             >
@@ -62,7 +74,7 @@ export default function Header({
                     <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                   </svg> */}
                   <p className="order-first md:order-last md:hidden md:group-hover:block">
-                    About
+                    Home
                   </p>
                 </Link>
               </li>
@@ -109,7 +121,7 @@ export default function Header({
                   </svg> */}
 
                   <p className="order-first md:order-last md:hidden md:group-hover:block">
-                    Learner
+                    Experience
                   </p>
                 </Link>
               </li>
@@ -133,27 +145,7 @@ export default function Header({
                   </svg> */}
 
                   <p className="order-first md:order-last md:hidden md:group-hover:block">
-                    Musician
-                  </p>
-                </Link>
-              </li>
-
-              <li className="w-full rounded-md bg-opacity-25 p-2 md:w-20">
-                <Link
-                  href="/content creator"
-                  className="group flex items-center justify-end rounded-md transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
-                >
-                  {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="mx-2 h-6 md:group-hover:h-4"
-                  >
-                    <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z" />
-                  </svg> */}
-
-                  <p className="order-first md:order-last md:hidden md:text-xs md:group-hover:block">
-                    Content Creator
+                    Awards
                   </p>
                 </Link>
               </li>

@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "title": "kamifriend",
+    "description": {
+      "problem": "As the Indonesian economy is rapidly growing, there is a need for an application that can help local small businesses (UMKM) compete in these conditions. We are aware that some main problems include a lack of business education, difficulty in finding product suppliers, and a one-man-show approach.",
+      "solution": "Based on a one-on-one interview with the business owner, Angelika Gw, our team developed an app with three main features to specifically address the three problems mentioned above."
+    },
+    "techstack": ["Java", "XML", "Android"],
+    "awards": {
+      "1st Place, Hackathon SoCS 2022": "HIMTI Binus University",
+      "1st Winner, Exhibitor in Techfest": "School of Computer Science Binus University"
+    },
+    "video": "UD4YgtE4WWU",
+    "news": {
+      "title": "Mahasiswa BINUS Bandung Memenangkan lomba SoCS Hackathon Kategori Lomba Software Development dan Artificial Intelligence",
+      "link": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/"
+    },
+    "contributor": {
+      "Heryan Djaruma": "Developer & UI/UX Designer",
+      "Joshua Wenata Sunarto": "Developer",
+      "Maria Auleria": "Business Lead/Product Manager"
+    }
+  },
+  {
+    "id": 2,
+    "title": "kampoeng koena",
+    "description": "This is project 2.",
+    "news": {
+      "title": "",
+      "link": ""
+    }
+  },
+  {
+    "id": 3,
+    "title": "hikost",
+    "description": "This is project 3.",
+    "news": {
+      "title": "",
+      "link": ""
+    }
+  },
+  {
+    "id": 4,
+    "title": "personal website",
+    "description": "This is project 4.",
+    "news": {
+      "title": "",
+      "link": ""
+    }
+  },
+  {
+    "id": 5,
+    "title": "seldnet dcase 2020",
+    "description": "This is project 5.",
+    "news": {
+      "title": "",
+      "link": ""
+    }
+  }
+]
