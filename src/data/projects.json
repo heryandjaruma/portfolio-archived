@@ -1,12 +1,13 @@
 [
   {
     "id": 1,
+    "logo": true,
     "title": "kamifriend",
     "description": {
-      "problem": "As the Indonesian economy is rapidly growing, there is a need for an application that can help local small businesses (UMKM) compete in these conditions. We are aware that some main problems include a lack of business education, difficulty in finding product suppliers, and a one-man-show approach.",
-      "solution": "Based on a one-on-one interview with the business owner, Angelika Gw, our team developed an app with three main features to specifically address the three problems mentioned above."
+      "problem": "As the Indonesian economy is rapidly growing, there is a need for an application that can help local small businesses (UMKM) compete in these conditions. We are aware that some main problems include <strong> a lack of business education, difficulty in finding product suppliers, and a one-man-show approach </strong>.",
+      "solution": "Based on a one-on-one interview with a local business owner, Angelika Gw, <strong> our team developed an app with three main features </strong> to specifically address the three problems mentioned above."
     },
-    "techstack": ["Java", "XML", "Android"],
+    "techstack": ["Java", "XML", "Android", "Firebase"],
     "awards": {
       "1st Place, Hackathon SoCS 2022": "HIMTI Binus University",
       "1st Winner, Exhibitor in Techfest": "School of Computer Science Binus University"
@@ -24,33 +25,44 @@
   },
   {
     "id": 2,
+    "logo": true,
     "title": "kampoeng koena",
-    "description": "This is project 2.",
-    "news": {
-      "title": "",
-      "link": ""
+    "description": {
+      "problem": "Kampoeng Koena is a newly founded tourism village as of early 2022. It has received support from the Ministry of Public Works and Housing (KPUPR) of Indonesia and aims to become a village with numerous homestays for tourists visiting nearby attractions such as Mount Bromo. However, <strong> the village faces the challenge of increasing the number of tourists while still promoting and preserving their local culture and experiences</strong>.",
+      "solution": "After a three-day incentive involving interviews with locals, discussions with other groups, and brainstorming within our team, we arrived at a viable solution to help promote Kampoeng Koena: <strong> the creation of a website</strong>. In this digital age, where people rely heavily on the internet to search for information, a website can be a powerful tool to attract tourists to the village.<br /><br /> The website will be <strong> designed to showcase Kampoeng Koena's unique features </strong> and attractions, making it easy for visitors to plan their trip and learn about the village. To increase visibility, we will ensure that the website is <strong> optimized for search engines</strong>, making it easier for people to find when searching for travel destinations in the region."
+    },
+    "techstack": ["Figma"],
+    "contributor": {
+      "Heryan Djaruma": "Leader & Developer",
+      "Charlene Mariscal": "Member",
+      "Bella Berlianti": "Member",
+      "Ong Pey Wen": "Member"
     }
   },
   {
     "id": 3,
+    "logo": true,
     "title": "hikost",
-    "description": "This is project 3.",
-    "news": {
-      "title": "",
-      "link": ""
-    }
+    "description": {
+      "problem": "Managing money as a college student can be a daunting task, especially for those living abroad or away from their parents. To address this challenge, we recognized the importance of<strong> an app that could help students manage their finances more effectively</strong>, providing guidance and support for every purchase and savings decision throughout their college experience.",
+      "solution": "Our team has created an app that directly addresses these common financial management challenges faced by college students. Our app features three main menus, including <strong> a money tracker, savings, and budget tool,</strong> along with a recommendation system that keeps you informed of your financial availability. With these features, our app empowers college students to make informed decisions and better manage their finances throughout their college experience."
+    },
+    "techstack": ["Java", "XML", "Android", "Firebase"]
   },
   {
     "id": 4,
+    "logo": false,
     "title": "personal website",
     "description": "This is project 4.",
     "news": {
       "title": "",
       "link": ""
-    }
+    },
+    "techstack": ["Next", "Tailwind"]
   },
   {
     "id": 5,
+    "logo": false,
     "title": "seldnet dcase 2020",
     "description": "This is project 5.",
     "news": {

@@ -16,7 +16,7 @@ export default function Header({
 
   return (
     <>
-      <nav className="bg-fill bg-[url('/images/particles/bg001-01.png')] shadow-sm">
+      <nav className="bg-fill sticky top-0 z-50 bg-white backdrop-blur-lg backdrop-filter">
         <div className="container mx-auto flex flex-wrap items-center justify-between p-2">
           <Link href="/">
             <Image

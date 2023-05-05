@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Header from "./layout/Header";
 import getWindowSize from "@/utils/windowSize";
-import Kamifriend from "./layout/coder/Kamifriend";
 import Image from "next/image";
 import ListArrow from "./components/ListArrow";
 import ShowcaseItem from "./layout/ShowcaseItem";
@@ -10,6 +9,7 @@ import path from "path";
 import { GetStaticProps } from "next";
 import YouTube from "react-youtube";
 import Link from "next/link";
+import ShowIf from "./layout/ShowIf";
 
 interface Props {
   projects: Project[];
@@ -17,6 +17,7 @@ interface Props {
 
 interface Project {
   id: number;
+  logo: boolean;
   title: string;
   description: {
     problem: string;
@@ -72,51 +73,84 @@ export default function Projects({ projects }: Props) {
                 <ShowcaseItem id={project.title}>
                   <div
                     id="project-title"
-                    className="mb-4 flex w-full flex-row items-center justify-center space-x-4 rounded-lg px-4 py-10"
+                    className="sticky top-11 z-40 flex w-full flex-row items-center justify-center space-x-4 rounded-b-lg bg-white/70 py-3  backdrop-blur-lg backdrop-filter"
                   >
-                    <Image
-                      src={`/images/logo/${project.title}.svg`}
-                      alt={`${project.title}-logo`}
-                      className="h-16 w-16"
-                      width={64}
-                      height={64}
-                    />
+                    <ShowIf isExist={project.logo}>
+                      <Image
+                        src={`/images/logo/${project.title}.svg`}
+                        alt={`${project.title}-logo`}
+                        className="h-10 w-10"
+                        width={64}
+                        height={64}
+                      />
+                    </ShowIf>
                     <h1 className="text-2xl font-bold capitalize text-blue">
                       {project.title}
                     </h1>
                   </div>
 
-                  <hr className="mx-4 h-px border-0 bg-gray-300" />
+                  {/* <hr className="mx-4 h-px border-0 bg-gray-300" /> */}
 
-                  <div id="project-problem" className="py-4 px-4 text-blue">
-                    <h1 className="mb-4 text-2xl font-medium">
-                      Problem Description
-                    </h1>
-                    <p className="text-left text-blk">
-                      {project.description.problem}
-                    </p>
+                  <div id="project-problem" className="py-14 px-4 text-blue">
+                    <Image
+                      src={`/images/projects/${project.title}_cover.jpg`}
+                      alt={`${project.title}-cover`}
+                      width={960}
+                      height={960}
+                      className="mb-10 rounded-lg shadow-md"
+                    />
+                    <h1 className="mb-4 text-2xl font-medium">Background</h1>
+                    <div
+                      className="text-left text-blk"
+                      dangerouslySetInnerHTML={{
+                        __html: project.description.problem,
+                      }}
+                    ></div>
                   </div>
 
                   <div
                     id="project-solution"
-                    className="bg-blue py-4 px-4 text-white"
+                    className="bg-blue py-20 px-4 text-white"
                   >
+                    <Image
+                      src={`/images/projects/${project.title}_solution.jpg`}
+                      alt={`${project.title}-cover`}
+                      width={`720`}
+                      height={720}
+                      className="mb-10 rounded-lg shadow-md"
+                    />
                     <h1 className="mb-4 text-2xl font-medium">
                       Problem Solution
                     </h1>
-                    <p className="text-left">{project.description.solution}</p>
+                    <div
+                      className="text-left"
+                      dangerouslySetInnerHTML={{
+                        __html: project.description.solution,
+                      }}
+                    ></div>
                   </div>
                   {/* {project.video ? <YouTube videoId={project.video} /> : ""} */}
 
                   <div
                     id="project-techstack"
-                    className="bg-blue py-4 px-4 text-white"
+                    className="bg-blu px-4 py-14 text-white"
                   >
                     <h1 className="mb-4 text-2xl font-medium">Techstack</h1>
                     {project.techstack && Array.isArray(project.techstack) && (
-                      <ul className="flex w-full flex-row items-center justify-center space-x-4">
-                        {project.techstack.map((tech, index) => (
-                          <li key={index}>{tech}</li>
+                      <ul className="flex w-full flex-row items-center justify-evenly space-x-10">
+                        {project.techstack.map((tech, item) => (
+                          <li key={item}>
+                            <div className="flex flex-col items-center justify-center">
+                              <Image
+                                src={`/images/logo/${tech}.svg`}
+                                alt={`${tech}-logo`}
+                                width={100}
+                                height={100}
+                                className="h-12 w-12 object-contain"
+                              />
+                              <h1 className="capitalize">{tech}</h1>
+                            </div>
+                          </li>
                         ))}
                       </ul>
                     )}
@@ -124,41 +158,52 @@ export default function Projects({ projects }: Props) {
                     {/* <p className="text-left">{project.description.solution}</p> */}
                   </div>
 
-                  <div
-                    id="project-awards"
-                    className="bg-lightblu px-4 py-4 text-white"
-                  >
-                    <h1 className="text-2xl font-medium text-indigo-700">
-                      Awards
-                    </h1>
-                    <p className="mb-4 text-indigo-700">
-                      This project has received{" "}
-                      {project.awards && Object.entries(project.awards).length}{" "}
-                      {project.awards &&
-                      Object.keys(project.awards).length > 1 ? (
-                        <span>awards</span>
-                      ) : (
-                        <span>award</span>
-                      )}
-                    </p>
-                    <div id="awards-list" className="my-6">
-                      <ul className="space-y-2">
+                  <ShowIf isExist={project.awards}>
+                    <div
+                      id="project-awards"
+                      className="bg-lightblu px-4 py-14 text-white"
+                    >
+                      <h1 className="text-2xl font-medium">Awards</h1>
+                      <p className="mb-4">
+                        This project has received{" "}
                         {project.awards &&
-                          Object.entries(project.awards).map(([key, value]) => (
-                            <li key={key}>
-                              <h1 className="font-medium">{key}</h1>
-                              <h1 className="font-light">by {value}</h1>
-                            </li>
-                          ))}
-                      </ul>
+                          Object.entries(project.awards).length}{" "}
+                        {project.awards &&
+                        Object.keys(project.awards).length > 1 ? (
+                          <span>awards</span>
+                        ) : (
+                          <span>award</span>
+                        )}
+                      </p>
+                      <Image
+                        src={`/images/projects/${project.title}_awards.jpg`}
+                        alt={`${project.title}-cover`}
+                        width={`720`}
+                        height={720}
+                        className="mb-10 rounded-lg shadow-md"
+                      />
+                      <div id="awards-list" className="my-6">
+                        <ul className="space-y-2">
+                          {project.awards &&
+                            Object.entries(project.awards).map(
+                              ([key, value]) => (
+                                <li key={key}>
+                                  <h1 className="font-medium">{key}</h1>
+                                  <h1 className="font-light">by {value}</h1>
+                                </li>
+                              )
+                            )}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    id="project-news"
-                    className="bg-blue px-4 py-4 text-white"
-                  >
-                    <h1 className="text-2xl font-medium">News</h1>
-                    {/* <div id="news-list" className="my-6">
+                  </ShowIf>
+                  <ShowIf isExist={project.news}>
+                    <div
+                      id="project-news"
+                      className="bg-blue px-4 py-14 text-white"
+                    >
+                      <h1 className="text-2xl font-medium">News</h1>
+                      {/* <div id="news-list" className="my-6">
                       {project.news && (
                         <div id="news-list" className="my-6">
                           {project.news.link && (
@@ -172,10 +217,11 @@ export default function Projects({ projects }: Props) {
                         </div>
                       )}
                     </div> */}
-                  </div>
+                    </div>
+                  </ShowIf>
                   <div
                     id="project-contributor"
-                    className="bg-indigo-500 px-4 py-4 text-white"
+                    className="bg-indigo-500 px-4 py-14 text-white"
                   >
                     <h1 className="mb-4 text-2xl font-medium">Contributor</h1>
                     <ul className="space-y-2">
@@ -188,11 +234,16 @@ export default function Projects({ projects }: Props) {
                                   <Link href="/" className="underline">
                                     {key}
                                   </Link>
-                                  <span>, {value}</span>
+                                  <span className="font-extralight">
+                                    , {value}
+                                  </span>
                                 </>
                               ) : (
                                 <>
-                                  {key}, {value}
+                                  {key},{" "}
+                                  <span className="font-extralight">
+                                    {value}
+                                  </span>
                                 </>
                               )}
                             </li>

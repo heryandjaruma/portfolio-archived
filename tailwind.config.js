@@ -19,7 +19,7 @@ module.exports = {
 
         wht: "#e8ede4",
         blk: "#242224",
-        blue: "#486cea"
+        blue: "#486cea",
       },
       fontFamily: {
         display: ["Inter"],
