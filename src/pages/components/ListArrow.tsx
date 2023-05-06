@@ -7,11 +7,10 @@ export default function ListArrow(props: { title: string }) {
       <li>
         <a
           href={`#${properLinkTitle}`}
-          className="group flex items-center text-3xl capitalize underline "
+          className="group flex items-center text-start text-2xl capitalize underline"
         >
           {props.title}
-          &nbsp;
-          <div className="hidden group-hover:block">
+          <div className="ml-2 hidden group-hover:block">
             <ArrowRight />
           </div>
         </a>

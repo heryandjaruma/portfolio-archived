@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "show": true,
+    "title": "teaching assistant",
+    "period": "Mar 2023 - Now",
+    "association": {
+      "name": "Duksung Women's University (덕성여자대학교)",
+      "logo": true
+    },
+    "location": "Seoul, South Korea",
+    "description": {
+      "brief": "As an exchange student, I have been fortunate to serve as a Teaching Assistant. My role involves actively participating in the university's official program known as the Global Lounge. This program facilitates weekly meetings where Korean and international students can come together, explore various themes, and engage in different activities. Working alongside fellow Indonesian, Japanese, and Korean students, we collaboratively organize and manage this program on a weekly basis, fostering a vibrant and inclusive campus environment."
+    },
+    "image": 4
+  },
+  {
+    "id": 2,
+    "show": true,
+    "title": "laboratory assistant",
+    "period": "Feb 2022 - Feb 2023",
+    "association": {
+      "name": "Binus University",
+      "logo": true
+    },
+    "location": "Bandung, Indonesia",
+    "description": {
+      "brief": "After undergoing a thorough selection process that spanned half of a semester (3 mo), I was fortunate to be chosen as one of the two selected assistants for the Laboratory Center in Bandung. This opportunity granted me an official part-time role as an assistant, where I had the privilege to provide support in the teaching process within the Computer Science Department's laboratory.",
+      "detail": [
+        "Course: Interaction Design (COMP6667032)",
+        "Course: Algorithm & Programming (COMP6667032)",
+        "Completed 55+ Competitive Programming cases",
+        "Provided assistance to 240 university students"
+      ]
+    },
+    "image": 4
+  },
+  {
+    "id": 3,
+    "show": true,
+    "title": "activist",
+    "period": "Nov 2021 - Feb 2022",
+    "association": {
+      "name": "Bina Nusantara Computer Club (BNCC) of Binus University",
+      "logo": true
+    },
+    "location": "Bandung, Indonesia",
+    "description": {
+      "brief": "BNCC is a highly esteemed organization within the Binus University. As activists, we organized a diverse range of special events and monthly gatherings covering various technology-related topics.",
+      "detail": [
+        "Member of the Learning and Training (LnT) team",
+        "Active involvement in organizational activities for 2 semesters during university",
+        "Served as Chief Committee for LnT Camp 2022",
+        "Contributed as event staff for various events, including Techbinar"
+      ]
+    }
+  }
+]

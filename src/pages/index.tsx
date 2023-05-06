@@ -18,7 +18,7 @@ export default function Home() {
           active && size.width < 640 ? "hidden" : "block"
         }`}
       >
-        <div className="w-full bg-[url('/images/particles/bg001-01.png')] bg-cover">
+        <div className="w-full bg-slate-100">
           <div
             id="welcome"
             className="flex h-[600px] w-full flex-col justify-center px-8 font-display text-white"
@@ -53,19 +53,19 @@ export default function Home() {
 
         <div
           id="works"
-          className="bg-fill flex h-[500px] w-full items-center justify-center bg-[url('/images/particles/bg003.png')] py-6 px-4"
+          className="flex h-[500px] w-full items-center justify-center bg-turq py-6 px-4"
         >
           <div className="flex h-full flex-col justify-around">
-            <h1 className="font-display text-4xl font-normal text-blue">
+            <h1 className="font-display text-4xl font-normal text-white">
               Works
             </h1>
             <Link href="/projects">
               <div
                 id="roller"
-                className="bg-fill relative my-2 rounded-full bg-[url('/images/particles/bg004.png')] py-2 px-7 font-display text-white"
+                className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
               >
                 <Image
-                  src="/images/particles/ic_code.svg"
+                  src="/images/icons/ic_code.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
@@ -75,13 +75,13 @@ export default function Home() {
                 <p>Award winning and technical projects</p>
               </div>
             </Link>
-            <Link href="/code">
+            <Link href="/experience">
               <div
                 id="roller"
-                className="bg-fill relative my-2 rounded-full bg-[url('/images/particles/bg004.png')] py-2 px-7 font-display text-white"
+                className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
               >
                 <Image
-                  src="/images/particles/ic_exp.svg"
+                  src="/images/icons/ic_exp.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
@@ -91,13 +91,13 @@ export default function Home() {
                 <p>Laboratory Assistant and teaching</p>
               </div>
             </Link>
-            <Link href="/code">
+            <Link href="/awards">
               <div
                 id="roller"
-                className="bg-fill relative my-2 rounded-full bg-[url('/images/particles/bg004.png')] py-2 px-7 font-display text-white"
+                className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
               >
                 <Image
-                  src="/images/particles/ic_desmus.svg"
+                  src="/images/icons/ic_desmus.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
@@ -112,7 +112,7 @@ export default function Home() {
 
         <div
           id="education"
-          className="bg-fill flex h-[550px] w-full items-center justify-center bg-[url('/images/particles/bg000-01.png')] py-6 px-4"
+          className="bg-fill flex h-[550px] w-full items-center justify-center bg-slate-50 py-6 px-4"
         >
           <div className="flex h-full flex-col justify-around">
             <h1 className="mb-2 font-display text-4xl font-normal text-blue">

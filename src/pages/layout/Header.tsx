@@ -16,11 +16,11 @@ export default function Header({
 
   return (
     <>
-      <nav className="bg-fill sticky top-0 z-50 bg-white backdrop-blur-lg backdrop-filter">
+      <nav className="bg-fill sticky top-0 z-50 flex h-14 border-b-2 bg-white backdrop-blur-lg backdrop-filter">
         <div className="container mx-auto flex flex-wrap items-center justify-between p-2">
           <Link href="/">
             <Image
-              src="/images/particles/LOGO.svg"
+              src="/images/logo/LOGO.svg"
               alt="my_logo"
               className="w-10"
               width={100}
@@ -104,7 +104,7 @@ export default function Header({
 
               <li className="w-full rounded-md bg-opacity-25 p-2 md:w-20">
                 <Link
-                  href="/learner"
+                  href="/experience"
                   className="group flex items-center justify-end rounded-md transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
                 >
                   {/* <svg
@@ -128,7 +128,7 @@ export default function Header({
 
               <li className="w-full rounded-md bg-opacity-25 p-2 md:w-20">
                 <Link
-                  href="/musician"
+                  href="/awards"
                   className="group flex items-center justify-end rounded-md transition duration-300 hover:text-[#b0fffc] md:flex-col md:text-center md:text-base"
                 >
                   {/* <svg
