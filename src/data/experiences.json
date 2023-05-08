@@ -35,13 +35,14 @@
     },
     "image": 4
   },
+
   {
-    "id": 3,
-    "show": true,
+    "id": 4,
+    "show": false,
     "title": "activist",
     "period": "Nov 2021 - Feb 2022",
     "association": {
-      "name": "Bina Nusantara Computer Club (BNCC) of Binus University",
+      "name": "Bina Nusantara Computer Club (BNCC)",
       "logo": true
     },
     "location": "Bandung, Indonesia",
@@ -54,5 +55,59 @@
         "Contributed as event staff for various events, including Techbinar"
       ]
     }
+  },
+  {
+    "id": 3,
+    "show": false,
+    "title": "trainer",
+    "period": "September 2022",
+    "association": {
+      "name": "HIMTI Binus University",
+      "logo": true
+    },
+    "location": "Bandung, Indonesia",
+    "description": {
+      "brief": "I had the opportunity to serve as a trainer for HIMTI's PBP Techno programming class, where I engaged with over 40 freshmen in an online setting.",
+      "detail": ["Entry-Level Programming in C Language"]
+    },
+    "image": 2
+  },
+  {
+    "id": 6,
+    "show": true,
+    "title": "Student Council President",
+    "period": "Sep 2019 - Aug 2020",
+    "association": {
+      "name": "OSIS Ekklesia SMAK 1 BPK Penabur Bandung",
+      "logo": true
+    },
+    "location": "Bandung, Indonesia",
+    "description": {
+      "brief": "I had the opportunity to serve as a trainer for HIMTI's PBP Techno programming class, where I engaged with over 40 freshmen in an online setting.",
+      "detail": [""]
+    }
+  },
+  {
+    "id": 5,
+    "show": true,
+    "title": "volunteer",
+    "period": "Apr 2021 - Oct 2021",
+    "association": {
+      "name": "SejutaCita Indonesia",
+      "logo": false
+    },
+    "location": "Remote",
+    "description": {
+      "brief": "As a SahabatCita volunteer, I had the privilege of utilizing my time and skills as an editor and graphic designer to support engagement initiatives.",
+      "detail": [
+        "Participated in three significant projects",
+        "Edited a promotional video for Festival Mahasiswa Baru & Pelajar Indonesia 2021",
+        "Edited opening videos and in-event footage for Festival Mahasiswa Baru & Pelajar Indonesia 2021",
+        "Collaborated with campus organizations to promote SejutaCita and establish partnerships",
+        "Created captivating Instagram stories for marketing purposes"
+      ],
+      "keyword": ["najwa shihab"]
+    },
+    "image": 1
   }
 ]

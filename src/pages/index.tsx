@@ -1,33 +1,41 @@
-import getWindowSize from "@/utils/windowSize";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import path from "path";
+import fs from "fs";
+import { GetStaticProps } from "next";
 
-export default function Home() {
-  const [active, setActive] = useState(false);
+interface Props {
+  news: Anews[];
+}
 
-  const size = getWindowSize();
+interface Anews {
+  id: number;
+  show: boolean;
+  title: string;
+  description: string;
+  platform: string;
+  link: string;
+}
 
+export default function Home({ news }: Props) {
   return (
     <>
-      <Header state={active} setState={setActive} windowSize={size} />
+      <Header />
       <div
-        className={`container mx-auto flex flex-col items-center text-justify sm:px-0 ${
-          active && size.width < 640 ? "hidden" : "block"
-        }`}
+        className={`mx-auto flex max-w-screen-2xl flex-col items-center sm:px-0`}
       >
-        <div className="w-full bg-slate-100">
+        <div className="mt-16 w-full bg-slate-100">
           <div
             id="welcome"
-            className="flex h-[600px] w-full flex-col justify-center px-8 font-display text-white"
+            className="flex h-[500px] w-full flex-col justify-center px-8 font-display text-white"
           >
             <h1 className="text-left font-display text-5xl font-bold text-blue">
               Heryan Djaruma
             </h1>
             <p className="my-2 text-left text-blk">
-              Find out more about me in this website
+              Find out more about me in this site
             </p>
             <div className="mt-4 flex flex-row">
               <a href="#works">
@@ -65,7 +73,7 @@ export default function Home() {
                 className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
               >
                 <Image
-                  src="/images/icons/ic_code.svg"
+                  src="/images/icons/code.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
@@ -81,7 +89,7 @@ export default function Home() {
                 className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
               >
                 <Image
-                  src="/images/icons/ic_exp.svg"
+                  src="/images/icons/cap.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
@@ -97,11 +105,11 @@ export default function Home() {
                 className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
               >
                 <Image
-                  src="/images/icons/ic_desmus.svg"
-                  alt="code_icon"
+                  src="/images/icons/awards.svg"
+                  alt="award icon"
                   width={32}
                   height={32}
-                  className="absolute right-0 top-0 w-9"
+                  className="absolute right-0 top-0 w-7"
                 />
                 <h1 className="text-xl font-bold">Awards</h1>
                 <p>Content creating and rhythms</p>
@@ -163,6 +171,28 @@ export default function Home() {
             </ol>
           </div>
         </div>
+        <div id="mentions" className="w-full py-6">
+          <h1 className="mb-4 px-4 text-2xl text-blk">Mentions</h1>
+          <div className="overflow-x-auto">
+            <div
+              className="scrolling-touch flex snap-x snap-mandatory space-x-3 px-4 pb-6"
+              style={{ overflowX: "scroll", scrollbarWidth: "none" }}
+            >
+              {news.map((anews) => (
+                <div
+                  key={anews.id}
+                  className="scroll-x-4 h-72 w-[88vw] flex-none snap-center rounded-lg bg-slate-200 shadow-lg"
+                >
+                  <Link href="/" className="">
+                    <h1 className="text-md font-semibold">
+                      {anews.title} on {anews.platform}
+                    </h1>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
       <div id="contact">
         <Footer />
@@ -170,3 +200,19 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const filePath = path.join(process.cwd(), "src", "data", "news.json");
+  const fileContents = fs.readFileSync(filePath, "utf8");
+  const data: Anews[] = JSON.parse(fileContents);
+
+  const filteredNews = data.filter((news) => {
+    return news.show === true;
+  });
+
+  return {
+    props: {
+      news: filteredNews,
+    },
+  };
+};

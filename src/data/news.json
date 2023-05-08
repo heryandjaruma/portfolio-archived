@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "show": true,
+    "title": "SejutaCita",
+    "description": "",
+    "platform": "Instagram",
+    "link": "https://"
+  },
+  {
+    "id": 2,
+    "show": true,
+    "title": "Ruang Xpresi",
+    "description": "",
+    "platform": "YouTube",
+    "link": "https://"
+  },
+  {
+    "id": 3,
+    "show": true,
+    "title": "Ruang Xpresi",
+    "description": "",
+    "platform": "YouTube",
+    "link": "https://"
+  },
+  {
+    "id": 4,
+    "show": true,
+    "title": "Ruang Xpresi",
+    "description": "",
+    "platform": "YouTube",
+    "link": "https://"
+  }
+]

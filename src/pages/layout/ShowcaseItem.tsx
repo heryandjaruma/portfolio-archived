@@ -5,7 +5,7 @@ const ShowcaseItem = (props: { id: string; children: ReactNode }) => {
   return (
     <div
       id={properId}
-      className="bg-fill flex w-full flex-col bg-white/70 py-6 font-display"
+      className="bg-fill bg-white/ flex w-full flex-col font-display"
     >
       {props.children}
     </div>

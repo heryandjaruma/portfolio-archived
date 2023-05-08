@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "show": true,
+    "title": "awardee",
+    "program": "Global Korea Scholarship (GKS) Non-degree",
+    "association": "Korea Ministry of Education",
+    "type": "scholarship",
+    "date": "February 2022",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "show": true,
+    "title": "1st winner",
+    "program": "Techfest Exhibition Competition",
+    "association": "HIMTI Binus University",
+    "type": "competition",
+    "refer": "kamifriend",
+    "date": "December 2022",
+    "description": ""
+  },
+  {
+    "id": 3,
+    "show": true,
+    "title": "1st winner",
+    "program": "Hackathon SoCS",
+    "association": "School of Computer Science Binus University",
+    "type": "competition",
+    "refer": "kamifriend",
+    "date": "November 2022",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "show": true,
+    "title": "participant",
+    "program": "International Community Development Program (ICDP)",
+    "association": "Binus University",
+    "refer": "kampoeng koena",
+    "type": "short program",
+    "date": "August 2022",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "show": true,
+    "title": "3rd winner",
+    "program": "Festival Band Temu Akrab Antar Penabur",
+    "association": "BPK Penabur Cianjur",
+    "type": "band competition",
+    "date": "January 2022",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "show": true,
+    "title": "1st winner",
+    "program": "Groove In Beat Band Competition 2019 SKETSA",
+    "association": "SMA Kristen Kalam Kudus",
+    "type": "band competition",
+    "date": "September 2019",
+    "description": ""
+  },
+  {
+    "id": 7,
+    "show": true,
+    "title": "1st winner",
+    "program": "Lomba CreatiVlog \"Aku dan Museum KAA\"",
+    "association": "Museum Konferensi Asia Afrika (KAA)",
+    "type": "video competition",
+    "date": "April 2019",
+    "description": ""
+  },
+  {
+    "id": 8,
+    "show": true,
+    "title": "3rd winner",
+    "program": "Lomba Film Layar Sejarah (LASER) Pekan Raya Sejarah",
+    "association": "Himpunan Mahasiswa Sejarah (HIMAS) UPI",
+    "type": "video competition",
+    "date": "March 2019",
+    "description": ""
+  },
+  {
+    "id": 9,
+    "show": true,
+    "title": "awardee",
+    "program": "Noble Student Award",
+    "association": "SMAK 1 BPK PENABUR Bandung",
+    "type": "competition",
+    "date": "January 2019",
+    "description": ""
+  },
+  {
+    "id": 10,
+    "show": true,
+    "title": "2nd winner",
+    "program": "L'AGIE TRIOP Team Supporter Challenge",
+    "association": "SMA Trinitas",
+    "type": "suppporter competition",
+    "date": "January 2019",
+    "description": ""
+  },
+  {
+    "id": 11,
+    "show": true,
+    "title": "winner",
+    "program": "Ruang Xpresi BINUS",
+    "association": "First Year Program (FYP) Binus University",
+    "type": "talent competition",
+    "date": "January 2019",
+    "description": ""
+  },
+  {
+    "id": 12,
+    "show": true,
+    "title": "winner",
+    "program": "Friendship Without Barriers Poster Competition",
+    "association": "Friends Care Community (FCC) Binus University",
+    "type": "creative competition",
+    "date": "September 2022",
+    "description": ""
+  }
+]

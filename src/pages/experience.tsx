@@ -1,5 +1,3 @@
-import getWindowSize from "@/utils/windowSize";
-import { useState } from "react";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import ListArrow from "./components/ListArrow";
@@ -16,7 +14,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination } from "swiper";
+import Link from "next/link";
+import CapIcon from "./components/CapIcon";
 
 interface Props {
   experiences: Experience[];
@@ -40,40 +40,46 @@ interface Experience {
 }
 
 export default function Experience({ experiences }: Props) {
-  const [active, setActive] = useState(false);
-
-  const size = getWindowSize();
   return (
     <>
-      <Header state={active} setState={setActive} windowSize={size} />
+      <Header />
       <div
-        className={`container mx-auto flex flex-col items-center text-justify sm:px-0 ${
-          active && size.width < 640 ? "hidden" : "block"
-        }`}
+        className={`mx-auto flex max-w-screen-2xl flex-col items-center sm:px-0`}
       >
         <div
           id="welcome"
-          className="flex h-[600px] w-full flex-col justify-center bg-turq px-4 font-display font-semibold text-white"
+          className="mt-16 flex h-[560px] w-full flex-col justify-center bg-turq px-4 pt-10 font-display font-semibold text-white"
         >
-          <div className="mb-16">
-            <Image
-              src="/images/icons/ic_exp.svg"
-              alt="code-icon"
-              width={160}
-              height={160}
-              className="h-16 w-16"
-            />
+          <div className="mb-10">
+            <CapIcon />
             <h1 className="py-3 text-5xl font-extrabold">Experience</h1>
-            <p className="text-xl font-normal text-gray-200"></p>
-            <ul className="space-y-2">
-              {experiences.map((experience) => (
-                <li key={experience.id}>
-                  <ListArrow title={experience.title} />
-                </li>
-              ))}
-            </ul>
+            <p className="text-xl font-normal text-gray-200">
+              I&apos;ve been in
+            </p>
+          </div>
+          <ul className="mb-16 space-y-2">
+            {experiences.map((experience) => (
+              <li key={experience.id}>
+                <ListArrow title={experience.title} />
+              </li>
+            ))}
+          </ul>
+          <div className="w-full text-right">
+            <Link
+              href="/"
+              className="rounded-full border-2 p-2 text-sm font-normal text-white"
+            >
+              See all on gallery view
+            </Link>
           </div>
         </div>
+
+        <h1
+          id="highlight"
+          className="w-full px-4 text-start text-2xl font-semibold text-gray-500"
+        >
+          Highlights
+        </h1>
 
         <div id="contents" className="w-full">
           <ul className="">
@@ -82,7 +88,7 @@ export default function Experience({ experiences }: Props) {
                 <ShowcaseItem id={experience.title}>
                   <div
                     id="experience-intro"
-                    className="sticky top-14 z-40 flex w-full flex-col items-center justify-center bg-darkprimary py-2 px-4"
+                    className="sticky top-16 z-40 mt-14 flex w-full flex-col items-center justify-center bg-darkprimary py-2 px-4"
                   >
                     <h1 className="w-full text-left text-2xl font-bold capitalize text-white">
                       {experience.title}
@@ -94,15 +100,8 @@ export default function Experience({ experiences }: Props) {
 
                   <div
                     id="experience-location"
-                    className="flex w-full flex-col bg-blue px-4 py-8 text-white"
+                    className="flex w-full flex-col bg-blue px-4 py-2 text-white"
                   >
-                    {/* <Image
-                      src="/images/icons/direction.svg"
-                      width={64}
-                      height={64}
-                      alt="direction-icon"
-                      className="h-5 w-5"
-                    /> */}
                     <h1 className="text-start">
                       {experience.association.name}
                     </h1>

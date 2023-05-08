@@ -1,6 +1,4 @@
-import { useState } from "react";
 import Header from "./layout/Header";
-import getWindowSize from "@/utils/windowSize";
 import Image from "next/image";
 import ListArrow from "./components/ListArrow";
 import ShowcaseItem from "./layout/ShowcaseItem";
@@ -10,6 +8,8 @@ import { GetStaticProps } from "next";
 import Link from "next/link";
 import ShowIf from "./layout/ShowIf";
 import Footer from "./layout/Footer";
+
+import CodeIcon from "./components/CodeIcon";
 
 interface Props {
   projects: Project[];
@@ -43,46 +43,39 @@ interface Project {
 }
 
 export default function Projects({ projects }: Props) {
-  const [active, setActive] = useState(false);
-
-  const size = getWindowSize();
-
   return (
     <>
-      <Header state={active} setState={setActive} windowSize={size} />
-      <div
-        className={`container mx-auto flex flex-col items-center text-justify sm:px-0 ${
-          active && size.width < 640 ? "hidden" : "block"
-        }`}
-      >
+      <Header />
+      <div className={`mx-auto flex max-w-screen-2xl flex-col items-center`}>
         <div
           id="welcome"
-          className="flex h-[600px] w-full flex-col justify-center bg-blue px-4 font-display font-semibold text-white"
+          className="mt-16 mb-10 flex h-[560px] w-full flex-col justify-center bg-blue px-4 pt-10 font-display font-semibold text-white"
         >
-          <div className="mb-16">
-            <Image
-              src="/images/icons/ic_code.svg"
-              alt="code-icon"
-              width={160}
-              height={160}
-              className="h-16 w-16"
-            />
+          <div className="mb-10">
+            <CodeIcon />
             <h1 className="py-3 text-5xl font-extrabold">Projects</h1>
-            <p className="text-xl font-normal text-gray-200">
+            <p className="mb-2 text-xl font-normal text-gray-200">
               I&apos;ve worked on
             </p>
-            <Link href="/" className="mt-10 text-base font-normal text-blk">
-              Gallery view
-            </Link>
           </div>
-          <ul className="space-y-2">
+          <ul className="mb-16 space-y-2">
             {projects.map((project) => (
               <li key={project.id}>
                 <ListArrow title={project.title} />
               </li>
             ))}
           </ul>
+          <div className="w-full text-right">
+            <Link
+              href="/"
+              className="rounded-full border-2 p-2 text-sm font-normal text-white"
+            >
+              See all on gallery view
+            </Link>
+          </div>
         </div>
+
+        <hr className="mx-4 mt-24 h-px border-0 bg-gray-600" />
 
         <div id="contents" className="w-full">
           <ul className="">
@@ -91,7 +84,7 @@ export default function Projects({ projects }: Props) {
                 <ShowcaseItem id={project.title}>
                   <div
                     id="project-title"
-                    className="sticky top-14 z-40 flex w-full flex-row items-center justify-center space-x-4 rounded-b-lg bg-white/70 py-3  backdrop-blur-lg backdrop-filter"
+                    className="sticky top-16 z-40 flex w-full flex-row items-center justify-center space-x-4 rounded-b-lg bg-white/70 py-3  backdrop-blur-lg backdrop-filter"
                   >
                     <ShowIf isExist={project.logo}>
                       <Image
