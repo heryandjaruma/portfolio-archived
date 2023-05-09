@@ -85,7 +85,7 @@ export default function Experience({ experiences }: Props) {
         <div id="contents" className="w-full">
           <ul className="">
             {experiences.map((experience) => (
-              <li key={experience.id} className="">
+              <div key={experience.id} className="">
                 <ShowcaseItem id={experience.title}>
                   <div
                     id="experience-intro"
@@ -130,7 +130,7 @@ export default function Experience({ experiences }: Props) {
                           <ul className="">
                             {experience.description.detail.map(
                               (detail, item) => (
-                                <li key={item}>• {detail}</li>
+                                <div key={item}>• {detail}</div>
                               )
                             )}
                           </ul>
@@ -165,7 +165,7 @@ export default function Experience({ experiences }: Props) {
                     </Swiper>
                   </ShowIf>
                 </ShowcaseItem>
-              </li>
+              </div>
             ))}
           </ul>
         </div>

@@ -1,7 +1,5 @@
-import ArrowRight from "./ArrowRight";
-
 export default function ListArrow(props: { title: string }) {
-  const properLinkTitle = props.title.replace(/\s+/g, "-");
+  const properLinkTitle = props.title?.replace(/\s+/g, "-");
   return (
     <>
       <li>
@@ -10,9 +8,6 @@ export default function ListArrow(props: { title: string }) {
           className="group flex items-center text-start text-2xl capitalize underline duration-200 hover:text-gray-300"
         >
           {props.title}
-          {/* <div className="ml-2 hidden group-hover:block">
-            <ArrowRight />
-          </div> */}
         </a>
       </li>
     </>
