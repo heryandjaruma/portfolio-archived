@@ -86,7 +86,7 @@ export default function Projects({ projects }: Props) {
           <ul className="">
             {projects.map((project) => (
               <li key={project.id} className="">
-                <ShowcaseItem id={project.title}>
+                <ShowcaseItem id={project.title} tag={project.tag}>
                   <ShowIf isExist={project.description.problemimage}>
                     <div className="mb-4 px-4 py-2">
                       <Image

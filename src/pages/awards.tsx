@@ -47,7 +47,7 @@ export default function Awards({ awards }: Props) {
           <ul className="space-y-4">
             {awards.map((award) => (
               <li key={award.id}>
-                <ShowcaseItem id={award.title}>
+                <ShowcaseItem id={award.title} tag={award.type}>
                   <Link
                     className="rounded-xl bg-slate-100 py-4 px-4 hover:bg-slate-200"
                     href="/"

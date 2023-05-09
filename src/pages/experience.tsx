@@ -87,7 +87,7 @@ export default function Experience({ experiences }: Props) {
           <ul className="">
             {experiences.map((experience) => (
               <div key={experience.id} className="">
-                <ShowcaseItem id={experience.title}>
+                <ShowcaseItem id={experience.title} tag={experience.tag}>
                   <div
                     id="experience-intro"
                     className="sticky top-16 z-40 mt-14 flex w-full flex-col items-center justify-center bg-darkprimary py-2 px-4"

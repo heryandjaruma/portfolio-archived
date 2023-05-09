@@ -1,10 +1,13 @@
 import { ReactNode } from "react";
 
-const ShowcaseItem = (props: { id: string; children: ReactNode }) => {
-  const properId = props.id.replace(/\s/g, "-");
+const ShowcaseItem = (props: {
+  id: string;
+  tag: string;
+  children: ReactNode;
+}) => {
   return (
     <div
-      id={properId}
+      id={props.tag}
       className="bg-fill bg-white/ flex w-full flex-col font-display"
     >
       {props.children}
