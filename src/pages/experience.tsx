@@ -27,6 +27,7 @@ interface Experience {
   id: number;
   show: boolean;
   title: string;
+  tag: string;
   period: string;
   association: {
     name: string;
@@ -61,7 +62,7 @@ export default function Experience({ experiences }: Props) {
           <ul className="mb-16 space-y-2">
             {experiences.map((experience) => (
               <li key={experience.id}>
-                <ListArrow title={experience.title} />
+                <ListArrow title={experience.title} tag={experience.tag} />
               </li>
             ))}
           </ul>

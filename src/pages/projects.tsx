@@ -22,6 +22,7 @@ interface Project {
   logo: boolean;
   logotext: boolean;
   title: string;
+  tag: string;
   description: {
     problem: string;
     solution: string;
@@ -62,7 +63,7 @@ export default function Projects({ projects }: Props) {
           <ul className="mb-16 space-y-2">
             {projects.map((project) => (
               <li key={project.id}>
-                <ListArrow title={project.title} />
+                <ListArrow title={project.title} tag={project.tag} />
               </li>
             ))}
           </ul>

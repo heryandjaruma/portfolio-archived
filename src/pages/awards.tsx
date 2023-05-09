@@ -1,6 +1,5 @@
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
-import ListArrow from "./components/ListArrow";
 import Link from "next/link";
 import path from "path";
 import fs from "fs";

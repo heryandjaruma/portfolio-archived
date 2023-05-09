@@ -3,6 +3,7 @@
     "id": 1,
     "show": true,
     "title": "teaching assistant",
+    "tag": "teaching-assistant",
     "period": "Mar 2023 - Now",
     "association": {
       "name": "Duksung Women's University (덕성여자대학교)",
@@ -18,6 +19,7 @@
     "id": 2,
     "show": true,
     "title": "laboratory assistant",
+    "tag": "laboratory-assistant",
     "period": "Feb 2022 - Feb 2023",
     "association": {
       "name": "Binus University",
@@ -40,6 +42,7 @@
     "id": 4,
     "show": false,
     "title": "activist",
+    "tag": "activist",
     "period": "Nov 2021 - Feb 2022",
     "association": {
       "name": "Bina Nusantara Computer Club (BNCC)",
@@ -60,6 +63,7 @@
     "id": 3,
     "show": false,
     "title": "trainer",
+    "tag": "trainer",
     "period": "September 2022",
     "association": {
       "name": "HIMTI Binus University",
@@ -76,6 +80,7 @@
     "id": 6,
     "show": true,
     "title": "Student Council President",
+    "tag": "student-council-president",
     "period": "Sep 2019 - Aug 2020",
     "association": {
       "name": "OSIS Ekklesia SMAK 1 BPK Penabur Bandung",
@@ -91,6 +96,7 @@
     "id": 7,
     "show": true,
     "title": "Student Council Staff",
+    "tag": "student-council-staff",
     "period": "Nov 2018 - Aug 2019",
     "association": {
       "name": "OSIS Ekklesia SMAK 1 BPK Penabur Bandung",
@@ -106,6 +112,7 @@
     "id": 5,
     "show": true,
     "title": "volunteer",
+    "tag": "volunteer",
     "period": "Apr 2021 - Oct 2021",
     "association": {
       "name": "SejutaCita Indonesia",
