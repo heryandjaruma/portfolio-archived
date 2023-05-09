@@ -12,7 +12,7 @@
       "problemimage": true,
       "solutionimage": true
     },
-    "techstack": ["Java", "XML", "Android", "Firebase"],
+    "techstack": ["java", "xml", "android", "firebase"],
     "awards": {
       "1st Winner, Hackathon SoCS 2022": "HIMTI Binus University",
       "1st Winner, Exhibitor in Techfest": "School of Computer Science Binus University"
@@ -60,7 +60,7 @@
       "problemimage": true,
       "solutionimage": true
     },
-    "techstack": ["Java", "XML", "Android", "Firebase"],
+    "techstack": ["java", "xml", "android", "firebase"],
     "contributor": {
       "Heryan Djaruma": "Leader & Developer",
       "Joshua Wenata Sunarto": "Developer",
@@ -82,7 +82,7 @@
       "problemimage": true,
       "solutionimage": true
     },
-    "techstack": ["Laravel", "Bootstrap", "PHP"],
+    "techstack": ["laravel", "bootstrap", "php"],
     "contributor": {
       "Heryan Djaruma": "Developer & UI/UX Designer",
       "Joshua Wenata Sunarto": "Developer"
@@ -102,7 +102,7 @@
       "solutionimage": false,
       "topiclink": "https://dcase.community/challenge2020/task-sound-event-localization-and-detection"
     },
-    "techstack": ["Python"]
+    "techstack": ["python"]
   },
   {
     "id": 6,
@@ -114,6 +114,6 @@
     "description": {
       "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
     },
-    "techstack": ["Next", "Typescript", "Tailwind"]
+    "techstack": ["next", "typescript", "tailwind"]
   }
 ]
