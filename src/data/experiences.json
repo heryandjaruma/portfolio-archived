@@ -88,6 +88,21 @@
     }
   },
   {
+    "id": 7,
+    "show": true,
+    "title": "Student Council Staff",
+    "period": "Nov 2018 - Aug 2019",
+    "association": {
+      "name": "OSIS Ekklesia SMAK 1 BPK Penabur Bandung",
+      "logo": true
+    },
+    "location": "Bandung, Indonesia",
+    "description": {
+      "brief": "I had the opportunity to serve as a trainer for HIMTI's PBP Techno programming class, where I engaged with over 40 freshmen in an online setting.",
+      "detail": [""]
+    }
+  },
+  {
     "id": 5,
     "show": true,
     "title": "volunteer",

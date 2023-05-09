@@ -17,6 +17,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper";
 import Link from "next/link";
 import CapIcon from "./components/CapIcon";
+import NextPage from "./components/NextPage";
 
 interface Props {
   experiences: Experience[];
@@ -168,6 +169,7 @@ export default function Experience({ experiences }: Props) {
             ))}
           </ul>
         </div>
+        <NextPage next="awards" />
       </div>
       <Footer />
     </>

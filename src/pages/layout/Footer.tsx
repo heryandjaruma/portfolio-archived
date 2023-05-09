@@ -5,8 +5,8 @@ import BackToTopButton from "../components/BackToTop";
 export default function Footer() {
   return (
     <>
-      <div className="bg-blue py-2">
-        <div className="flex h-32  flex-row items-center justify-center gap-x-7">
+      <div className="bg-slate-50 py-4">
+        <div className="flex h-32 flex-row items-center justify-center gap-x-7">
           <Link href="https://github.com/heryandjaruma" className="bg-turq p-4">
             <Image
               src="/images/particles/github_icon.svg"
@@ -29,7 +29,7 @@ export default function Footer() {
             />
           </Link>
         </div>
-        <p className="w-full text-center text-xs text-white">
+        <p className="w-full text-center text-xs text-blk">
           Copyright © 2023 Heryan Djaruma
         </p>
       </div>

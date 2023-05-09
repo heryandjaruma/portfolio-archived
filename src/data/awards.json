@@ -32,6 +32,16 @@
     "description": ""
   },
   {
+    "id": 13,
+    "show": true,
+    "title": "awardee",
+    "program": "Beasiswa SejutaCita Batch 1",
+    "association": "SejutaCita Indonesia",
+    "type": "scholarship",
+    "date": "November 2022",
+    "description": ""
+  },
+  {
     "id": 4,
     "show": true,
     "title": "participant",
@@ -99,7 +109,7 @@
     "program": "L'AGIE TRIOP Team Supporter Challenge",
     "association": "SMA Trinitas",
     "type": "suppporter competition",
-    "date": "January 2019",
+    "date": "November 2018",
     "description": ""
   },
   {
@@ -109,7 +119,7 @@
     "program": "Ruang Xpresi BINUS",
     "association": "First Year Program (FYP) Binus University",
     "type": "talent competition",
-    "date": "January 2019",
+    "date": "September 2021",
     "description": ""
   },
   {

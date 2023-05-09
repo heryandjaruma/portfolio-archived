@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "education": "exchange student",
+    "association": "Duksung Women's University, Seoul",
+    "period": "February - July 2023",
+    "major": "Liberal Arts and Sciences",
+    "related": "Teaching Assistant"
+  },
+  {
+    "id": 2,
+    "education": "Undergraduate",
+    "association": "Binus University",
+    "period": "2025 (expected)",
+    "major": "Liberal Arts and Sciences",
+    "grase": "GPA 3.90/4.00",
+    "related": "Laboratory Assistant"
+  },
+  {
+    "id": 3,
+    "education": "high school diploma",
+    "association": "SMAK 1 BPK Penabur Bandung",
+    "period": "2021",
+    "major": "Natural Science",
+    "related": "Student Council President; Commencement Speaker"
+  }
+]

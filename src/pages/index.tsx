@@ -6,35 +6,89 @@ import path from "path";
 import fs from "fs";
 import { GetStaticProps } from "next";
 
+import { useRef, useState } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper";
+
 interface Props {
   news: Anews[];
+  educations: Education[];
+  showcases: Showcase[];
+}
+
+interface Showcase {
+  id: number;
+  filename: string;
 }
 
 interface Anews {
   id: number;
   show: boolean;
   title: string;
+  association: string;
+  keyword: string;
   description: string;
+  account: string;
   platform: string;
   link: string;
 }
 
-export default function Home({ news }: Props) {
+interface Education {
+  id: number;
+  education: string;
+  association: string;
+  period: string;
+  major: string;
+  grade?: string;
+  related: string;
+}
+
+export default function Home({ news, educations, showcases }: Props) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (event: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(event.clientX - scrollContainerRef.current!.offsetLeft);
+    setScrollLeft(scrollContainerRef.current!.scrollLeft);
+  };
+
+  const handleMouseMove = (event: React.MouseEvent) => {
+    if (!isDragging) return;
+    const x = event.clientX - scrollContainerRef.current!.offsetLeft;
+    const distance = x - startX;
+    scrollContainerRef.current!.scrollLeft = scrollLeft - distance;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
   return (
     <>
       <Header />
       <div
-        className={`mx-auto flex max-w-screen-2xl flex-col items-center sm:px-0`}
+        className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-slate-200`}
       >
-        <div className="mt-16 w-full bg-slate-100">
-          <div
-            id="welcome"
-            className="flex h-[500px] w-full flex-col justify-center px-8 font-display text-white"
-          >
-            <h1 className="text-left font-display text-5xl font-bold text-blue">
+        <div
+          id="welcome"
+          className="mt-16 flex w-full flex-col justify-center font-display text-white"
+        >
+          <div className="my-2 bg-white p-6">
+            <p className="font-light text-gray-500">Hello, I&apos;m</p>
+            <h1 className="text-left text-5xl font-bold text-blue">
               Heryan Djaruma
             </h1>
-            <p className="my-2 text-left text-blk">
+            <p className="mt-8 text-left font-bold text-gray-500">
               Find out more about me in this site
             </p>
             <div className="mt-4 flex flex-row">
@@ -61,7 +115,7 @@ export default function Home({ news }: Props) {
 
         <div
           id="works"
-          className="flex h-[500px] w-full items-center justify-center bg-turq py-6 px-4"
+          className="my-2 flex w-full items-center justify-center bg-primary p-6"
         >
           <div className="flex h-full flex-col justify-around">
             <h1 className="font-display text-4xl font-normal text-white">
@@ -80,7 +134,7 @@ export default function Home({ news }: Props) {
                   className="absolute right-0 top-0 w-9"
                 />
                 <h1 className="text-xl font-bold">Projects</h1>
-                <p>Award winning and technical projects</p>
+                <p>Technical projects</p>
               </div>
             </Link>
             <Link href="/experience">
@@ -112,7 +166,7 @@ export default function Home({ news }: Props) {
                   className="absolute right-0 top-0 w-7"
                 />
                 <h1 className="text-xl font-bold">Awards</h1>
-                <p>Content creating and rhythms</p>
+                <p>Scholarship and winning project</p>
               </div>
             </Link>
           </div>
@@ -120,13 +174,16 @@ export default function Home({ news }: Props) {
 
         <div
           id="education"
-          className="bg-fill flex h-[550px] w-full items-center justify-center bg-slate-50 py-6 px-4"
+          className="bg-fill my-2 flex h-[550px] w-full items-center justify-center bg-white p-6"
         >
           <div className="flex h-full flex-col justify-around">
-            <h1 className="mb-2 font-display text-4xl font-normal text-blue">
+            <h1 className="mb-2 font-display text-4xl font-normal text-blk">
               Education
             </h1>
             <ol className="relative border-l border-gray-200 font-display dark:border-gray-700">
+              {/* {educations.map((education) => (
+                <div key={education.id}>HELLO</div>
+              ))} */}
               <li className="mb-10 ml-4">
                 <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-blk bg-blk"></div>
                 <time className="mb-1 text-sm font-normal italic leading-none text-gray-400">
@@ -171,27 +228,147 @@ export default function Home({ news }: Props) {
             </ol>
           </div>
         </div>
-        <div id="mentions" className="w-full py-6">
-          <h1 className="mb-4 px-4 text-2xl text-blk">Mentions</h1>
-          <div className="overflow-x-auto">
+
+        <div
+          id="mentions"
+          className="mt-2 mb-4 w-full bg-blue pt-6 font-display"
+        >
+          <h1 className="px-6 font-display text-4xl font-normal text-white">
+            Mentions
+          </h1>
+
+          {/* <div id="apple-scrolling" className="overflow-x-auto">
             <div
-              className="scrolling-touch flex snap-x snap-mandatory space-x-3 px-4 pb-6"
+              className="scrolling-touch flex snap-x snap-mandatory space-x-3 px-4 pb-8"
               style={{ overflowX: "scroll", scrollbarWidth: "none" }}
             >
               {news.map((anews) => (
                 <div
                   key={anews.id}
-                  className="scroll-x-4 h-72 w-[88vw] flex-none snap-center rounded-lg bg-slate-200 shadow-lg"
+                  className="scroll-x-4 relative w-[88vw] flex-none snap-center overflow-clip rounded-lg bg-white shadow-xl"
                 >
-                  <Link href="/" className="">
-                    <h1 className="text-md font-semibold">
-                      {anews.title} on {anews.platform}
-                    </h1>
-                  </Link>
+                  <a
+                    target="_blank"
+                    href={anews.link}
+                    rel="noopener noreferrer"
+                    className="group relative"
+                  >
+                    <div className="relative bg-slate-200 duration-150 group-hover:bg-slate-300">
+                      <Image
+                        src={`/images/mentions/${anews.keyword}.jpg`}
+                        alt={`${anews.keyword}-mention`}
+                        width={1080}
+                        height={1080}
+                        className="h-72 object-cover"
+                      />
+                      <div className="absolute bottom-0 h-12 w-full truncate bg-gradient-to-t from-white px-3 text-sm">
+                        &nbsp;
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-center justify-between py-3 px-3">
+                      <h1 className="text-md text-sm font-normal text-blk">
+                        <span className="font-semibold">
+                          {anews.platform === "Instagram" ? "@" : ""}
+                          {anews.account}
+                        </span>{" "}
+                        on {anews.platform}
+                      </h1>
+                      <Image
+                        src={`/images/logo/${anews.platform}.svg`}
+                        alt={`${anews.platform}-logo`}
+                        width={1080}
+                        height={1080}
+                        className=" pointer-events-none h-8 w-8 rounded-full border-2"
+                      />
+                    </div>
+                  </a>
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
+          {/* <div id="showcase" className="overflow-x-auto">
+            <div
+              className="scrolling-touch flex space-x-3 px-4"
+              style={{
+                overflowX: "scroll",
+                scrollbarWidth: "none",
+                cursor: isDragging ? "grabbing" : "grab",
+              }}
+              ref={scrollContainerRef}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+            >
+              {showcases.map((showcase) => (
+                <div
+                  key={showcase.id}
+                  className="scroll-x-4 relative w-48 flex-none overflow-clip rounded-xl border-2 border-gray-800 bg-white"
+                >
+                  <div className="relative duration-150 group-hover:bg-slate-300">
+                    <Image
+                      src={`/images/index/${showcase.filename}.jpg`}
+                      alt={`${showcase.filename}-mention`}
+                      width={1080}
+                      height={1080}
+                      className="pointer-events-none object-contain"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div> */}
+          <Swiper
+            rewind={true}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            className="mySwiper mt-3"
+          >
+            {news.map((anews) => (
+              <SwiperSlide key={anews.id}>
+                <div className="scroll-x-4 relative w-full flex-none bg-white ">
+                  <a
+                    target="_blank"
+                    href={anews.link}
+                    rel="noopener noreferrer"
+                    className="group relative"
+                  >
+                    <div className="relative bg-slate-200 duration-150 group-hover:bg-slate-300">
+                      <Image
+                        src={`/images/mentions/${anews.keyword}.jpg`}
+                        alt={`${anews.keyword}-mention`}
+                        width={1080}
+                        height={1080}
+                        className="h-72 object-cover"
+                      />
+                      <div className="absolute bottom-0 h-12 w-full truncate bg-gradient-to-t from-white px-3 text-sm">
+                        &nbsp;
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-center justify-between py-3 px-3">
+                      <h1 className="text-md text-sm font-normal text-blk">
+                        <span className="font-semibold">
+                          {anews.platform === "Instagram" ? "@" : ""}
+                          {anews.account}
+                        </span>{" "}
+                        on {anews.platform}
+                      </h1>
+                      <Image
+                        src={`/images/logo/${anews.platform}.svg`}
+                        alt={`${anews.platform}-logo`}
+                        width={1080}
+                        height={1080}
+                        className=" pointer-events-none h-8 w-8 rounded-full border-2"
+                      />
+                    </div>
+                  </a>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
       <div id="contact">
@@ -202,17 +379,37 @@ export default function Home({ news }: Props) {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const filePath = path.join(process.cwd(), "src", "data", "news.json");
-  const fileContents = fs.readFileSync(filePath, "utf8");
-  const data: Anews[] = JSON.parse(fileContents);
+  const newsFilePath = path.join(process.cwd(), "src", "data", "news.json");
+  const newsFileContents = fs.readFileSync(newsFilePath, "utf8");
+  const newsData: Anews[] = JSON.parse(newsFileContents);
 
-  const filteredNews = data.filter((news) => {
-    return news.show === true;
+  const filteredNews = newsData.filter((anews) => {
+    return anews.show === true;
   });
+
+  const educationFilePath = path.join(
+    process.cwd(),
+    "src",
+    "data",
+    "educations.json"
+  );
+  const educationFileContents = fs.readFileSync(educationFilePath, "utf8");
+  const educationData: Education[] = JSON.parse(educationFileContents);
+
+  const showcaseFilePath = path.join(
+    process.cwd(),
+    "src",
+    "data",
+    "showcase.json"
+  );
+  const showcaseFileContents = fs.readFileSync(showcaseFilePath, "utf8");
+  const showcaseData: Showcase[] = JSON.parse(showcaseFileContents);
 
   return {
     props: {
       news: filteredNews,
+      educations: educationData,
+      showcases: showcaseData,
     },
   };
 };

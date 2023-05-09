@@ -2,33 +2,44 @@
   {
     "id": 1,
     "show": true,
-    "title": "SejutaCita",
+    "title": "Binus University",
+    "association": "binusuniversity",
+    "keyword": "duksung",
     "description": "",
     "platform": "Instagram",
-    "link": "https://"
+    "account": "binus_bandung",
+    "link": "https://www.instagram.com/p/CrQDpRML881/?utm_source=ig_web_copy_link"
+  },
+  {
+    "id": 4,
+    "show": true,
+    "title": "Binus University",
+    "association": "binusuniversity",
+    "keyword": "kamifriend",
+    "description": "",
+    "platform": "web",
+    "account": "Binus University",
+    "link": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/"
   },
   {
     "id": 2,
     "show": true,
-    "title": "Ruang Xpresi",
-    "description": "",
-    "platform": "YouTube",
-    "link": "https://"
+    "title": "SejutaCita",
+    "association": "sejutacita",
+    "keyword": "sahabatcita",
+    "description": "Simak dulu deh kata para pemenang beasiswa sebelumnya biar kamu lebih termotivasi buat ikutan dan tau gimana rasanya jadi pemenang! 🏆",
+    "platform": "Instagram",
+    "account": "sejutacita.id",
+    "link": "https://www.instagram.com/p/CnON6kNv1ie/?utm_source=ig_web_button_share_sheet"
   },
   {
     "id": 3,
     "show": true,
     "title": "Ruang Xpresi",
     "description": "",
+    "keyword": "ruangxpresi",
     "platform": "YouTube",
-    "link": "https://"
-  },
-  {
-    "id": 4,
-    "show": true,
-    "title": "Ruang Xpresi",
-    "description": "",
-    "platform": "YouTube",
+    "account": "BINUSTV Channel",
     "link": "https://"
   }
 ]

@@ -3,9 +3,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-  .scroll-snap-center {
-    scroll-snap-align: center;
-  }
-}

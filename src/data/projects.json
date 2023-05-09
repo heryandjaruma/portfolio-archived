@@ -17,10 +17,8 @@
       "1st Winner, Exhibitor in Techfest": "School of Computer Science Binus University"
     },
     "video": "UD4YgtE4WWU",
-    "news": {
-      "title": "Mahasiswa BINUS Bandung Memenangkan lomba SoCS Hackathon Kategori Lomba Software Development dan Artificial Intelligence",
-      "link": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/"
-    },
+    "newstitle": "Mahasiswa BINUS Bandung Memenangkan lomba SoCS Hackathon Kategori Lomba Software Development dan Artificial Intelligence",
+    "newslink": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/",
     "contributor": {
       "Heryan Djaruma": "Developer & UI/UX Designer",
       "Joshua Wenata Sunarto": "Developer",

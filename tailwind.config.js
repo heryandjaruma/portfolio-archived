@@ -18,7 +18,7 @@ module.exports = {
         lightturq: "#67e9e9",
 
         wht: "#e8ede4",
-        blk: "#242224",
+        blk: "#28282B",
         blue: "#486cea",
       },
       fontFamily: {
@@ -28,5 +28,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
