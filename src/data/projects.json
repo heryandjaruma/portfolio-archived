@@ -14,16 +14,33 @@
     },
     "techstack": ["java", "xml", "android", "firebase"],
     "awards": {
-      "1st Winner, Hackathon SoCS 2022": "HIMTI Binus University",
-      "1st Winner, Exhibitor in Techfest": "School of Computer Science Binus University"
+      "1": {
+        "name": "1st Winner, Hackathon SoCS 2022",
+        "association": "HIMTI Binus University"
+      },
+      "2": {
+        "name": "1st Winner, Exhibitor in Techfest",
+        "association": "School of Computer Science Binus University"
+      }
     },
     "video": "UD4YgtE4WWU",
-    "newstitle": "Mahasiswa BINUS Bandung Memenangkan lomba SoCS Hackathon Kategori Lomba Software Development dan Artificial Intelligence",
-    "newslink": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/",
+    "news": {
+      "title": "Mahasiswa BINUS Bandung Memenangkan lomba SoCS Hackathon Kategori Lomba Software Development dan Artificial Intelligence",
+      "link": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/"
+    },
     "contributor": {
-      "Heryan Djaruma": "Developer & UI/UX Designer",
-      "Joshua Wenata Sunarto": "Developer",
-      "Maria Auleria": "Business Lead/Product Manager"
+      "1": {
+        "name": "Heryan Djaruma",
+        "role": "Developer & UI/UX Designer"
+      },
+      "2": {
+        "name": "Joshua Wenata Sunarto",
+        "role": "Developer"
+      },
+      "3": {
+        "name": "Maria Auleria",
+        "role": "Business Lead/Product Manager"
+      }
     }
   },
   {
@@ -41,10 +58,22 @@
     },
     "techstack": ["Figma"],
     "contributor": {
-      "Heryan Djaruma": "Leader & Developer",
-      "Charlene Mariscal": "Member",
-      "Bella Berlianti": "Member",
-      "Ong Pey Wen": "Member"
+      "1": {
+        "name": "Heryan Djaruma",
+        "role": "Leader & Developer"
+      },
+      "2": {
+        "name": "Charlene Mariscal",
+        "role": "Member"
+      },
+      "3": {
+        "name": "Bella Berlianti",
+        "role": "Member"
+      },
+      "4": {
+        "name": "Ong Pey Wen",
+        "role": "Member"
+      }
     }
   },
   {
@@ -62,11 +91,26 @@
     },
     "techstack": ["java", "xml", "android", "firebase"],
     "contributor": {
-      "Heryan Djaruma": "Leader & Developer",
-      "Joshua Wenata Sunarto": "Developer",
-      "Fabian Habil Ramdhan": "UI/UX Designer",
-      "Ghassan Arsafa": "UI/UX Designer",
-      "Ivana Leonita": "UI/UX Designer"
+      "1": {
+        "name": "Heryan Djaruma",
+        "role": "Leader & Developer"
+      },
+      "2": {
+        "name": "Joshua Wenata Sunarto",
+        "role": "Developer"
+      },
+      "3": {
+        "name": "Fabian Habil Ramdhan",
+        "role": "UI/UX Designer"
+      },
+      "4": {
+        "name": "Ghassan Arsafa",
+        "role": "UI/UX Designer"
+      },
+      "5": {
+        "name": "Ivana Leonita",
+        "role": "UI/UX Designer"
+      }
     }
   },
   {
@@ -84,8 +128,14 @@
     },
     "techstack": ["laravel", "bootstrap", "php"],
     "contributor": {
-      "Heryan Djaruma": "Developer & UI/UX Designer",
-      "Joshua Wenata Sunarto": "Developer"
+      "1": {
+        "name": "Heryan Djaruma",
+        "role": "Developer & UI/UX Designer"
+      },
+      "2": {
+        "name": "Joshua Wenata Sunarto",
+        "role": "Developer"
+      }
     }
   },
   {

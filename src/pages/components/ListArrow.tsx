@@ -1,4 +1,7 @@
-export default function ListArrow(props: { title: string; tag: string }) {
+export default function ListArrow(props: {
+  title: string | undefined;
+  tag: string | undefined;
+}) {
   return (
     <>
       <li>

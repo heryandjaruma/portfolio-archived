@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
 const ShowcaseItem = (props: {
-  id: string;
-  tag: string;
+  id: string | undefined;
+  tag: string | undefined;
   children: ReactNode;
 }) => {
   return (

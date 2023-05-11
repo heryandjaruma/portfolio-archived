@@ -12,37 +12,26 @@ import Footer from "./layout/Footer";
 import CodeIcon from "./components/CodeIcon";
 import NextPage from "./components/NextPage";
 
-interface Props {
-  projects: Project[];
-}
+import Project from "@/interface/project";
+import { useEffect, useState } from "react";
 
-interface Project {
-  show: boolean;
-  id: number;
-  logo: boolean;
-  logotext: boolean;
-  title: string;
-  tag: string;
-  description: {
-    problem: string;
-    solution: string;
-    problemimage: boolean;
-    solutionimage: boolean;
-    topiclink: string;
-  };
-  techstack: string[];
-  awards: {
-    [key: string]: string;
-  };
-  video: string;
-  newstitle: string;
-  newslink: string;
-  contributor: {
-    [key: string]: string;
-  };
-}
+export default function Projects() {
+  const [projects, setProjects] = useState<Project[]>([]);
 
-export default function Projects({ projects }: Props) {
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch("/api/projects");
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error("Error fetching awards:", error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
   return (
     <>
       <Header />
@@ -86,8 +75,14 @@ export default function Projects({ projects }: Props) {
           <ul className="">
             {projects.map((project) => (
               <li key={project.id} className="">
+                <Link
+                  className="rounded-full border-2 bg-white p-2"
+                  href={`/projects/${project.id}`}
+                >
+                  {project.title}
+                </Link>
                 <ShowcaseItem id={project.title} tag={project.tag}>
-                  <ShowIf isExist={project.description.problemimage}>
+                  <ShowIf isExist={project.description?.problemimage}>
                     <div className="mb-4 px-4 py-2">
                       <Image
                         src={`/images/projects/${project.title}_cover.jpg`}
@@ -138,17 +133,17 @@ export default function Projects({ projects }: Props) {
                     <div
                       className="text-left text-blk"
                       dangerouslySetInnerHTML={{
-                        __html: project.description.problem,
+                        __html: project.description?.problem,
                       }}
                     ></div>
                   </div>
 
-                  <ShowIf isExist={project.description.solution}>
+                  <ShowIf isExist={project.description?.solution}>
                     <div
                       id="project-solution"
                       className="bg-blue py-14 px-4 text-white"
                     >
-                      <ShowIf isExist={project.description.solutionimage}>
+                      <ShowIf isExist={project.description?.solutionimage}>
                         <Image
                           src={`/images/projects/${project.title}_solution.jpg`}
                           alt={`${project.title}-cover`}
@@ -161,10 +156,10 @@ export default function Projects({ projects }: Props) {
                       <div
                         className="text-left"
                         dangerouslySetInnerHTML={{
-                          __html: project.description.solution,
+                          __html: project.description?.solution,
                         }}
                       ></div>
-                      <ShowIf isExist={project.description.topiclink}>
+                      <ShowIf isExist={project.description?.topiclink}>
                         <p className="mt-6">
                           To Learn more about this topic, refer to{" "}
                           {/* <Link
@@ -237,10 +232,12 @@ export default function Projects({ projects }: Props) {
                         <ul className="space-y-2">
                           {project.awards &&
                             Object.entries(project.awards).map(
-                              ([key, value]) => (
+                              ([key, award]) => (
                                 <li key={key}>
-                                  <h1 className="font-medium">{key}</h1>
-                                  <h1 className="font-light">by {value}</h1>
+                                  <h1 className="font-medium">{award.name}</h1>
+                                  <h1 className="font-light">
+                                    by {award.association}
+                                  </h1>
                                 </li>
                               )
                             )}
@@ -249,21 +246,21 @@ export default function Projects({ projects }: Props) {
                     </div>
                   </ShowIf>
 
-                  <ShowIf isExist={project.newslink}>
+                  <ShowIf isExist={project.news}>
                     <div
                       id="project-news"
                       className="bg-blue px-4 py-14 text-white"
                     >
                       <h1 className="text-2xl font-medium">News</h1>
                       <div id="news-list" className="my-6">
-                        {project.newslink && (
+                        {project.news?.link && (
                           <a
                             target="_blank"
-                            href={project.newslink}
+                            href={project.news.link}
                             rel="noopener noreferrer"
                             className="text-center font-light underline"
                           >
-                            {project.newstitle}
+                            {project.news.title}
                           </a>
                         )}
                       </div>
@@ -279,22 +276,22 @@ export default function Projects({ projects }: Props) {
                       <ul className="space-y-2">
                         {project.contributor &&
                           Object.entries(project.contributor).map(
-                            ([key, value]) => (
+                            ([key, contributor]) => (
                               <li key={key}>
-                                {key === "Heryan Djaruma" ? (
+                                {contributor?.name === "Heryan Djaruma" ? (
                                   <>
                                     <Link href="/" className="underline">
-                                      {key}
+                                      {contributor.role}
                                     </Link>
                                     <span className="font-extralight">
-                                      , {value}
+                                      , {contributor?.name}
                                     </span>
                                   </>
                                 ) : (
                                   <>
-                                    {key}
+                                    {contributor?.role}
                                     <span className="font-extralight">
-                                      , {value}
+                                      , {contributor?.name}
                                     </span>
                                   </>
                                 )}
@@ -317,18 +314,22 @@ export default function Projects({ projects }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const filePath = path.join(process.cwd(), "src", "data", "projects.json");
-  const fileContents = fs.readFileSync(filePath, "utf8");
-  const data: Project[] = JSON.parse(fileContents);
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+//   const filePath = path.join(process.cwd(), "src", "data", "projects.json");
+//   const fileContents = fs.readFileSync(filePath, "utf8");
+//   const data: Project[] = JSON.parse(fileContents);
 
-  const filteredProjects = data.filter((project) => {
-    return project.show === true;
-  });
+//   const filteredProjects = data.filter((project) => {
+//     return project.show === true;
+//   });
 
-  return {
-    props: {
-      projects: filteredProjects,
-    },
-  };
-};
+//   return {
+//     props: {
+//       projects: filteredProjects,
+//     },
+//   };
+// };
+
+// export async function getStaticPaths() {
+//   // Return a list of possible value for id
+// }

@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useState } from "react";
-import GlobeIcon from "../components/GlobeIcon";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,21 +11,28 @@ export default function Header() {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleButtonClick = () => {
+    router.push("/");
+  };
+
   return (
     <>
       <nav className="sticky top-0 z-50 font-display font-semibold">
         <div className="absolute mx-auto w-full bg-white px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="">
-              <Link href="/">
+              <button
+                onClick={handleButtonClick}
+                className="flex items-center justify-between"
+              >
                 <Image
                   src="/images/logo/LOGO.svg"
                   alt="my_logo"
-                  className="w-10"
+                  className="pointer-events-none w-10"
                   width={100}
                   height={100}
                 />
-              </Link>
+              </button>
             </div>
             <div className="hidden md:block">
               <div className="ml-4 flex items-center space-x-4">

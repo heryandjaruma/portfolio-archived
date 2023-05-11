@@ -28,7 +28,7 @@ const BackToTopButton = () => {
 
   return (
     <button
-      className={`fixed bottom-5 right-5 z-50 rounded-full bg-lightblu p-3 text-white shadow-lg ${
+      className={`fixed bottom-8 right-5 z-50 rounded-full bg-lightblu p-3 text-white shadow-lg ${
         isVisible ? "visible" : "invisible"
       }`}
       onClick={scrollToTop}
@@ -38,7 +38,7 @@ const BackToTopButton = () => {
         alt="back-to-top-button"
         height={100}
         width={100}
-        className="h-5 w-5"
+        className="h-8 w-8 p-1"
       />
     </button>
   );
