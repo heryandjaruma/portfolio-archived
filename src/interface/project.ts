@@ -28,7 +28,7 @@ interface Project {
   logotext?: boolean;
   title?: string;
   tag?: string;
-  description?: Description;
+  description: Description;
   techstack?: string[];
   awards?: {
     [key: string]: {
