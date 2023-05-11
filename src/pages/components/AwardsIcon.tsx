@@ -7,7 +7,7 @@ export default function AwardsIcon() {
       alt="award icon"
       width={160}
       height={160}
-      className="h-16 w-16"
+      className="pointer-events-none w-8 sm:w-12 md:w-14"
     />
   );
 }

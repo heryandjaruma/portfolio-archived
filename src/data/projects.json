@@ -8,13 +8,13 @@
     "tag": "kamifriend",
     "type": "code",
     "description": {
-      "brief": "Award-winning project",
+      "brief": "Build Your Business Network",
       "problem": "As the Indonesian economy is rapidly growing, there is a need for an application that can help local small businesses (UMKM) compete in these conditions. We are aware that some main problems include <strong> a lack of business education, difficulty in finding product suppliers, and a one-man-show approach </strong>.",
       "solution": "Based on a one-on-one interview with a local business owner, Angelika Gw, <strong> our team developed an app with three main features </strong> to specifically address the three problems mentioned above.",
       "problemimage": true,
       "solutionimage": true
     },
-    "techstack": ["java", "xml", "android", "firebase"],
+    "techstack": ["Java", "XML", "Android", "Firebase"],
     "awards": {
       "1": {
         "name": "1st Winner, Hackathon SoCS 2022",
@@ -25,7 +25,11 @@
         "association": "School of Computer Science Binus University"
       }
     },
-    "video": "UD4YgtE4WWU",
+    "result": {
+      "link": "https://youtu.be/UD4YgtE4WWU",
+      "type": "video",
+      "properplatform": "YouTube"
+    },
     "news": {
       "title": "Mahasiswa BINUS Bandung Memenangkan lomba SoCS Hackathon Kategori Lomba Software Development dan Artificial Intelligence",
       "link": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/"
@@ -60,7 +64,7 @@
       "problemimage": true,
       "solutionimage": true
     },
-    "techstack": ["figma"],
+    "techstack": ["Figma"],
     "contributor": {
       "1": {
         "name": "Heryan Djaruma",
@@ -95,7 +99,7 @@
       "problemimage": true,
       "solutionimage": true
     },
-    "techstack": ["java", "xml", "android", "firebase"],
+    "techstack": ["Java", "XML", "Android", "Firebase"],
     "contributor": {
       "1": {
         "name": "Heryan Djaruma",
@@ -134,7 +138,7 @@
       "problemimage": true,
       "solutionimage": true
     },
-    "techstack": ["laravel", "bootstrap", "php"],
+    "techstack": ["Laravel", "Bootstrap", "PHP"],
     "contributor": {
       "1": {
         "name": "Heryan Djaruma",
@@ -162,7 +166,7 @@
       "solutionimage": false,
       "topiclink": "https://dcase.community/challenge2020/task-sound-event-localization-and-detection"
     },
-    "techstack": ["python"]
+    "techstack": ["Python"]
   },
   {
     "id": 6,
@@ -176,7 +180,7 @@
       "brief": "Personal web portfolio",
       "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
     },
-    "techstack": ["next", "typescript", "tailwind"]
+    "techstack": ["Next", "Typescript", "Tailwind"]
   },
   {
     "id": 7,
@@ -190,7 +194,7 @@
       "brief": "Solo live arrangement",
       "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
     },
-    "techstack": ["next", "typescript", "tailwind"]
+    "techstack": ["Next", "Typescript", "Tailwind"]
   },
   {
     "id": 8,
@@ -198,13 +202,19 @@
     "logo": false,
     "logotext": false,
     "title": "On the Other Side",
-    "tag": "personal-website",
+    "tag": "on-the-other-side",
     "type": "music",
-    "video": "bNSb5cvyQBI",
+    "result": {
+      "link": "https://youtu.be/bNSb5cvyQBI",
+      "type": "video",
+      "properplatform": "YouTube"
+    },
     "description": {
       "brief": "Short movie OST",
-      "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
+      "problem": "",
+      "solution": "",
+      "problemimage": true
     },
-    "techstack": ["next", "typescript", "tailwind"]
+    "techstack": ["Cubase"]
   }
 ]

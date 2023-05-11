@@ -43,11 +43,13 @@ export default function Awards() {
         >
           <div
             id="welcome"
-            className="mt-16 flex h-[260px] w-full flex-col justify-center bg-primary px-4 pt-10 font-display font-semibold text-white"
+            className="mt-16 flex h-[260px] w-full flex-col justify-center bg-primary px-4 pt-10 font-display font-semibold text-white md:px-8"
           >
             <div className="mb-10">
               <AwardsIcon />
-              <h1 className="py-3 text-5xl font-extrabold">Awards</h1>
+              <h1 className="py-3 text-5xl font-extrabold sm:text-6xl md:text-7xl">
+                Awards
+              </h1>
               <p className="mb-2 text-xl font-normal text-gray-200">
                 I&apos;ve received
               </p>
@@ -61,7 +63,7 @@ export default function Awards() {
             {awards.map((award) => (
               <button
                 key={award.id}
-                className="col-span-1 row-span-1 flex h-full w-11/12 flex-col rounded-xl bg-slate-100 py-4 px-4 duration-150 hover:scale-95 hover:bg-slate-200"
+                className="col-span-1 row-span-1 flex h-full w-full flex-col rounded-xl bg-slate-100 py-4 px-4 duration-150 md:hover:scale-95 md:hover:bg-slate-200"
                 onClick={() => handleButtonClick(router, `/awards/${award.id}`)}
               >
                 <h1 className="mb-2 w-fit rounded-full bg-turq py-1 px-2 text-xs font-semibold capitalize text-white">
@@ -70,11 +72,13 @@ export default function Awards() {
                 <h1 className="text-start text-4xl font-semibold capitalize text-blue">
                   {award.title}
                 </h1>
-                <p className="text-start text-blk">{award.program}</p>
-                <p className="mt-3 text-end text-xs text-gray-600">
+                <p className="text-start text-gray-600">{award.program}</p>
+                <p className="mt-5 w-full text-end text-xs text-gray-600">
                   by {award.association}
                 </p>
-                <p className="text-end text-xs text-gray-600">{award.date}</p>
+                <p className="w-full text-end text-xs text-gray-600">
+                  {award.date}
+                </p>
               </button>
             ))}
           </div>

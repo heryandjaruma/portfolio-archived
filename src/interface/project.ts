@@ -22,6 +22,12 @@ interface News {
   link?: string;
 }
 
+interface Result {
+  link: string;
+  type: string;
+  properplatform: string;
+}
+
 interface Project {
   id: number;
   show?: boolean;
@@ -35,7 +41,7 @@ interface Project {
   awards?: {
     [key: string]: Award;
   };
-  video?: string;
+  result?: Result;
   news?: News;
   contributor?: {
     [key: string]: Contributor | undefined;
