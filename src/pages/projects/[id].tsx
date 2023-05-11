@@ -73,7 +73,7 @@ export default function ProjectDetailPage() {
                 <Image
                   src={`/images/logo/${project.tag}.svg`}
                   alt={`${project.tag}-logo`}
-                  className="w-10"
+                  className="pointer-events-none w-10"
                   width={64}
                   height={64}
                 />
@@ -83,7 +83,7 @@ export default function ProjectDetailPage() {
                   <Image
                     src={`/images/logo/${project.tag}_logotext.svg`}
                     alt={`${project.tag}-logo-text`}
-                    className="w-36"
+                    className="pointer-events-none w-36"
                     width={1000}
                     height={1000}
                   />
@@ -109,7 +109,7 @@ export default function ProjectDetailPage() {
                     alt={`${project.tag}-cover`}
                     width={960}
                     height={960}
-                    className="rounded-lg shadow-md"
+                    className="pointer-events-none rounded-lg shadow-md"
                   />
                 </div>
               </ShowIf>
@@ -129,7 +129,7 @@ export default function ProjectDetailPage() {
                     alt={`${project.title}-cover`}
                     width={`720`}
                     height={720}
-                    className="mb-6 rounded-lg shadow-md"
+                    className="pointer-events-none mb-6 rounded-lg shadow-md"
                   />
                 </ShowIf>
                 <h1 className="text-2xl font-medium">Solution</h1>
@@ -182,7 +182,7 @@ export default function ProjectDetailPage() {
                           alt={`${tech}-logo`}
                           width={100}
                           height={100}
-                          className="h-12 w-12 object-contain"
+                          className="pointer-events-none h-12 w-12 object-contain"
                         />
                         <h1 className="">{tech}</h1>
                       </div>
@@ -213,7 +213,7 @@ export default function ProjectDetailPage() {
                   alt={`${project.title}-cover`}
                   width={`720`}
                   height={720}
-                  className="mb-10 rounded-lg shadow-md"
+                  className="pointer-events-none mb-10 rounded-lg shadow-md"
                 />
                 <div id="awards-list" className="my-6">
                   <ul className="space-y-2">
@@ -260,18 +260,18 @@ export default function ProjectDetailPage() {
                         <li key={key}>
                           {contributor?.name === "Heryan Djaruma" ? (
                             <>
-                              <Link href="/" className="underline">
-                                {contributor.role}
-                              </Link>
+                              <span className="underline">
+                                {contributor.name}
+                              </span>
                               <span className="font-extralight">
-                                , {contributor?.name}
+                                , {contributor?.role}
                               </span>
                             </>
                           ) : (
                             <>
-                              {contributor?.role}
+                              {contributor?.name}
                               <span className="font-extralight">
-                                , {contributor?.name}
+                                , {contributor?.role}
                               </span>
                             </>
                           )}
