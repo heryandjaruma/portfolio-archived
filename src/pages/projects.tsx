@@ -68,7 +68,7 @@ export default function Projects() {
 
         <hr className="mx-4 mt-10 h-px w-[90vw] border-0 bg-gray-400" />
 
-        <div id="contents" className="mt-2 w-full">
+        <div id="contents" className="mt-2 w-full bg-blue">
           <h1 className="px-4 font-display font-bold uppercase text-gray-400">
             highlights
           </h1>
