@@ -49,7 +49,7 @@ export default function Projects() {
 
         <div
           id="contents"
-          className="grid w-full grid-cols-1 place-items-center gap-4 bg-blue p-4 px-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          className="grid w-full grid-cols-1 place-items-center gap-x-4 gap-y-8 bg-blue pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
           {projects.map((project) => (
             <div
@@ -57,7 +57,7 @@ export default function Projects() {
               onClick={() =>
                 handleButtonClick(router, `/projects/${project.id}`)
               }
-              className="relative col-span-1 row-span-1 aspect-[4/3] w-11/12 overflow-hidden rounded-xl bg-slate-100 shadow-xl duration-150 hover:bg-violet-100"
+              className="relative col-span-1 row-span-1 aspect-[4/3] w-11/12 overflow-hidden rounded-xl bg-slate-100 shadow-xl duration-150 hover:scale-95 hover:bg-slate-200"
             >
               <div
                 id="title"
@@ -72,7 +72,7 @@ export default function Projects() {
                     width={300}
                     height={300}
                     alt="logo image"
-                    className="w-60"
+                    className="pointer-events-none w-60"
                   />
                 ) : (
                   <div className="text-4xl font-semibold capitalize text-blue">
@@ -94,7 +94,7 @@ export default function Projects() {
                     width={300}
                     height={300}
                     alt="logo image"
-                    className="w-48 p-4"
+                    className="pointer-events-none w-44 p-4"
                   />
                 ) : (
                   <Image
@@ -102,7 +102,7 @@ export default function Projects() {
                     width={300}
                     height={300}
                     alt="logo image"
-                    className="w-48 p-4"
+                    className="pointer-events-none w-44 p-4"
                   />
                 )}
               </div>

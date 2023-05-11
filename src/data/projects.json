@@ -187,7 +187,7 @@
     "tag": "personal-website",
     "type": "music",
     "description": {
-      "brief": "Music solo live arrangement",
+      "brief": "Solo live arrangement",
       "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
     },
     "techstack": ["next", "typescript", "tailwind"]

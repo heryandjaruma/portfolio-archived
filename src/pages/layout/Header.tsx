@@ -74,9 +74,9 @@ export default function Header() {
                     Awards
                   </p>
                 </Link>
-                {/* Add more menu items */}
               </div>
             </div>
+
             <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
@@ -148,15 +148,7 @@ export default function Header() {
                     Awards
                   </p>
                 </Link>
-                {/* Add more menu items */}
               </div>
-              {/* <div className="flex w-full flex-row items-center justify-center space-x-2 py-3 rounded-non">
-                <GlobeIcon height={5} width={5} />
-                <div className="grid grid-cols-3 items-center justify-center divide-x-2 text-gray-400">
-                  <Link href="/" className="hover:text-gray-500">en&nbsp;</Link>
-                  <Link href="/" className="hover:text-gray-500">&nbsp;in</Link>
-                </div>
-              </div> */}
             </div>
           )}
         </div>

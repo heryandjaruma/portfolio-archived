@@ -6,7 +6,8 @@
     "association": "binusuniversity",
     "keyword": "duksung",
     "description": "",
-    "platform": "Instagram",
+    "platform": "instagram",
+    "properplatform": "Instagram",
     "account": "binus_bandung",
     "link": "https://www.instagram.com/p/CrQDpRML881/?utm_source=ig_web_copy_link"
   },
@@ -18,6 +19,7 @@
     "keyword": "kamifriend",
     "description": "",
     "platform": "web",
+    "properplatform": "web",
     "account": "Binus University",
     "link": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/"
   },
@@ -28,7 +30,8 @@
     "association": "sejutacita",
     "keyword": "sahabatcita",
     "description": "Simak dulu deh kata para pemenang beasiswa sebelumnya biar kamu lebih termotivasi buat ikutan dan tau gimana rasanya jadi pemenang! 🏆",
-    "platform": "Instagram",
+    "platform": "instagram",
+    "properplatform": "Instagram",
     "account": "sejutacita.id",
     "link": "https://www.instagram.com/p/CnON6kNv1ie/?utm_source=ig_web_button_share_sheet"
   },
@@ -38,7 +41,8 @@
     "title": "Ruang Xpresi",
     "description": "",
     "keyword": "ruangxpresi",
-    "platform": "YouTube",
+    "platform": "youtube",
+    "properplatform": "YouTube",
     "account": "BINUSTV Channel",
     "link": "https://"
   }

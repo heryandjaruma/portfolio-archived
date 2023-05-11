@@ -7,13 +7,12 @@ import { useEffect, useState } from "react";
 import Award from "@/interface/award";
 import { useRouter } from "next/router";
 
-import LoadingPage from "../pages/components/LaodingPage";
+import LoadingPage from "./components/LoadingPage";
 import { handleButtonClick } from "@/utils/buttonUtils";
 
 export default function Awards() {
   const [awards, setAwards] = useState<Award[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-
   const router = useRouter();
 
   // API fetch
@@ -55,35 +54,29 @@ export default function Awards() {
             </div>
           </div>
 
-          <div id="contents" className="my-4 w-full px-4">
-            <div className="space-y-4">
-              {awards.map((award) => (
-                <ShowcaseItem key={award.id} id={award.title} tag={award.type}>
-                  <button
-                    className="rounded-xl bg-slate-100 py-4 px-4 duration-150 hover:bg-slate-200"
-                    onClick={() =>
-                      handleButtonClick(router, `/awards/${award.id}`)
-                    }
-                  >
-                    <div className="flex flex-row items-center space-x-2">
-                      <h1 className="text-2xl font-semibold capitalize text-blue">
-                        {award.title}
-                      </h1>
-                      <h1 className="rounded-full bg-turq py-1 px-2 text-xs capitalize text-white">
-                        {award.type}
-                      </h1>
-                    </div>
-                    <p className="text-start text-blk">{award.program}</p>
-                    <p className="mt-3 text-end text-xs text-gray-600">
-                      by {award.association}
-                    </p>
-                    <p className="text-end text-xs text-gray-600">
-                      {award.date}
-                    </p>
-                  </button>
-                </ShowcaseItem>
-              ))}
-            </div>
+          <div
+            id="contents"
+            className="col-span-1 my-4 grid w-full place-items-center gap-x-4 gap-y-6 px-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          >
+            {awards.map((award) => (
+              <button
+                key={award.id}
+                className="col-span-1 row-span-1 flex h-full w-11/12 flex-col rounded-xl bg-slate-100 py-4 px-4 duration-150 hover:scale-95 hover:bg-slate-200"
+                onClick={() => handleButtonClick(router, `/awards/${award.id}`)}
+              >
+                <h1 className="mb-2 w-fit rounded-full bg-turq py-1 px-2 text-xs font-semibold capitalize text-white">
+                  {award.type}
+                </h1>
+                <h1 className="text-start text-4xl font-semibold capitalize text-blue">
+                  {award.title}
+                </h1>
+                <p className="text-start text-blk">{award.program}</p>
+                <p className="mt-3 text-end text-xs text-gray-600">
+                  by {award.association}
+                </p>
+                <p className="text-end text-xs text-gray-600">{award.date}</p>
+              </button>
+            ))}
           </div>
         </div>
       )}

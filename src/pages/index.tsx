@@ -39,6 +39,7 @@ interface Anews {
   description: string;
   account: string;
   platform: string;
+  properplatform: string;
   link: string;
 }
 
@@ -136,63 +137,50 @@ export default function Home({ news, educations, showcases }: Props) {
             <h1 className="font-display text-4xl font-normal text-white">
               Works
             </h1>
-            <button
-              onClick={() => handleButtonClick(router, "/projects")}
-              className="text-start"
-            >
-              <div
-                id="roller"
-                className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
+            <div className="w-full space-y-4 py-2">
+              <button
+                onClick={() => handleButtonClick(router, "/projects")}
+                className="relative w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white"
               >
                 <Image
                   src="/images/icons/code.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
-                  className="absolute right-0 top-0 w-9"
+                  className="pointer-events-none absolute right-0 top-0 w-9"
                 />
                 <h1 className="text-xl font-bold">Projects</h1>
                 <p>Technical projects</p>
-              </div>
-            </button>
-            <button
-              onClick={() => handleButtonClick(router, "/experience")}
-              className="text-start"
-            >
-              <div
-                id="roller"
-                className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
+              </button>
+              <button
+                onClick={() => handleButtonClick(router, "/experience")}
+                className="relative w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white"
               >
                 <Image
                   src="/images/icons/cap.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
-                  className="absolute right-0 top-0 w-9"
+                  className="pointer-events-none absolute right-0 top-0 w-9"
                 />
                 <h1 className="text-xl font-bold">Experience</h1>
                 <p>Laboratory assistant and teaching</p>
-              </div>
-            </button>
-            <button
-              onClick={() => handleButtonClick(router, "/awards")}
-              className="text-start"
-            >
-              <div
-                id="roller"
-                className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
+              </button>
+              <button
+                onClick={() => handleButtonClick(router, "/awards")}
+                className="relative w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white"
               >
                 <Image
                   src="/images/icons/awards.svg"
                   alt="award icon"
                   width={32}
                   height={32}
-                  className="absolute right-0 top-0 w-7"
+                  className="pointer-events-none absolute right-0 top-0 w-7"
                 />
                 <h1 className="text-xl font-bold">Awards</h1>
                 <p>Scholarship and winning project</p>
-              </div>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -282,17 +270,17 @@ export default function Home({ news, educations, showcases }: Props) {
                         height={1080}
                         className="h-96 object-cover"
                       />
-                      <div className="absolute bottom-0 h-12 w-full truncate bg-gradient-to-t from-white px-3 text-sm">
+                      <div className="absolute bottom-0 h-1/2 w-full truncate bg-gradient-to-t from-white px-3 text-sm">
                         &nbsp;
                       </div>
                     </div>
                     <div className="flex flex-row items-center justify-between py-3 px-3">
                       <h1 className="text-md text-sm font-normal text-blk">
                         <span className="font-semibold">
-                          {anews.platform === "Instagram" ? "@" : ""}
+                          {anews.platform === "instagram" ? "@" : ""}
                           {anews.account}
                         </span>{" "}
-                        on {anews.platform}
+                        on {anews.properplatform}
                       </h1>
                       <Image
                         src={`/images/logo/${anews.platform}.svg`}
@@ -351,88 +339,3 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     },
   };
 };
-
-{
-  /* <div id="apple-scrolling" className="overflow-x-auto">
-            <div
-              className="scrolling-touch flex snap-x snap-mandatory space-x-3 px-4 pb-8"
-              style={{ overflowX: "scroll", scrollbarWidth: "none" }}
-            >
-              {news.map((anews) => (
-                <div
-                  key={anews.id}
-                  className="scroll-x-4 relative w-[88vw] flex-none snap-center overflow-clip rounded-lg bg-white shadow-xl"
-                >
-                  <a
-                    target="_blank"
-                    href={anews.link}
-                    rel="noopener noreferrer"
-                    className="group relative"
-                  >
-                    <div className="relative bg-slate-200 duration-150 group-hover:bg-slate-300">
-                      <Image
-                        src={`/images/mentions/${anews.keyword}.jpg`}
-                        alt={`${anews.keyword}-mention`}
-                        width={1080}
-                        height={1080}
-                        className="h-72 object-cover"
-                      />
-                      <div className="absolute bottom-0 h-12 w-full truncate bg-gradient-to-t from-white px-3 text-sm">
-                        &nbsp;
-                      </div>
-                    </div>
-                    <div className="flex flex-row items-center justify-between py-3 px-3">
-                      <h1 className="text-md text-sm font-normal text-blk">
-                        <span className="font-semibold">
-                          {anews.platform === "Instagram" ? "@" : ""}
-                          {anews.account}
-                        </span>{" "}
-                        on {anews.platform}
-                      </h1>
-                      <Image
-                        src={`/images/logo/${anews.platform}.svg`}
-                        alt={`${anews.platform}-logo`}
-                        width={1080}
-                        height={1080}
-                        className=" pointer-events-none h-8 w-8 rounded-full border-2"
-                      />
-                    </div>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div> */
-}
-{
-  /* <div id="showcase" className="overflow-x-auto">
-            <div
-              className="scrolling-touch flex space-x-3 px-4"
-              style={{
-                overflowX: "scroll",
-                scrollbarWidth: "none",
-                cursor: isDragging ? "grabbing" : "grab",
-              }}
-              ref={scrollContainerRef}
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-            >
-              {showcases.map((showcase) => (
-                <div
-                  key={showcase.id}
-                  className="scroll-x-4 relative w-48 flex-none overflow-clip rounded-xl border-2 border-gray-800 bg-white"
-                >
-                  <div className="relative duration-150 group-hover:bg-slate-300">
-                    <Image
-                      src={`/images/index/${showcase.filename}.jpg`}
-                      alt={`${showcase.filename}-mention`}
-                      width={1080}
-                      height={1080}
-                      className="pointer-events-none object-contain"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */
-}

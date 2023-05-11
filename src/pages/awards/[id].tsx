@@ -5,7 +5,7 @@ import Header from "../layout/Header";
 import Footer from "../layout/Footer";
 import Image from "next/image";
 
-import LoadingPage from "../components/LaodingPage";
+import LoadingPage from "../components/LoadingPage";
 
 const AwardDetailPage = () => {
   const router = useRouter();
