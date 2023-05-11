@@ -105,8 +105,8 @@ export default function ProjectDetailPage() {
               <ShowIf isExist={project.description?.problemimage}>
                 <div className="mb-4 py-2">
                   <Image
-                    src={`/images/projects/${project.title}_cover.jpg`}
-                    alt={`${project.title}-cover`}
+                    src={`/images/projects/${project.tag}_cover.jpg`}
+                    alt={`${project.tag}-cover`}
                     width={960}
                     height={960}
                     className="rounded-lg shadow-md"
