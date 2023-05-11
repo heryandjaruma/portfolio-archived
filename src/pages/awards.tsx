@@ -1,9 +1,5 @@
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
-import Link from "next/link";
-import path from "path";
-import fs from "fs";
-import { GetStaticProps } from "next";
 import AwardsIcon from "./components/AwardsIcon";
 import ShowcaseItem from "./layout/ShowcaseItem";
 import { useEffect, useState } from "react";
@@ -12,6 +8,7 @@ import Award from "@/interface/award";
 import { useRouter } from "next/router";
 
 import LoadingPage from "../pages/components/LaodingPage";
+import { handleButtonClick } from "@/utils/buttonUtils";
 
 export default function Awards() {
   const [awards, setAwards] = useState<Award[]>([]);
@@ -35,11 +32,6 @@ export default function Awards() {
 
     fetchAwards();
   }, []);
-
-  // handling button
-  const handleButtonClick = (page: string) => {
-    router.push(page);
-  };
 
   return (
     <>
@@ -69,7 +61,9 @@ export default function Awards() {
                 <ShowcaseItem key={award.id} id={award.title} tag={award.type}>
                   <button
                     className="rounded-xl bg-slate-100 py-4 px-4 duration-150 hover:bg-slate-200"
-                    onClick={() => handleButtonClick(`/awards/${award.id}`)}
+                    onClick={() =>
+                      handleButtonClick(router, `/awards/${award.id}`)
+                    }
                   >
                     <div className="flex flex-row items-center space-x-2">
                       <h1 className="text-2xl font-semibold capitalize text-blue">

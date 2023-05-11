@@ -16,7 +16,7 @@ export default function NextPage({ next }: Props) {
           href={`/${next}`}
           className="ml-2 font-semibold capitalize text-primary underline"
         >
-          {next} ➡️
+          {next}
         </Link>
       </div>
     </>

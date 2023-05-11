@@ -6,7 +6,9 @@
     "logotext": true,
     "title": "kamifriend",
     "tag": "kamifriend",
+    "type": "code",
     "description": {
+      "brief": "Award-winning project",
       "problem": "As the Indonesian economy is rapidly growing, there is a need for an application that can help local small businesses (UMKM) compete in these conditions. We are aware that some main problems include <strong> a lack of business education, difficulty in finding product suppliers, and a one-man-show approach </strong>.",
       "solution": "Based on a one-on-one interview with a local business owner, Angelika Gw, <strong> our team developed an app with three main features </strong> to specifically address the three problems mentioned above.",
       "problemimage": true,
@@ -50,13 +52,15 @@
     "logotext": false,
     "title": "kampoeng koena",
     "tag": "kampoeng-koena",
+    "type": "prototype",
     "description": {
+      "brief": "Real-world project",
       "problem": "Kampoeng Koena is a newly founded tourism village as of early 2022. It has received support from the Ministry of Public Works and Housing (KPUPR) of Indonesia and aims to become a village with numerous homestays for tourists visiting nearby attractions such as Mount Bromo. However, <strong> the village faces the challenge of increasing the number of tourists while still promoting and preserving their local culture and experiences</strong>.",
       "solution": "After a three-day incentive involving interviews with locals, discussions with other groups, and brainstorming within our team, we arrived at a viable solution to help promote Kampoeng Koena: <strong> the creation of a website</strong>. In this digital age, where people rely heavily on the internet to search for information, a website can be a powerful tool to attract tourists to the village.<br /><br /> The website will be <strong> designed to showcase Kampoeng Koena's unique features </strong> and attractions, making it easy for visitors to plan their trip and learn about the village. To increase visibility, we will ensure that the website is <strong> optimized for search engines</strong>, making it easier for people to find when searching for travel destinations in the region.",
       "problemimage": true,
       "solutionimage": true
     },
-    "techstack": ["Figma"],
+    "techstack": ["figma"],
     "contributor": {
       "1": {
         "name": "Heryan Djaruma",
@@ -83,7 +87,9 @@
     "logotext": true,
     "title": "hikost",
     "tag": "hikost",
+    "type": "code",
     "description": {
+      "brief": "Right cost in your \"kost\"",
       "problem": "Managing money as a college student can be a daunting task, especially for those living abroad or away from their parents. To address this challenge, we recognized the importance of<strong> an app that could help students manage their finances more effectively</strong>, providing guidance and support for every purchase and savings decision throughout their college experience.",
       "solution": "Our team has created an app that directly addresses these common financial management challenges faced by college students. Our app features three main menus, including <strong> a money tracker, savings, and budget tool,</strong> along with a recommendation system that keeps you informed of your financial availability. With these features, our app empowers college students to make informed decisions and better manage their finances throughout their college experience.",
       "problemimage": true,
@@ -115,12 +121,14 @@
   },
   {
     "id": 4,
-    "show": false,
+    "show": true,
     "logo": true,
     "logotext": false,
     "title": "hitchhiker",
     "tag": "hitchhiker",
+    "type": "code",
     "description": {
+      "brief": "Learning Management System",
       "problem": "Hitchikker is an innovative Learning Management System (LMS) developed to fulfill the requirements of the Bina Nusantara Computer Club (BNCC) Midterm project quest.",
       "solution": "The project showcased the utilization of Laravel framework and the implementation of user authentication with middlewares.",
       "problemimage": true,
@@ -145,7 +153,9 @@
     "logotext": false,
     "title": "seldnet dcase 2020",
     "tag": "seldnet-dcase-2020",
+    "type": "code",
     "description": {
+      "brief": "AI sound detection project",
       "problem": "In 2022, I was professionally recruited as a project assistant by Professor R (initial) of Computer Science Binus University to assist in completing her doctoral dissertation at Institut Teknologi Bandung (ITB). The focus of the dissertation was on Seldnet DCASE 2020, <strong> a research project centered around Sound Event Localization and Detection Evaluated in Real Spatial Sound Scenes using Artificial Intelligence</strong>.",
       "solution": "In my role within the project, I was responsible for performing audio separation using the Nussl library. Additionally, I worked on overlaying specific audio based on the requirements set by Professor R to enhance the training data. After the training process was completed by Professor R using TensorFlow,<strong> we successfully achieved an accuracy rate of 70%</strong> in identifying 13 different types of sound. This exceeded our target of 65% accuracy, demonstrating the effectiveness of our approach.",
       "problemimage": false,
@@ -156,12 +166,43 @@
   },
   {
     "id": 6,
-    "show": false,
+    "show": true,
     "logo": true,
     "logotext": false,
     "title": "personal website",
     "tag": "personal-website",
+    "type": "code",
     "description": {
+      "brief": "Personal web portfolio",
+      "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
+    },
+    "techstack": ["next", "typescript", "tailwind"]
+  },
+  {
+    "id": 7,
+    "show": true,
+    "logo": false,
+    "logotext": false,
+    "title": "ruang xpresi",
+    "tag": "personal-website",
+    "type": "music",
+    "description": {
+      "brief": "Music solo live arrangement",
+      "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
+    },
+    "techstack": ["next", "typescript", "tailwind"]
+  },
+  {
+    "id": 8,
+    "show": true,
+    "logo": false,
+    "logotext": false,
+    "title": "On the Other Side",
+    "tag": "personal-website",
+    "type": "music",
+    "video": "bNSb5cvyQBI",
+    "description": {
+      "brief": "Short movie OST",
       "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
     },
     "techstack": ["next", "typescript", "tailwind"]

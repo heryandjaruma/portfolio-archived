@@ -7,7 +7,7 @@
     "association": "Korea Ministry of Education",
     "type": "scholarship",
     "date": "February 2023",
-    "description": "I have been selected as one of the three recipients from Binus University for the GKS exchange student program. This program offers me the opportunity to embark on a remarkable academic journey for one semester, commencing in February 2023."
+    "description": "I have been selected as one of the three awardees from Binus University for the GKS exchange student program. This program offers me the opportunity to embark on a remarkable academic journey for one semester in Seoul, South Korea, commencing in February 2023."
   },
   {
     "id": 2,
@@ -26,7 +26,7 @@
     "title": "1st winner",
     "program": "Hackathon SoCS",
     "association": "School of Computer Science Binus University",
-    "type": "competition",
+    "type": "hackathon",
     "refer": "kamifriend",
     "date": "November 2022",
     "description": ""
@@ -108,7 +108,7 @@
     "title": "2nd winner",
     "program": "L'AGIE TRIOP Team Supporter Challenge",
     "association": "SMA Trinitas",
-    "type": "suppporter competition",
+    "type": "competition",
     "date": "November 2018",
     "description": ""
   },

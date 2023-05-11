@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import path from "path";
@@ -7,7 +6,6 @@ import fs from "fs";
 import { GetStaticProps } from "next";
 
 import { useRef, useState } from "react";
-import { scroller } from "react-scroll";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,6 +16,8 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { scrollToDiv } from "@/utils/scrollUtils";
+import { handleButtonClick } from "@/utils/buttonUtils";
+import { useRouter } from "next/router";
 
 interface Props {
   news: Anews[];
@@ -58,6 +58,8 @@ export default function Home({ news, educations, showcases }: Props) {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
+  const router = useRouter();
+
   const handleMouseDown = (event: React.MouseEvent) => {
     setIsDragging(true);
     setStartX(event.clientX - scrollContainerRef.current!.offsetLeft);
@@ -94,15 +96,15 @@ export default function Home({ news, educations, showcases }: Props) {
           id="welcome"
           className="mt-16 flex w-full flex-col justify-center font-display text-white"
         >
-          <div className="bg-white px-4 py-24">
+          <div className="bg-white px-4 py-36">
             <p className="font-light text-gray-500">Hello, I&apos;m</p>
             <h1 className="text-left text-5xl font-bold text-blue">
               Heryan Djaruma
             </h1>
-            <p className="mt-12 text-left font-bold text-gray-500">
+            <p className="my-1 text-left font-bold text-gray-500">
               Find out more about me in this site
             </p>
-            <div className="mt-4 flex flex-row">
+            <div className="mt-10 flex flex-row">
               <button
                 className="rounded-full border-2 border-blk py-1 px-9 text-blk"
                 onClick={() => scrollToDiv("works")}
@@ -134,7 +136,10 @@ export default function Home({ news, educations, showcases }: Props) {
             <h1 className="font-display text-4xl font-normal text-white">
               Works
             </h1>
-            <Link href="/projects">
+            <button
+              onClick={() => handleButtonClick(router, "/projects")}
+              className="text-start"
+            >
               <div
                 id="roller"
                 className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
@@ -149,8 +154,11 @@ export default function Home({ news, educations, showcases }: Props) {
                 <h1 className="text-xl font-bold">Projects</h1>
                 <p>Technical projects</p>
               </div>
-            </Link>
-            <Link href="/experience">
+            </button>
+            <button
+              onClick={() => handleButtonClick(router, "/experience")}
+              className="text-start"
+            >
               <div
                 id="roller"
                 className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
@@ -165,8 +173,11 @@ export default function Home({ news, educations, showcases }: Props) {
                 <h1 className="text-xl font-bold">Experience</h1>
                 <p>Laboratory assistant and teaching</p>
               </div>
-            </Link>
-            <Link href="/awards">
+            </button>
+            <button
+              onClick={() => handleButtonClick(router, "/awards")}
+              className="text-start"
+            >
               <div
                 id="roller"
                 className="bg-fill relative my-2 rounded-full bg-blue py-2 px-7 font-display text-white"
@@ -181,7 +192,7 @@ export default function Home({ news, educations, showcases }: Props) {
                 <h1 className="text-xl font-bold">Awards</h1>
                 <p>Scholarship and winning project</p>
               </div>
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -252,7 +263,7 @@ export default function Home({ news, educations, showcases }: Props) {
               delay: 4000,
               disableOnInteraction: false,
             }}
-            className="mySwiper mt-3 overflow-hidden rounded-lg shadow-lg"
+            className="mySwiper mt-3 max-w-md overflow-hidden rounded-lg shadow-lg"
           >
             {news.map((anews) => (
               <SwiperSlide key={anews.id}>

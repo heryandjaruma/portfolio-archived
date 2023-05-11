@@ -9,6 +9,7 @@ interface Award {
 }
 
 interface Description {
+  brief: string;
   problem?: string;
   solution?: string;
   problemimage?: boolean;
@@ -26,15 +27,13 @@ interface Project {
   show?: boolean;
   logo?: boolean;
   logotext?: boolean;
-  title?: string;
+  title: string;
   tag?: string;
+  type: string;
   description: Description;
   techstack?: string[];
   awards?: {
-    [key: string]: {
-      name: string;
-      association: string;
-    };
+    [key: string]: Award;
   };
   video?: string;
   news?: News;
