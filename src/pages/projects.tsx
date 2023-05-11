@@ -130,12 +130,9 @@ export default function Projects() {
                     className="px-4 pt-2 pb-14 text-blk"
                   >
                     <h1 className="text-2xl font-medium">Background</h1>
-                    <div
-                      className="text-left text-blk"
-                      dangerouslySetInnerHTML={{
-                        __html: project.description?.problem,
-                      }}
-                    ></div>
+                    <div className="text-left text-blk">
+                      {project.description?.problem}
+                    </div>
                   </div>
 
                   <ShowIf isExist={project.description?.solution}>
@@ -153,12 +150,9 @@ export default function Projects() {
                         />
                       </ShowIf>
                       <h1 className="mb-4 text-2xl font-medium">Solution</h1>
-                      <div
-                        className="text-left"
-                        dangerouslySetInnerHTML={{
-                          __html: project.description?.solution,
-                        }}
-                      ></div>
+                      <div className="text-left">
+                        {project.description?.solution}
+                      </div>
                       <ShowIf isExist={project.description?.topiclink}>
                         <p className="mt-6">
                           To Learn more about this topic, refer to{" "}
