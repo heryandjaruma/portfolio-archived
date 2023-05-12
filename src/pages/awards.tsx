@@ -58,7 +58,7 @@ export default function Awards() {
 
           <div
             id="contents"
-            className="col-span-1 my-4 grid w-full place-items-center gap-x-4 gap-y-6 px-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            className="col-span-1 my-4 grid w-full place-items-center gap-4 px-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
             {awards.map((award) => (
               <button

@@ -58,7 +58,7 @@ export default function Projects() {
 
           <div
             id="contents"
-            className="grid w-full grid-cols-1 place-items-center gap-x-4 gap-y-8 bg-blue px-4 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            className="grid w-full grid-cols-1 place-items-center gap-4 bg-blue px-4 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
             {projects.map((project) => (
               <div
@@ -118,7 +118,7 @@ export default function Projects() {
               </div>
             ))}
           </div>
-          <NextPage next="experience" />
+          <NextPage next="experiences" />
         </div>
       )}
       <Footer />

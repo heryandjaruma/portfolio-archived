@@ -6,8 +6,6 @@ import LoadingPage from "../components/LoadingPage";
 import Project from "@/interface/project";
 import Image from "next/image";
 import ShowIf from "../layout/ShowIf";
-import Link from "next/link";
-import { handleButtonClick } from "@/utils/buttonUtils";
 
 export default function ProjectDetailPage() {
   const router = useRouter();
@@ -97,7 +95,7 @@ export default function ProjectDetailPage() {
               )}
             </div>
 
-            <div id="project-problem" className="px-4 py-6 text-white">
+            <div id="project-problem" className="w-full px-4 py-6 text-white">
               <h1 className="mb-2 w-fit rounded-full bg-turq py-1 px-2 text-xs font-semibold capitalize">
                 {project.type}
               </h1>
@@ -115,7 +113,9 @@ export default function ProjectDetailPage() {
               </ShowIf>
 
               <h1 className="text-2xl font-medium">Background</h1>
-              <div className="text-left">{project.description?.problem}</div>
+              <div className="w-full text-left">
+                {project.description?.problem}
+              </div>
             </div>
 
             <ShowIf isExist={project.description?.solution}>
