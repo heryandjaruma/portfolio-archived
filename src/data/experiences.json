@@ -10,6 +10,7 @@
       "logo": true
     },
     "location": "Seoul, South Korea",
+    "type": "Teaching",
     "description": {
       "brief": "As an exchange student, I have been fortunate to serve as a Teaching Assistant. My role involves actively participating in the university's official program known as the Global Lounge. This program facilitates weekly meetings where Korean and international students can come together, explore various themes, and engage in different activities. Working alongside fellow Indonesian, Japanese, and Korean students, we collaboratively organize and manage this program on a weekly basis, fostering a vibrant and inclusive campus environment."
     },
@@ -26,6 +27,7 @@
       "logo": true
     },
     "location": "Bandung, Indonesia",
+    "type": "Teaching",
     "description": {
       "brief": "After undergoing a thorough selection process that spanned half of a semester (3 mo), I was fortunate to be chosen as one of the two selected assistants for the Laboratory Center in Bandung. This opportunity granted me an official part-time role as an assistant, where I had the privilege to provide support in the teaching process within the Computer Science Department's laboratory.",
       "detail": [
@@ -39,16 +41,17 @@
   },
 
   {
-    "id": 4,
+    "id": 3,
     "show": false,
     "title": "activist",
-    "tag": "activist",
+    "tag": "activist-bncc",
     "period": "Nov 2021 - Feb 2022",
     "association": {
       "name": "Bina Nusantara Computer Club (BNCC)",
       "logo": true
     },
     "location": "Bandung, Indonesia",
+    "type": "Organization",
     "description": {
       "brief": "BNCC is a highly esteemed organization within the Binus University. As activists, we organized a diverse range of special events and monthly gatherings covering various technology-related topics.",
       "detail": [
@@ -60,7 +63,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 4,
     "show": false,
     "title": "trainer",
     "tag": "trainer",
@@ -70,6 +73,7 @@
       "logo": true
     },
     "location": "Bandung, Indonesia",
+    "type": "Teaching",
     "description": {
       "brief": "I had the opportunity to serve as a trainer for HIMTI's PBP Techno programming class, where I engaged with over 40 freshmen in an online setting.",
       "detail": ["Entry-Level Programming in C Language"]
@@ -77,7 +81,7 @@
     "image": 2
   },
   {
-    "id": 6,
+    "id": 5,
     "show": true,
     "title": "Student Council President",
     "tag": "student-council-president",
@@ -87,13 +91,14 @@
       "logo": true
     },
     "location": "Bandung, Indonesia",
+    "type": "Organization",
     "description": {
       "brief": "I had the opportunity to serve as a trainer for HIMTI's PBP Techno programming class, where I engaged with over 40 freshmen in an online setting.",
       "detail": [""]
     }
   },
   {
-    "id": 7,
+    "id": 6,
     "show": true,
     "title": "Student Council Staff",
     "tag": "student-council-staff",
@@ -103,22 +108,24 @@
       "logo": true
     },
     "location": "Bandung, Indonesia",
+    "type": "Organization",
     "description": {
       "brief": "I had the opportunity to serve as a trainer for HIMTI's PBP Techno programming class, where I engaged with over 40 freshmen in an online setting.",
       "detail": [""]
     }
   },
   {
-    "id": 5,
+    "id": 7,
     "show": true,
     "title": "volunteer",
-    "tag": "volunteer",
+    "tag": "volunteer-sejutacita",
     "period": "Apr 2021 - Oct 2021",
     "association": {
       "name": "SejutaCita Indonesia",
       "logo": false
     },
     "location": "Remote",
+    "type": "Company",
     "description": {
       "brief": "As a SahabatCita volunteer, I had the privilege of utilizing my time and skills as an editor and graphic designer to support engagement initiatives.",
       "detail": [

@@ -153,7 +153,7 @@ export default function Home({ news, educations, showcases }: Props) {
                 <p>Technical projects</p>
               </button>
               <button
-                onClick={() => handleButtonClick(router, "/experience")}
+                onClick={() => handleButtonClick(router, "/experiences")}
                 className="relative w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white"
               >
                 <Image
@@ -163,7 +163,7 @@ export default function Home({ news, educations, showcases }: Props) {
                   height={32}
                   className="pointer-events-none absolute right-0 top-0 w-9"
                 />
-                <h1 className="text-xl font-bold">Experience</h1>
+                <h1 className="text-xl font-bold">Experiences</h1>
                 <p>Laboratory assistant and teaching</p>
               </button>
               <button

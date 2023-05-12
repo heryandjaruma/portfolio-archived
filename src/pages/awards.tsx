@@ -63,7 +63,7 @@ export default function Awards() {
             {awards.map((award) => (
               <button
                 key={award.id}
-                className="col-span-1 row-span-1 flex h-full w-full flex-col rounded-xl bg-slate-100 py-4 px-4 duration-150 md:hover:scale-95 md:hover:bg-slate-200"
+                className="col-span-1 row-span-1 flex h-full w-full flex-col rounded-xl bg-slate-100 p-4 duration-150 md:hover:scale-95 md:hover:bg-slate-200"
                 onClick={() => handleButtonClick(router, `/awards/${award.id}`)}
               >
                 <h1 className="mb-2 w-fit rounded-full bg-turq py-1 px-2 text-xs font-semibold capitalize text-white">

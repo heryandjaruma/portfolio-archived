@@ -54,15 +54,15 @@ export default function Header() {
                     Projects
                   </p>
                 </Link>
-                <Link href="/experience">
+                <Link href="/experiences">
                   <p
                     className={`rounded-md px-3 py-2 text-sm text-blue duration-200 hover:scale-95 hover:text-turq ${
-                      router.pathname === "/experience"
+                      router.pathname === "/experiences"
                         ? "text-indigo-700 "
                         : ""
                     }`}
                   >
-                    Experience
+                    Experiences
                   </p>
                 </Link>
                 <Link href="/awards">
@@ -128,15 +128,15 @@ export default function Header() {
                     Projects
                   </p>
                 </Link>
-                <Link href="/experience">
+                <Link href="/experiences">
                   <p
                     className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
-                      router.pathname === "/experience"
+                      router.pathname === "/experiences"
                         ? "text-indigo-700 "
                         : ""
                     }`}
                   >
-                    Experience
+                    Experiences
                   </p>
                 </Link>
                 <Link href="/awards">
