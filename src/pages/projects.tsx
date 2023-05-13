@@ -53,6 +53,9 @@ export default function Projects() {
               <p className="mb-2 text-xl font-normal text-gray-200">
                 I&apos;ve worked on
               </p>
+              <p className="mb-2 font-light text-gray-200">
+                Click on any card to view the details
+              </p>
             </div>
           </div>
 

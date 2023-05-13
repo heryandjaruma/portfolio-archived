@@ -1,9 +1,7 @@
-import { scroller } from "react-scroll";
-
-export const scrollToDiv = (target: string) => {
-  scroller.scrollTo(target, {
-    duration: 100,
-    delay: 0,
-    smooth: "easeInOutQuart",
-  });
+const handleScrollDown = (target: string) => {
+  const element = document.getElementById(target);
+  if (element) {
+    // 👇 Will scroll smoothly to the top of the next section
+    element.scrollIntoView({ behavior: "smooth" });
+  }
 };

@@ -50,8 +50,10 @@ export default function Experiences() {
           >
             <div className="mb-10">
               <CapIcon />
-              <h1 className="py-3 text-5xl font-extrabold">Experience</h1>
-              <p className="text-xl font-normal text-gray-200">
+              <h1 className="ppy-3 text-5xl font-extrabold sm:text-6xl md:text-7xl">
+                Experiences
+              </h1>
+              <p className="text-xl font-normal text-gray-100">
                 I&apos;ve been in
               </p>
             </div>

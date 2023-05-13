@@ -24,6 +24,18 @@
     "link": "https://binus.ac.id/bandung/2022/11/mahasiswa-binus-bandung-memenangkan-lomba-socs-hackathon-kategori-lomba-software-development-dan-artificial-intelligence/"
   },
   {
+    "id": 5,
+    "show": true,
+    "title": "Commencing Graduation of Class 2021",
+    "association": "smak1bpkpenabur",
+    "keyword": "commencement-speaker",
+    "description": "",
+    "platform": "youtube",
+    "properplatform": "YouTube",
+    "account": "SMAK 1 BEDA",
+    "link": "https://youtu.be/MWlEoua2JCw?t=7167"
+  },
+  {
     "id": 2,
     "show": true,
     "title": "SejutaCita",
@@ -44,6 +56,6 @@
     "platform": "youtube",
     "properplatform": "YouTube",
     "account": "BINUSTV Channel",
-    "link": "https://"
+    "link": "https://youtu.be/wckfgmaeYZ0"
   }
 ]
