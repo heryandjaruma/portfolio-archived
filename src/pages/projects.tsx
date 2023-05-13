@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { handleButtonClick } from "@/utils/buttonUtils";
 import { useRouter } from "next/router";
 import LoadingPage from "./components/LoadingPage";
+import Head from "next/head";
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -34,6 +35,9 @@ export default function Projects() {
 
   return (
     <>
+      <Head>
+        <title>Projects - Ryan&apos;s Portfolio</title>
+      </Head>
       <Header />
       {isLoading ? (
         <LoadingPage />
@@ -43,17 +47,17 @@ export default function Projects() {
         >
           <div
             id="welcome"
-            className="mt-16 flex h-[260px] w-full flex-col justify-center bg-blue px-4 font-display font-semibold text-white md:px-8"
+            className="mt-16 flex w-full flex-col justify-center bg-blue px-4 pt-10 font-display font-semibold text-white lg:px-10"
           >
             <div className="mb-10">
               <CodeIcon />
               <h1 className="py-3 text-5xl font-extrabold sm:text-6xl md:text-7xl">
                 Projects
               </h1>
-              <p className="mb-2 text-xl font-normal text-gray-200">
+              <p className="pb-2 text-xl font-normal text-gray-200">
                 I&apos;ve worked on
               </p>
-              <p className="mb-2 font-light text-gray-200">
+              <p className="pb-2 font-light text-gray-200">
                 Click on any card to view the details
               </p>
             </div>
@@ -78,6 +82,7 @@ export default function Projects() {
                   <h1 className="mb-2 w-fit rounded-full bg-turq py-1 px-2 text-xs capitalize text-white">
                     {project.type}
                   </h1>
+
                   {project.logotext ? (
                     <Image
                       src={`/images/logo/${project.tag}_logotext.svg`}
@@ -92,6 +97,7 @@ export default function Projects() {
                       {project.title}
                     </div>
                   )}
+
                   <div
                     id="brief"
                     className="mt-2 w-1/2 text-sm font-normal capitalize text-gray-500"
@@ -107,7 +113,7 @@ export default function Projects() {
                       width={300}
                       height={300}
                       alt="logo image"
-                      className="pointer-events-none w-44 p-4"
+                      className="pointer-events-none w-44 rounded-xl p-4"
                       priority
                     />
                   ) : (

@@ -20,6 +20,7 @@ import { handleButtonClick } from "@/utils/buttonUtils";
 import { useRouter } from "next/router";
 import { scroller } from "react-scroll";
 import Link from "next/link";
+import Head from "next/head";
 
 interface Props {
   news: Anews[];
@@ -90,6 +91,9 @@ export default function Home({ news, educations, showcases }: Props) {
 
   return (
     <>
+      <Head>
+        <title>Ryan&apos;s Portfolio</title>
+      </Head>
       <Header />
       <div
         className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-white font-display`}
@@ -107,14 +111,15 @@ export default function Home({ news, educations, showcases }: Props) {
               Heryan Djaruma
             </h1>
 
-            <p className="py-4 text-center font-light text-gray-600 md:text-lg lg:text-xl">
-              A Computer Science student and an enthusiastic learner with a
+            <p className="py-4 text-center font-normal text-gray-600 md:text-lg lg:text-xl">
+              A <span className="text-blue">Computer Science student</span> and
+              an <span className="text-blue">enthusiastic learner</span> with a
               series of professional works.
             </p>
 
             <p className="w-full py-4 text-center font-light text-gray-600 md:max-w-2xl">
               Some of my accomplishments include being a scholarship awardee,
-              working as a laboratory assistant, and receiving an award for my
+              working as a laboratory assistant, and receiving awards for my
               project.
             </p>
 
@@ -162,8 +167,8 @@ export default function Home({ news, educations, showcases }: Props) {
           </h1>
 
           <div className="pt-4 pb-8 text-gray-700 md:max-w-2xl md:text-lg">
-            From coding projects and teaching experiences to scholarships and
-            notable awards, they have all been an integral part of my works.
+            From coding projects and teaching experiences to scholarship and
+            notable award, they have all been an integral part of my works.
             Click on any item below to explore further and delve into the
             details.
           </div>
@@ -304,7 +309,7 @@ export default function Home({ news, educations, showcases }: Props) {
 
         <div
           id="mentions"
-          className="grid w-full grid-cols-1 place-items-center px-6 pb-16 text-center font-display lg:grid-cols-2"
+          className="grid w-full grid-cols-1 place-items-center px-6 py-16 text-center font-display lg:grid-cols-2"
         >
           <div className=" order-0 col-span-1 row-span-1 lg:order-1 lg:w-2/3 lg:text-start">
             <h1 className="font-display text-4xl font-semibold text-primary lg:text-5xl">

@@ -13,6 +13,7 @@ import Experience from "@/interface/experience";
 import { useRouter } from "next/router";
 import { handleButtonClick } from "@/utils/buttonUtils";
 import LoadingPage from "./components/LoadingPage";
+import Head from "next/head";
 
 export default function Experiences() {
   const [experiences, setExperiences] = useState<Experience[]>([]);
@@ -37,6 +38,9 @@ export default function Experiences() {
 
   return (
     <>
+      <Head>
+        <title>Experiences - Ryan&apos;s Portfolio</title>
+      </Head>
       <Header />
       {isLoading ? (
         <LoadingPage />
@@ -46,15 +50,18 @@ export default function Experiences() {
         >
           <div
             id="welcome"
-            className="mt-16 flex w-full flex-col justify-center px-4 pt-10 font-display font-semibold text-white"
+            className="mt-16 flex w-full flex-col justify-center px-4 pt-10 font-display font-semibold text-white lg:px-10"
           >
             <div className="mb-10">
               <CapIcon />
-              <h1 className="ppy-3 text-5xl font-extrabold sm:text-6xl md:text-7xl">
+              <h1 className="py-3 text-5xl font-extrabold sm:text-6xl md:text-7xl">
                 Experiences
               </h1>
-              <p className="text-xl font-normal text-gray-100">
+              <p className="pb-2 text-xl font-normal text-gray-100">
                 I&apos;ve been in
+              </p>
+              <p className="pb-2 font-light text-gray-200">
+                Click on any card to view the details
               </p>
             </div>
           </div>
@@ -83,7 +90,7 @@ export default function Experiences() {
                   </div>
                   <div
                     id="brief"
-                    className="pt-2 text-xs font-normal text-gray-600 line-clamp-3"
+                    className="pt-2 text-xs font-normal text-gray-600 line-clamp-2"
                   >
                     {experience.description.brief}
                   </div>

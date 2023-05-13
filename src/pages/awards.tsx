@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 
 import LoadingPage from "./components/LoadingPage";
 import { handleButtonClick } from "@/utils/buttonUtils";
+import Head from "next/head";
 
 export default function Awards() {
   const [awards, setAwards] = useState<Award[]>([]);
@@ -34,6 +35,9 @@ export default function Awards() {
 
   return (
     <>
+      <Head>
+        <title>Awards - Ryan&apos;s Portfolio</title>
+      </Head>
       <Header />
       {isLoading ? (
         <LoadingPage />
@@ -43,15 +47,18 @@ export default function Awards() {
         >
           <div
             id="welcome"
-            className="mt-16 flex h-[260px] w-full flex-col justify-center bg-primary px-4 pt-10 font-display font-semibold text-white md:px-8"
+            className="mt-16 flex w-full flex-col justify-center px-4 pt-10 font-display font-semibold text-white lg:px-10"
           >
             <div className="mb-10">
               <AwardsIcon />
               <h1 className="py-3 text-5xl font-extrabold sm:text-6xl md:text-7xl">
                 Awards
               </h1>
-              <p className="mb-2 text-xl font-normal text-gray-200">
+              <p className="pb-2 text-xl font-normal text-gray-200">
                 I&apos;ve received
+              </p>
+              <p className="pb-2 font-light text-gray-200">
+                Click on any card to view the details
               </p>
             </div>
           </div>

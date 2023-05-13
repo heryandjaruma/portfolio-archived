@@ -6,6 +6,7 @@ import Footer from "../layout/Footer";
 import Image from "next/image";
 
 import LoadingPage from "../components/LoadingPage";
+import Head from "next/head";
 
 const AwardDetailPage = () => {
   const router = useRouter();
@@ -47,6 +48,9 @@ const AwardDetailPage = () => {
   if (!award) {
     return (
       <div>
+        <Head>
+          <title>Error - Ryan&apos;s Portfolio</title>
+        </Head>
         <Header />
         <LoadingPage />
         <Footer />
@@ -56,6 +60,9 @@ const AwardDetailPage = () => {
 
   return (
     <div>
+      <Head>
+        <title>{award.title} - Ryan&apos;s Portfolio</title>
+      </Head>
       <Header />
       {isLoading ? (
         <LoadingPage />

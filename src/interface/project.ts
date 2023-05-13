@@ -34,6 +34,7 @@ interface Project {
   logo?: boolean;
   logotext?: boolean;
   title: string;
+  propertitle: string;
   tag?: string;
   type: string;
   description: Description;

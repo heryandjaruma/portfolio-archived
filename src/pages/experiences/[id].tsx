@@ -7,6 +7,7 @@ import Footer from "../layout/Footer";
 import exp from "constants";
 import ShowIf from "../layout/ShowIf";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function ExperienceDetailPage() {
   const router = useRouter();
@@ -48,6 +49,9 @@ export default function ExperienceDetailPage() {
   if (!experience) {
     return (
       <div>
+        <Head>
+          <title>Error - Ryan&apos;s Portfolio</title>
+        </Head>
         <Header />
         <LoadingPage />
         <Footer />
@@ -57,6 +61,9 @@ export default function ExperienceDetailPage() {
 
   return (
     <div>
+      <Head>
+        <title>{experience.title} - Ryan&apos;s Portfolio</title>
+      </Head>
       <Header />
       {isLoading ? (
         <LoadingPage />

@@ -5,6 +5,7 @@
     "logo": true,
     "logotext": true,
     "title": "kamifriend",
+    "propertitle": "Kamifriend",
     "tag": "kamifriend",
     "type": "code",
     "description": {
@@ -55,6 +56,7 @@
     "logo": true,
     "logotext": false,
     "title": "kampoeng koena",
+    "propertitle": "Kampoeng Koena",
     "tag": "kampoeng-koena",
     "type": "prototype",
     "description": {
@@ -90,6 +92,7 @@
     "logo": true,
     "logotext": true,
     "title": "hikost",
+    "propertitle": "Hikost",
     "tag": "hikost",
     "type": "code",
     "description": {
@@ -129,6 +132,7 @@
     "logo": true,
     "logotext": false,
     "title": "hitchhiker",
+    "propertitle": "Hitchhiker",
     "tag": "hitchhiker",
     "type": "code",
     "description": {
@@ -156,6 +160,7 @@
     "logo": false,
     "logotext": false,
     "title": "seldnet dcase 2020",
+    "propertitle": "Seldnet Dcase 2020",
     "tag": "seldnet-dcase-2020",
     "type": "code",
     "description": {
@@ -173,8 +178,9 @@
     "show": true,
     "logo": true,
     "logotext": false,
-    "title": "personal website",
-    "tag": "personal-website",
+    "title": "web portfolio",
+    "propertitle": "Web Portfolio",
+    "tag": "web-portfolio",
     "type": "code",
     "description": {
       "brief": "Personal web portfolio",
@@ -188,6 +194,7 @@
     "logo": false,
     "logotext": false,
     "title": "ruang xpresi",
+    "propertitle": "Ruang Xpresi",
     "tag": "personal-website",
     "type": "music",
     "description": {
@@ -202,6 +209,7 @@
     "logo": false,
     "logotext": false,
     "title": "On the Other Side",
+    "propertitle": "On the Other Side",
     "tag": "on-the-other-side",
     "type": "music",
     "result": {

@@ -6,6 +6,7 @@ import LoadingPage from "../components/LoadingPage";
 import Project from "@/interface/project";
 import Image from "next/image";
 import ShowIf from "../layout/ShowIf";
+import Head from "next/head";
 
 export default function ProjectDetailPage() {
   const router = useRouter();
@@ -47,6 +48,9 @@ export default function ProjectDetailPage() {
   if (!project) {
     return (
       <div>
+        <Head>
+          <title>Error - Ryan&apos;s Portfolio</title>
+        </Head>
         <Header />
         <LoadingPage />
         <Footer />
@@ -56,6 +60,9 @@ export default function ProjectDetailPage() {
 
   return (
     <div>
+      <Head>
+        <title>{project.propertitle} - Ryan&apos;s Portfolio</title>
+      </Head>
       <Header />
       {isLoading ? (
         <LoadingPage />
