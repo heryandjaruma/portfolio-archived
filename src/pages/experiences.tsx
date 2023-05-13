@@ -67,7 +67,7 @@ export default function Experiences() {
                 onClick={() =>
                   handleButtonClick(router, `/experiences/${experience.id}`)
                 }
-                className="col-span-1 row-span-1 h-full w-full overflow-hidden rounded-xl bg-slate-100 p-4 shadow-xl duration-150 md:hover:scale-95 md:hover:bg-slate-200"
+                className="col-span-1 row-span-1 flex h-full w-full flex-col rounded-xl bg-slate-100 p-4 duration-150 md:hover:scale-95 md:hover:bg-slate-200"
               >
                 <div
                   id="title"
@@ -81,12 +81,12 @@ export default function Experiences() {
                   </div>
                   <div
                     id="brief"
-                    className="mt-2 text-xs font-normal text-gray-600 line-clamp-3"
+                    className="pt-2 text-xs font-normal text-gray-600 line-clamp-3"
                   >
                     {experience.description.brief}
                   </div>
                 </div>
-                <p className="mt-4 w-full truncate text-end text-xs font-normal text-gray-500">
+                <p className="w-full truncate pt-4 text-end text-xs font-normal text-gray-500">
                   {experience.association.name}
                 </p>
                 <p className="w-full truncate text-end text-xs font-normal text-gray-500">

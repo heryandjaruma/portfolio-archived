@@ -66,11 +66,11 @@ export default function Projects() {
                 onClick={() =>
                   handleButtonClick(router, `/projects/${project.id}`)
                 }
-                className="relative col-span-1 row-span-1 aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100 shadow-xl duration-150 md:hover:scale-95 md:hover:bg-slate-200"
+                className="relative col-span-1 row-span-1 aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100 shadow-xl duration-150 lg:hover:scale-95 lg:hover:bg-slate-200"
               >
                 <div
                   id="title"
-                  className="h-full  w-full p-6 text-2xl font-semibold  text-blk shadow-xl"
+                  className="h-full  w-full p-6 text-2xl font-semibold text-blk shadow-xl"
                 >
                   <h1 className="mb-2 w-fit rounded-full bg-turq py-1 px-2 text-xs capitalize text-white">
                     {project.type}
@@ -82,6 +82,7 @@ export default function Projects() {
                       height={300}
                       alt="logo image"
                       className="pointer-events-none w-60"
+                      priority
                     />
                   ) : (
                     <div className="text-4xl font-semibold capitalize text-blue">
@@ -104,6 +105,7 @@ export default function Projects() {
                       height={300}
                       alt="logo image"
                       className="pointer-events-none w-44 p-4"
+                      priority
                     />
                   ) : (
                     <Image
@@ -112,6 +114,7 @@ export default function Projects() {
                       height={300}
                       alt="logo image"
                       className="pointer-events-none w-44 p-4"
+                      priority
                     />
                   )}
                 </div>

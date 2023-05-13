@@ -11,3 +11,29 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+
+.typewriter-container {
+  position: relative;
+}
+
+.typewriter-cursor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 8px;
+  height: 1em;
+  background-color: #000;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

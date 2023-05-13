@@ -91,18 +91,21 @@ export default function Home({ news, educations, showcases }: Props) {
     <>
       <Header />
       <div
-        className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-slate-200`}
+        className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-white font-display`}
       >
         <div
           id="welcome"
           className="mt-16 flex w-full flex-col justify-center font-display text-white"
         >
-          <div className="bg-white px-4 py-36">
-            <p className="font-light text-gray-500">Hello, I&apos;m</p>
-            <h1 className="text-left text-5xl font-bold text-blue">
+          <div className="px-4 py-36">
+            <p className="font-light text-gray-500 md:text-xl lg:text-2xl">
+              Hello, I&apos;m
+            </p>
+            <div className="text-gray-500"></div>
+            <h1 className="text-left text-5xl font-bold text-blue md:text-6xl lg:text-6xl">
               Heryan Djaruma
             </h1>
-            <p className="my-1 text-left font-bold text-gray-500">
+            <p className="my-1 text-left font-bold text-gray-500 md:text-lg lg:text-xl">
               Find out more about me in this site
             </p>
             <div className="mt-10 flex flex-row">
@@ -131,53 +134,61 @@ export default function Home({ news, educations, showcases }: Props) {
 
         <div
           id="works"
-          className="flex w-full items-center justify-center bg-primary px-4 py-16"
+          className="justify-cente flex w-full items-center px-4 py-16"
         >
+          <div className="w-1/2">
+            From coding projects and teaching experiences to scholarships and
+            notable awards, they have all been an integral part of my works.
+            Click on any item to explore further and delve into the details.
+          </div>
           <div className="flex h-full w-full flex-col justify-around py-2">
-            <h1 className="font-display text-4xl font-normal text-white">
+            <h1 className="font-display text-4xl font-normal text-primary">
               Works
             </h1>
-            <div className="w-full space-y-4 py-2">
+            <div className="grid w-full grid-cols-1 gap-4 py-2 md:grid-cols-3">
               <button
                 onClick={() => handleButtonClick(router, "/projects")}
-                className="relative w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white"
+                className="relative col-span-1 row-span-1 h-32 w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white shadow-xl duration-150 md:h-40 lg:hover:scale-95"
               >
                 <Image
                   src="/images/icons/code.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
-                  className="pointer-events-none absolute right-0 top-0 w-9"
+                  className="pointer-events-none absolute right-0 top-0 w-16"
+                  priority
                 />
-                <h1 className="text-xl font-bold">Projects</h1>
+                <h1 className="text-2xl font-bold md:text-3xl">Projects</h1>
                 <p>Technical projects</p>
               </button>
               <button
                 onClick={() => handleButtonClick(router, "/experiences")}
-                className="relative w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white"
+                className="relative col-span-1 row-span-1 h-32 w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white shadow-xl duration-150 md:h-40 lg:hover:scale-95"
               >
                 <Image
                   src="/images/icons/cap.svg"
                   alt="code_icon"
                   width={32}
                   height={32}
-                  className="pointer-events-none absolute right-0 top-0 w-9"
+                  className="pointer-events-none absolute right-0 top-0 w-16"
+                  priority
                 />
-                <h1 className="text-xl font-bold">Experiences</h1>
+                <h1 className="text-2xl font-bold md:text-3xl">Experiences</h1>
                 <p>Laboratory assistant and teaching</p>
               </button>
               <button
                 onClick={() => handleButtonClick(router, "/awards")}
-                className="relative w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white"
+                className="relative col-span-1 row-span-1 h-32 w-full rounded-full bg-blue py-2 px-7 text-start font-display text-white shadow-xl duration-150 md:h-40 lg:hover:scale-95"
               >
                 <Image
                   src="/images/icons/awards.svg"
                   alt="award icon"
                   width={32}
                   height={32}
-                  className="pointer-events-none absolute right-0 top-0 w-7"
+                  className="pointer-events-none absolute right-0 top-0 w-12"
+                  priority
                 />
-                <h1 className="text-xl font-bold">Awards</h1>
+                <h1 className="text-2xl font-bold md:text-3xl">Awards</h1>
                 <p>Scholarship and winning project</p>
               </button>
             </div>
@@ -186,7 +197,7 @@ export default function Home({ news, educations, showcases }: Props) {
 
         <div
           id="education"
-          className="bg-fill pointer-events-none flex w-full items-center justify-center bg-white p-16 px-4"
+          className="bg-fill pointer-events-none flex w-96 items-center justify-center p-16 px-4"
         >
           <div className="flex h-full w-full flex-col items-center justify-around">
             <h1 className="pointer-events-none my-2 w-full text-start font-display text-4xl font-normal text-blk">
