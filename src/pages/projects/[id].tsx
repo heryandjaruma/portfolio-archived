@@ -53,6 +53,7 @@ export default function ProjectDetailPage() {
       </div>
     );
   }
+
   return (
     <div>
       <Header />

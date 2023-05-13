@@ -22,12 +22,12 @@ export default function Experiences() {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await fetch("/api/experience");
+        const response = await fetch("/api/experiences");
         const data = await response.json();
         setExperiences(data);
         setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching experience:", error);
+        console.error("Error fetching experiences:", error);
         setIsLoading(false);
       }
     };
@@ -59,7 +59,7 @@ export default function Experiences() {
 
           <div
             id="contents"
-            className="grid w-full grid-cols-1 place-items-center gap-4 px-4 pb-8 font-display md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            className="grid w-full grid-cols-1 place-items-center gap-4 px-4 font-display md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
           >
             {experiences.map((experience) => (
               <div
@@ -67,7 +67,7 @@ export default function Experiences() {
                 onClick={() =>
                   handleButtonClick(router, `/experiences/${experience.id}`)
                 }
-                className="col-span-1 row-span-1 h-full w-full overflow-hidden rounded-xl bg-slate-100 p-6 shadow-xl duration-150 md:hover:scale-95 md:hover:bg-slate-200"
+                className="col-span-1 row-span-1 h-full w-full overflow-hidden rounded-xl bg-slate-100 p-4 shadow-xl duration-150 md:hover:scale-95 md:hover:bg-slate-200"
               >
                 <div
                   id="title"
