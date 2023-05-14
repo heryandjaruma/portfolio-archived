@@ -18,7 +18,6 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 // import { scrollToDiv } from "@/utils/scrollUtils";
 import { handleButtonClick } from "@/utils/buttonUtils";
 import { useRouter } from "next/router";
-import { scroller } from "react-scroll";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -118,9 +117,10 @@ export default function Home({ news, educations, showcases }: Props) {
             </p>
 
             <p className="w-full py-4 text-center font-light text-gray-600 md:max-w-2xl">
-              Some of my accomplishments include being a scholarship awardee,
-              working as a laboratory assistant, and receiving awards for my
-              project.
+              Some of my notable accomplishments include being awarded a
+              scholarship, serving as a laboratory assistant, and receiving
+              recognition for my project. Moreover, my diverse range of
+              interests spans across leadership, graphic editing, and music.
             </p>
 
             <div className="mt-6 flex flex-row gap-x-6">
@@ -348,6 +348,7 @@ export default function Home({ news, educations, showcases }: Props) {
                           width={1080}
                           height={1080}
                           className="h-96 object-cover"
+                          priority
                         />
 
                         <div className="absolute bottom-0 h-1/2 w-full truncate bg-gradient-to-t from-white px-3 text-sm">
@@ -370,6 +371,7 @@ export default function Home({ news, educations, showcases }: Props) {
                           width={1080}
                           height={1080}
                           className=" pointer-events-none h-8 w-8 rounded-full border-2 bg-white"
+                          priority
                         />
                       </div>
                     </a>

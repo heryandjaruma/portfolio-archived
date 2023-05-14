@@ -49,7 +49,7 @@ export default function ProjectDetailPage() {
     return (
       <div>
         <Head>
-          <title>Error - Ryan&apos;s Portfolio</title>
+          <title>Ryan&apos;s Portfolio</title>
         </Head>
         <Header />
         <LoadingPage />
@@ -73,170 +73,214 @@ export default function ProjectDetailPage() {
           <div className="mt-16" id="contents">
             <div
               id="project-title"
-              className="sticky top-16 z-40 flex w-full flex-row items-center justify-start space-x-4 bg-white px-4 py-3 backdrop-blur-lg backdrop-filter"
+              className="flex flex-col bg-white px-4 py-3 backdrop-blur-lg backdrop-filter"
             >
-              <ShowIf isExist={project.logo}>
-                <Image
-                  src={`/images/logo/${project.tag}.svg`}
-                  alt={`${project.tag}-logo`}
-                  className="pointer-events-none w-10"
-                  width={64}
-                  height={64}
-                />
-              </ShowIf>
-
-              {project.logotext ? (
-                <span>
-                  <Image
-                    src={`/images/logo/${project.tag}_logotext.svg`}
-                    alt={`${project.tag}-logo-text`}
-                    className="pointer-events-none w-36"
-                    width={1000}
-                    height={1000}
-                  />
-                </span>
-              ) : (
-                <span>
-                  <h1 className="text-2xl font-bold capitalize text-blue">
-                    {project.title}
-                  </h1>
-                </span>
-              )}
-            </div>
-
-            <div id="project-problem" className="w-full px-4 py-6 text-white">
-              <h1 className="mb-2 w-fit rounded-full bg-turq py-1 px-2 text-xs font-semibold capitalize">
+              <h1 className="w-fit rounded-full bg-turq py-1 px-2 text-xs font-semibold capitalize text-white">
                 {project.type}
               </h1>
 
-              <ShowIf isExist={project.description?.problemimage}>
-                <div className="mb-4 py-2">
+              <div className="flex w-full flex-row items-center justify-start space-x-4 pt-3">
+                <ShowIf isExist={project.logo}>
+                  <Image
+                    src={`/images/logo/${project.tag}.svg`}
+                    alt={`${project.tag}-logo`}
+                    className="pointer-events-none w-10"
+                    width={64}
+                    height={64}
+                  />
+                </ShowIf>
+
+                {project.logotext ? (
+                  <span>
+                    <Image
+                      src={`/images/logo/${project.tag}_logotext.svg`}
+                      alt={`${project.tag}-logo-text`}
+                      className="pointer-events-none w-36"
+                      width={1000}
+                      height={1000}
+                    />
+                  </span>
+                ) : (
+                  <span>
+                    <h1 className="text-2xl font-bold capitalize text-blue">
+                      {project.title}
+                    </h1>
+                  </span>
+                )}
+              </div>
+            </div>
+
+            <div
+              id="project-problem"
+              className="grid w-full grid-cols-1 place-items-center px-4 py-14 text-white md:grid-cols-2"
+            >
+              <div className="col-span-1 row-span-1 md:order-last md:w-5/6">
+                <h1 className="w-full text-start text-3xl font-medium lg:text-4xl">
+                  Background
+                </h1>
+
+                <div className="text-left">{project.description?.problem}</div>
+              </div>
+
+              {project.description.problemimage ? (
+                <div className="pt-4">
                   <Image
                     src={`/images/projects/${project.tag}_cover.jpg`}
                     alt={`${project.tag}-cover`}
                     width={960}
                     height={960}
-                    className="pointer-events-none rounded-lg shadow-md"
+                    className="pointer-events-none w-full rounded-lg shadow-md md:max-h-screen"
                   />
                 </div>
-              </ShowIf>
-
-              <h1 className="text-2xl font-medium">Background</h1>
-              <div className="w-full text-left">
-                {project.description?.problem}
-              </div>
+              ) : (
+                <Image
+                  src={`/images/doodles/problem_doodle.svg`}
+                  alt={`problem-doodle`}
+                  width={960}
+                  height={960}
+                  className="pointer-events-none mt-8 w-full max-w-sm rounded-lg md:max-w-md"
+                />
+              )}
             </div>
 
             <ShowIf isExist={project.description?.solution}>
               <div
                 id="project-solution"
-                className="bg-blue py-14 px-4 text-white"
+                className="grid grid-cols-1 place-items-center px-4 pb-4 text-white md:grid-cols-2"
               >
-                <ShowIf isExist={project.description?.solutionimage}>
-                  <Image
-                    src={`/images/projects/${project.title}_solution.jpg`}
-                    alt={`${project.title}-cover`}
-                    width={`720`}
-                    height={720}
-                    className="pointer-events-none mb-6 rounded-lg shadow-md"
-                  />
-                </ShowIf>
+                <div className="col-span-1 row-span-1 md:order-first md:w-5/6 md:text-end">
+                  <h1 className="w-full text-3xl font-medium lg:text-4xl">
+                    Solution
+                  </h1>
 
-                <h1 className="text-2xl font-medium">Solution</h1>
+                  <div className="">{project.description?.solution}</div>
 
-                <div className="text-left">{project.description?.solution}</div>
+                  <ShowIf isExist={project.description?.topiclink}>
+                    <p className="mt-6 italic">
+                      To Learn more about this topic, refer to{" "}
+                      <a
+                        target="_blank"
+                        href={project.description.topiclink}
+                        rel="noopener noreferrer"
+                        className="underline"
+                      >
+                        this link
+                      </a>
+                      .
+                    </p>
+                  </ShowIf>
+                </div>
 
-                <ShowIf isExist={project.description?.topiclink}>
-                  <p className="mt-6 italic">
-                    To Learn more about this topic, refer to{" "}
-                    <a
-                      target="_blank"
-                      href={project.description.topiclink}
-                      rel="noopener noreferrer"
-                      className="underline"
-                    >
-                      this link
-                    </a>
-                    .
-                  </p>
-                </ShowIf>
-
-                <ShowIf isExist={project.result}>
-                  <div className="mt-20 text-center text-2xl italic">
-                    <a
-                      className="font-display underline"
-                      target="_blank"
-                      href={project.result?.link}
-                      rel="noopener noreferrer"
-                    >
-                      <p className="">
-                        See the {project.result?.type} on{" "}
-                        {project.result?.properplatform}
-                      </p>
-                    </a>
+                {project.description.problemimage ? (
+                  <div className="pt-4">
+                    <Image
+                      src={`/images/projects/${project.tag}_solution.jpg`}
+                      alt={`${project.tag}-solution`}
+                      width={960}
+                      height={960}
+                      className="pointer-events-none w-full rounded-lg shadow-md md:max-h-screen"
+                    />
                   </div>
-                </ShowIf>
+                ) : (
+                  <Image
+                    src={`/images/doodles/solution_doodle.svg`}
+                    alt={`solution-doodle`}
+                    width={960}
+                    height={960}
+                    className="pointer-events-none mt-8 w-full max-w-sm rounded-lg md:max-w-md"
+                  />
+                )}
+              </div>
+            </ShowIf>
+
+            <ShowIf isExist={project.result}>
+              <div className="my-16 px-4 text-center text-2xl italic text-white">
+                <a
+                  className="font-display underline"
+                  target="_blank"
+                  href={project.result?.link}
+                  rel="noopener noreferrer"
+                >
+                  <p className="">
+                    See the {project.result?.type} on{" "}
+                    {project.result?.properplatform}
+                  </p>
+                </a>
               </div>
             </ShowIf>
 
             <div
               id="project-techstack"
-              className="bg-blu px-4 py-14 text-white"
+              className="flex items-center justify-center bg-blu px-4 py-14 text-white"
             >
-              <h1 className="mb-8 text-2xl font-medium">Techstack</h1>
-              {project.techstack && Array.isArray(project.techstack) && (
-                <ul className="flex w-full flex-row items-center justify-evenly space-x-10">
-                  {project.techstack.map((tech, item) => (
-                    <li key={item}>
-                      <div className="flex flex-col items-center justify-center">
-                        <Image
-                          src={`/images/logo/${tech}.svg`}
-                          alt={`${tech}-logo`}
-                          width={100}
-                          height={100}
-                          className="pointer-events-none h-12 w-12 object-contain"
-                        />
-                        <h1 className="">{tech}</h1>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <div className="w-full md:max-w-xl">
+                <h1 className="mb-8 text-2xl font-medium md:text-center md:text-4xl">
+                  Techstack
+                </h1>
+                {project.techstack && Array.isArray(project.techstack) && (
+                  <ul className="flex w-full flex-row items-center justify-evenly space-x-10">
+                    {project.techstack.map((tech, item) => (
+                      <li key={item}>
+                        <div className="flex flex-col items-center justify-center">
+                          <Image
+                            src={`/images/logo/${tech}.svg`}
+                            alt={`${tech}-logo`}
+                            width={100}
+                            height={100}
+                            className="pointer-events-none h-12 w-12 object-contain"
+                          />
+                          <h1 className="">{tech}</h1>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
 
             <ShowIf isExist={project.awards}>
               <div
                 id="project-awards"
-                className="bg-lightblu px-4 py-14 text-white"
+                className="grid grid-cols-1 place-items-center bg-lightblu px-4 py-14 text-white md:grid-cols-2"
               >
-                <h1 className="text-2xl font-medium">Awards</h1>
-                <p className="mb-4">
-                  <span className="capitalize">{project.title}</span> has
-                  received{" "}
-                  {project.awards && Object.entries(project.awards).length}{" "}
-                  {project.awards && Object.keys(project.awards).length > 1 ? (
-                    <span>awards</span>
-                  ) : (
-                    <span>award</span>
-                  )}
-                </p>
-                <Image
-                  src={`/images/projects/${project.tag}_awards.jpg`}
-                  alt={`${project.title}-cover`}
-                  width={`720`}
-                  height={720}
-                  className="pointer-events-none mb-10 rounded-lg shadow-md"
-                />
-                <div id="awards-list" className="my-6">
-                  <ul className="space-y-2">
+                <div className="col-span-1 row-span-1 w-full md:order-last md:w-5/6">
+                  <h1 className="text-2xl font-medium">Awards</h1>
+
+                  <p className="mb-4">
+                    <span className="capitalize">{project.title}</span> has
+                    received{" "}
+                    {project.awards && Object.entries(project.awards).length}{" "}
                     {project.awards &&
-                      Object.entries(project.awards).map(([key, award]) => (
-                        <li key={key}>
-                          <h1 className="font-medium">{award.name}</h1>
-                          <h1 className="font-light">by {award.association}</h1>
-                        </li>
-                      ))}
-                  </ul>
+                    Object.keys(project.awards).length > 1 ? (
+                      <span>awards</span>
+                    ) : (
+                      <span>award</span>
+                    )}
+                  </p>
+
+                  <div id="awards-list" className="my-6">
+                    <ul className="space-y-2">
+                      {project.awards &&
+                        Object.entries(project.awards).map(([key, award]) => (
+                          <li key={key}>
+                            <h1 className="font-medium">{award.name}</h1>
+                            <h1 className="font-light">
+                              by {award.association}
+                            </h1>
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="col-span-1 row-span-1 w-full md:max-w-xl">
+                  <Image
+                    src={`/images/projects/${project.tag}_awards.jpg`}
+                    alt={`${project.title}-cover`}
+                    width={`720`}
+                    height={720}
+                    className="pointer-events-none mb-10 rounded-lg shadow-md"
+                  />
                 </div>
               </div>
             </ShowIf>
@@ -262,14 +306,16 @@ export default function ProjectDetailPage() {
             <ShowIf isExist={project.contributor}>
               <div
                 id="project-contributor"
-                className="bg-indigo-500 px-4 py-14 text-white"
+                className="grid grid-cols-1 place-items-center bg-indigo-500 px-4 py-14 text-white md:grid-cols-2"
               >
-                <h1 className="mb-4 text-2xl font-medium">Contributor</h1>
-                <ul className="space-y-2">
+                <h1 className="mb-4 w-full text-left text-2xl font-medium md:mb-0 md:w-5/6 md:text-right md:text-4xl">
+                  Contributor
+                </h1>
+                <ul className="w-full space-y-2 md:w-5/6">
                   {project.contributor &&
                     Object.entries(project.contributor).map(
                       ([key, contributor]) => (
-                        <li key={key}>
+                        <li key={key} className="md:text-lg">
                           {contributor?.name === "Heryan Djaruma" ? (
                             <>
                               <span className="underline">

@@ -38,7 +38,7 @@ export default function Header() {
               <div className="ml-4 flex items-center space-x-4">
                 <Link href="/">
                   <p
-                    className={`rounded-md px-3 py-2 text-sm text-blue duration-200 hover:scale-95 hover:text-turq ${
+                    className={`text-md rounded-md px-3 py-2 text-blue duration-200 hover:scale-95 hover:text-turq ${
                       router.pathname === "/" ? "text-indigo-700 " : ""
                     }`}
                   >
@@ -47,7 +47,7 @@ export default function Header() {
                 </Link>
                 <Link href="/projects">
                   <p
-                    className={`rounded-md px-3 py-2 text-sm text-blue duration-200 hover:scale-95 hover:text-turq ${
+                    className={`text-md rounded-md px-3 py-2 text-blue duration-200 hover:scale-95 hover:text-turq ${
                       router.pathname === "/projects" ? "text-indigo-700 " : ""
                     }`}
                   >
@@ -56,7 +56,7 @@ export default function Header() {
                 </Link>
                 <Link href="/experiences">
                   <p
-                    className={`rounded-md px-3 py-2 text-sm text-blue duration-200 hover:scale-95 hover:text-turq ${
+                    className={`text-md rounded-md px-3 py-2 text-blue duration-200 hover:scale-95 hover:text-turq ${
                       router.pathname === "/experiences"
                         ? "text-indigo-700 "
                         : ""
@@ -67,7 +67,7 @@ export default function Header() {
                 </Link>
                 <Link href="/awards">
                   <p
-                    className={`rounded-md px-3 py-2 text-sm text-blue duration-200 hover:scale-95 hover:text-turq ${
+                    className={`text-md rounded-md px-3 py-2 text-blue duration-200 hover:scale-95 hover:text-turq ${
                       router.pathname === "/awards" ? "text-indigo-700 " : ""
                     }`}
                   >

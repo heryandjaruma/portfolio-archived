@@ -108,7 +108,10 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div id="logo" className="absolute -bottom-9 -right-6">
+                <div
+                  id="logo"
+                  className="absolute bottom-0 right-0 translate-x-6 translate-y-8"
+                >
                   {project.logo ? (
                     <Image
                       src={`/images/logo/${project.tag}.svg`}

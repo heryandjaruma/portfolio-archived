@@ -49,7 +49,7 @@ const AwardDetailPage = () => {
     return (
       <div>
         <Head>
-          <title>Error - Ryan&apos;s Portfolio</title>
+          <title>Ryan&apos;s Portfolio</title>
         </Head>
         <Header />
         <LoadingPage />
@@ -70,7 +70,7 @@ const AwardDetailPage = () => {
         <div className="mx-auto flex max-w-screen-2xl flex-col items-center bg-primary pt-16 font-display">
           <div
             id="content"
-            className="m-4 flex flex-col items-center overflow-hidden rounded-xl bg-white shadow-xl"
+            className="m-4 flex flex-col items-center overflow-hidden rounded-xl bg-white shadow-xl md:max-w-2xl"
           >
             <div id="title" className="w-full px-4 py-4 text-start">
               <h1 className="mb-8 w-fit rounded-full bg-turq py-1 px-2 text-xs capitalize text-white">
@@ -86,20 +86,18 @@ const AwardDetailPage = () => {
               <p className="text-md text-gray-600">{award.date}</p>
             </div>
 
-            <div
-              id="illustration"
-              className="w-3/4 place-items-center px-4 py-6"
-            >
+            <div id="description" className="px-4 py-4 text-white">
+              <p className="text-blk">{award.description}</p>
+            </div>
+
+            <div id="illustration" className="place-items-center px-4 py-6">
               <Image
                 src="/images/awards/groovydoodle.svg"
                 width={1000}
                 height={1000}
                 alt="groovy-doodle"
-                className=""
+                className="md:max-w-md"
               />
-            </div>
-            <div id="description" className="bg-slate-100 px-4 py-4 text-white">
-              <p className="text-blk">{award.description}</p>
             </div>
           </div>
         </div>

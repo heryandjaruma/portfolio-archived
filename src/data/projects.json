@@ -64,7 +64,8 @@
       "problem": "Kampoeng Koena is a newly founded tourism village as of early 2022. It has received support from the Ministry of Public Works and Housing (KPUPR) of Indonesia and aims to become a village with numerous homestays for tourists visiting nearby attractions such as Mount Bromo. However,  the village faces the challenge of increasing the number of tourists while still promoting and preserving their local culture and experiences.",
       "solution": "After a three-day incentive involving interviews with locals, discussions with other groups, and brainstorming within our team, we arrived at a viable solution to help promote Kampoeng Koena:  the creation of a website. In this digital age, where people rely heavily on the internet to search for information, a website can be a powerful tool to attract tourists to the village. The website is  designed to showcase Kampoeng Koena's unique features  and attractions, making it easy for visitors to plan their trip and learn about the village.",
       "problemimage": true,
-      "solutionimage": true
+      "solutionimage": true,
+      "topiclink": "https://malangposcomedia.id/bantu-kembangkan-pariwisata-desa-gubugklakah-binus-gelar-international-community-development-program/"
     },
     "techstack": ["Figma"],
     "result": {
@@ -258,7 +259,8 @@
       "brief": "Short movie OST",
       "problem": "This project is specifically created as an original soundtrack (OST) for a short movie. As the music director and producer of this song, I employed techniques of harmony and a dreamy vibe, resulting in a composition that is truly worthy of a movie.",
       "solution": "The OST successfully captures the desired atmosphere and enhances the storytelling of the short movie. It adds depth and emotion to the scenes, immersing the viewers in the cinematic experience. The careful attention to harmony and the dreamy ambiance of the song contribute to its overall quality and suitability for the project.",
-      "problemimage": true
+      "problemimage": true,
+      "solutionimage": true
     },
     "techstack": ["Cubase"]
   }
