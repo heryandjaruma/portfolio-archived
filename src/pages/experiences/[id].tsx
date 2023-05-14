@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Header from "../layout/Header";
 import LoadingPage from "../components/LoadingPage";
 import Footer from "../layout/Footer";
-import exp from "constants";
 import ShowIf from "../layout/ShowIf";
 import Image from "next/image";
 import Head from "next/head";
@@ -62,7 +61,7 @@ export default function ExperienceDetailPage() {
   return (
     <div>
       <Head>
-        <title>{experience.title} - Ryan&apos;s Portfolio</title>
+        <title>{experience.propertitle} - Ryan&apos;s Portfolio</title>
       </Head>
       <Header />
       {isLoading ? (

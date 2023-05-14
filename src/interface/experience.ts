@@ -12,6 +12,7 @@ interface Experience {
   id: number;
   show: boolean;
   title: string;
+  propertitle: string;
   type: string;
   tag: string;
   period: string;

@@ -3,6 +3,7 @@
     "id": 1,
     "show": true,
     "title": "teaching assistant",
+    "propertitle": "Teaching Assistant",
     "tag": "teaching-assistant",
     "period": "Mar 2023 - Now",
     "association": {
@@ -20,6 +21,7 @@
     "id": 2,
     "show": true,
     "title": "laboratory assistant",
+    "propertitle": "Laboratory Assistant",
     "tag": "laboratory-assistant",
     "period": "Feb 2022 - Feb 2023",
     "association": {
@@ -44,6 +46,7 @@
     "id": 3,
     "show": false,
     "title": "activist",
+    "propertitle": "Activist",
     "tag": "activist-bncc",
     "period": "Nov 2021 - Feb 2022",
     "association": {
@@ -66,6 +69,7 @@
     "id": 4,
     "show": false,
     "title": "trainer",
+    "propertitle": "Trainer",
     "tag": "trainer",
     "period": "September 2022",
     "association": {
@@ -83,7 +87,8 @@
   {
     "id": 5,
     "show": true,
-    "title": "Student Council President",
+    "title": "student council president",
+    "propertitle": "Student Council President",
     "tag": "student-council-president",
     "period": "Sep 2019 - Aug 2020",
     "association": {
@@ -101,6 +106,7 @@
     "id": 6,
     "show": true,
     "title": "Student Council Staff",
+    "propertitle": "student council staff",
     "tag": "student-council-staff",
     "period": "Nov 2018 - Aug 2019",
     "association": {
@@ -118,6 +124,7 @@
     "id": 7,
     "show": true,
     "title": "volunteer",
+    "propertitle": "Volunteer",
     "tag": "volunteer-sejutacita",
     "period": "Apr 2021 - Oct 2021",
     "association": {

@@ -10,8 +10,8 @@
     "type": "code",
     "description": {
       "brief": "Build Your Business Network",
-      "problem": "As the Indonesian economy is rapidly growing, there is a need for an application that can help local small businesses (UMKM) compete in these conditions. We are aware that some main problems include <strong> a lack of business education, difficulty in finding product suppliers, and a one-man-show approach </strong>.",
-      "solution": "Based on a one-on-one interview with a local business owner, Angelika Gw, <strong> our team developed an app with three main features </strong> to specifically address the three problems mentioned above.",
+      "problem": "As the Indonesian economy is rapidly growing, there is a need for an application that can help local small businesses (UMKM) compete in these conditions. We are aware that some main problems include a lack of business education, difficulty in finding product suppliers, and a one-man-show approach.",
+      "solution": "Based on a one-on-one interview with a local business owner, Angelika Gw, our team developed an app with three main features  to specifically address the three problems mentioned above.",
       "problemimage": true,
       "solutionimage": true
     },
@@ -61,12 +61,17 @@
     "type": "prototype",
     "description": {
       "brief": "Real-world project",
-      "problem": "Kampoeng Koena is a newly founded tourism village as of early 2022. It has received support from the Ministry of Public Works and Housing (KPUPR) of Indonesia and aims to become a village with numerous homestays for tourists visiting nearby attractions such as Mount Bromo. However, <strong> the village faces the challenge of increasing the number of tourists while still promoting and preserving their local culture and experiences</strong>.",
-      "solution": "After a three-day incentive involving interviews with locals, discussions with other groups, and brainstorming within our team, we arrived at a viable solution to help promote Kampoeng Koena: <strong> the creation of a website</strong>. In this digital age, where people rely heavily on the internet to search for information, a website can be a powerful tool to attract tourists to the village.<br /><br /> The website will be <strong> designed to showcase Kampoeng Koena's unique features </strong> and attractions, making it easy for visitors to plan their trip and learn about the village. To increase visibility, we will ensure that the website is <strong> optimized for search engines</strong>, making it easier for people to find when searching for travel destinations in the region.",
+      "problem": "Kampoeng Koena is a newly founded tourism village as of early 2022. It has received support from the Ministry of Public Works and Housing (KPUPR) of Indonesia and aims to become a village with numerous homestays for tourists visiting nearby attractions such as Mount Bromo. However,  the village faces the challenge of increasing the number of tourists while still promoting and preserving their local culture and experiences.",
+      "solution": "After a three-day incentive involving interviews with locals, discussions with other groups, and brainstorming within our team, we arrived at a viable solution to help promote Kampoeng Koena:  the creation of a website. In this digital age, where people rely heavily on the internet to search for information, a website can be a powerful tool to attract tourists to the village. The website is  designed to showcase Kampoeng Koena's unique features  and attractions, making it easy for visitors to plan their trip and learn about the village.",
       "problemimage": true,
       "solutionimage": true
     },
     "techstack": ["Figma"],
+    "result": {
+      "link": "https://www.figma.com/proto/v6DPDEZjKhXPhPxoM63p1u/Prototype?node-id=8-21&starting-point-node-id=8%3A21",
+      "type": "prototype",
+      "properplatform": "Figma"
+    },
     "contributor": {
       "1": {
         "name": "Heryan Djaruma",
@@ -97,12 +102,17 @@
     "type": "code",
     "description": {
       "brief": "Right cost in your \"kost\"",
-      "problem": "Managing money as a college student can be a daunting task, especially for those living abroad or away from their parents. To address this challenge, we recognized the importance of<strong> an app that could help students manage their finances more effectively</strong>, providing guidance and support for every purchase and savings decision throughout their college experience.",
-      "solution": "Our team has created an app that directly addresses these common financial management challenges faced by college students. Our app features three main menus, including <strong> a money tracker, savings, and budget tool,</strong> along with a recommendation system that keeps you informed of your financial availability. With these features, our app empowers college students to make informed decisions and better manage their finances throughout their college experience.",
+      "problem": "Managing money as a college student can be a daunting task, especially for those living abroad or away from their parents. To address this challenge, we recognized the importance of an app that could help students manage their finances more effectively, providing guidance and support for every purchase and savings decision throughout their college experience.",
+      "solution": "Our team has created an app that directly addresses these common financial management challenges faced by college students. Our app features three main menus, including  a money tracker, savings, and budget tool, along with a recommendation system that keeps you informed of your financial availability. With these features, our app empowers college students to make informed decisions and better manage their finances throughout their college experience.",
       "problemimage": true,
       "solutionimage": true
     },
     "techstack": ["Java", "XML", "Android", "Firebase"],
+    "result": {
+      "link": "https://github.com/joshuawenata/hikost",
+      "type": "repository",
+      "properplatform": "Github"
+    },
     "contributor": {
       "1": {
         "name": "Heryan Djaruma",
@@ -143,6 +153,11 @@
       "solutionimage": true
     },
     "techstack": ["Laravel", "Bootstrap", "PHP"],
+    "result": {
+      "link": "https://github.com/heryandjaruma/MidProject-BackendDevelopment-2021",
+      "type": "repository",
+      "properplatform": "Github"
+    },
     "contributor": {
       "1": {
         "name": "Heryan Djaruma",
@@ -165,8 +180,8 @@
     "type": "code",
     "description": {
       "brief": "AI sound detection project",
-      "problem": "In 2022, I was professionally recruited as a project assistant by Professor R (initial) of Computer Science Binus University to assist in completing her doctoral dissertation at Institut Teknologi Bandung (ITB). The focus of the dissertation was on Seldnet DCASE 2020, <strong> a research project centered around Sound Event Localization and Detection Evaluated in Real Spatial Sound Scenes using Artificial Intelligence</strong>.",
-      "solution": "In my role within the project, I was responsible for performing audio separation using the Nussl library. Additionally, I worked on overlaying specific audio based on the requirements set by Professor R to enhance the training data. After the training process was completed by Professor R using TensorFlow,<strong> we successfully achieved an accuracy rate of 70%</strong> in identifying 13 different types of sound. This exceeded our target of 65% accuracy, demonstrating the effectiveness of our approach.",
+      "problem": "In 2022, I was professionally recruited as a project assistant by Professor R (initial) of Computer Science Binus University to assist in completing her doctoral dissertation at Institut Teknologi Bandung (ITB). The focus of the dissertation was on Seldnet DCASE 2020,  a research project centered around Sound Event Localization and Detection Evaluated in Real Spatial Sound Scenes using Artificial Intelligence.",
+      "solution": "In my role within the project, I was responsible for performing audio separation using the Nussl library. Additionally, I worked on overlaying specific audio based on the requirements set by Professor R to enhance the training data. After the training process was completed by Professor R using TensorFlow, we successfully achieved an accuracy rate of 70% in identifying 13 different types of sound. This exceeded our target of 65% accuracy, demonstrating the effectiveness of our approach.",
       "problemimage": false,
       "solutionimage": false,
       "topiclink": "https://dcase.community/challenge2020/task-sound-event-localization-and-detection"
@@ -184,9 +199,15 @@
     "type": "code",
     "description": {
       "brief": "Personal web portfolio",
-      "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
+      "problem": "This project has been specifically designed to cater to the requirements of the professional work field and serve as a portfolio showcase.",
+      "solution": "The web portfolio design prioritizes the maximum UI/UX experience, emphasizing important points while maintaining readability and accessibility. It incorporates vibrant colors that catch the eye, along with design principles that create a clean look despite the abundance of information. The website utilizes Next.js technology, which offers the advantage of serving both the front-end and back-end, making it easier to maintain and scale in the future. Additionally, Tailwind CSS is employed for its versatility, enabling the creation of custom React components from scratch for this website."
     },
-    "techstack": ["Next", "Typescript", "Tailwind"]
+    "techstack": ["Next", "Typescript", "Tailwind"],
+    "result": {
+      "link": "https://github.com/heryandjaruma/portfolio",
+      "type": "repository",
+      "properplatform": "Github"
+    }
   },
   {
     "id": 7,
@@ -195,13 +216,29 @@
     "logotext": false,
     "title": "ruang xpresi",
     "propertitle": "Ruang Xpresi",
-    "tag": "personal-website",
+    "tag": "ruang-xpresi",
     "type": "music",
     "description": {
       "brief": "Solo live arrangement",
-      "problem": "To cater to the requirements of the professional work field, this project has been specifically designed to serve as a portfolio showcase."
+      "problem": "This project began as my active participation initiative as a freshman in Binus University. With just 2 days of arranging, recording, and editing, the outcome was amazing, reaching a wide audience and receiving positive feedback from colleagues.",
+      "solution": "This project had a significant impact and was recognized with an award for being one of the best projects among other freshman projects. As a testament to its success, the video was showcased at TEDxBinusUniversity in 2021."
     },
-    "techstack": ["Next", "Typescript", "Tailwind"]
+    "techstack": ["Cubase"],
+    "result": {
+      "link": "https://youtu.be/wckfgmaeYZ0",
+      "type": "performance",
+      "properplatform": "Youtube"
+    },
+    "awards": {
+      "1": {
+        "name": "Winner, Ruang Xpresi BINUS",
+        "association": "First Year Program (FYP) Binus University"
+      },
+      "2": {
+        "name": "Showcased at TEDxBinusUniversity",
+        "association": "Binus University"
+      }
+    }
   },
   {
     "id": 8,
@@ -214,13 +251,13 @@
     "type": "music",
     "result": {
       "link": "https://youtu.be/bNSb5cvyQBI",
-      "type": "video",
+      "type": "OST music video",
       "properplatform": "YouTube"
     },
     "description": {
       "brief": "Short movie OST",
-      "problem": "",
-      "solution": "",
+      "problem": "This project is specifically created as an original soundtrack (OST) for a short movie. As the music director and producer of this song, I employed techniques of harmony and a dreamy vibe, resulting in a composition that is truly worthy of a movie.",
+      "solution": "The OST successfully captures the desired atmosphere and enhances the storytelling of the short movie. It adds depth and emotion to the scenes, immersing the viewers in the cinematic experience. The careful attention to harmony and the dreamy ambiance of the song contribute to its overall quality and suitability for the project.",
       "problemimage": true
     },
     "techstack": ["Cubase"]

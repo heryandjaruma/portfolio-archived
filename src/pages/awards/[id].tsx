@@ -61,7 +61,7 @@ const AwardDetailPage = () => {
   return (
     <div>
       <Head>
-        <title>{award.title} - Ryan&apos;s Portfolio</title>
+        <title>{award.propertitle} - Ryan&apos;s Portfolio</title>
       </Head>
       <Header />
       {isLoading ? (

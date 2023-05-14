@@ -2,6 +2,7 @@ interface Award {
   id: number;
   show: boolean;
   title: string;
+  propertitle: string;
   program: string;
   association: string;
   type: string;

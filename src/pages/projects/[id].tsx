@@ -84,6 +84,7 @@ export default function ProjectDetailPage() {
                   height={64}
                 />
               </ShowIf>
+
               {project.logotext ? (
                 <span>
                   <Image
@@ -140,8 +141,11 @@ export default function ProjectDetailPage() {
                     className="pointer-events-none mb-6 rounded-lg shadow-md"
                   />
                 </ShowIf>
+
                 <h1 className="text-2xl font-medium">Solution</h1>
+
                 <div className="text-left">{project.description?.solution}</div>
+
                 <ShowIf isExist={project.description?.topiclink}>
                   <p className="mt-6 italic">
                     To Learn more about this topic, refer to{" "}
@@ -217,7 +221,7 @@ export default function ProjectDetailPage() {
                   )}
                 </p>
                 <Image
-                  src={`/images/projects/${project.title}_awards.jpg`}
+                  src={`/images/projects/${project.tag}_awards.jpg`}
                   alt={`${project.title}-cover`}
                   width={`720`}
                   height={720}

@@ -1,16 +1,18 @@
-import Header from "./layout/Header";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import Head from "next/head";
+import { useEffect, useState } from "react";
+
+import Project from "@/interface/project";
+
+import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 
 import CodeIcon from "./components/CodeIcon";
 import NextPage from "./components/NextPage";
-
-import Project from "@/interface/project";
-import { useEffect, useState } from "react";
-import { handleButtonClick } from "@/utils/buttonUtils";
-import { useRouter } from "next/router";
 import LoadingPage from "./components/LoadingPage";
-import Head from "next/head";
+
+import { handleButtonClick } from "@/utils/buttonUtils";
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
