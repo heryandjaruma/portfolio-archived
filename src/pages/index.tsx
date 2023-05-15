@@ -116,7 +116,7 @@ export default function Home({ news, educations, showcases }: Props) {
               series of professional works.
             </p>
 
-            <p className="w-full py-4 text-center font-light text-gray-600 md:max-w-2xl">
+            <p className="w-full py-4 text-center text-sm font-light text-gray-600 md:max-w-2xl lg:text-base">
               Some of my notable accomplishments include being awarded a
               scholarship, serving as a laboratory assistant, and receiving
               recognition for my project. Moreover, my diverse range of

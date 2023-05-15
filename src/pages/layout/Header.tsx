@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <>
       <nav className="sticky top-0 z-50 font-display font-semibold">
-        <div className="absolute mx-auto w-full bg-white px-4 sm:px-6 lg:px-8">
+        <div className="absolute mx-auto w-full bg-white px-4 shadow-md sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="">
               <button
