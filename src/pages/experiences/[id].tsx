@@ -63,7 +63,9 @@ export default function ExperienceDetailPage() {
       <Head>
         <title>{experience.propertitle} - Ryan&apos;s Portfolio</title>
       </Head>
+
       <Header />
+
       {isLoading ? (
         <LoadingPage />
       ) : (
@@ -75,9 +77,11 @@ export default function ExperienceDetailPage() {
               <h1 className="mb-2 w-fit rounded-full bg-primary py-1 px-2 text-xs capitalize text-white">
                 {experience.type}
               </h1>
+
               <div className="text-4xl font-semibold capitalize text-primary">
                 {experience.title}
               </div>
+
               <p className="w-full text-start font-normal text-gray-500">
                 {experience.period}
               </p>
@@ -85,21 +89,26 @@ export default function ExperienceDetailPage() {
 
             <div id="association" className="w-full bg-turq p-4 text-white">
               <p className="text-lg">{experience.association.name}</p>
+
               <p className="text-sm">{experience.location}</p>
             </div>
 
             <div id="brief" className="px-4 text-white">
               <hr className="my-4 h-px border-0 bg-gray-200" />
+
               <h1 className="text-2xl font-semibold ">Brief</h1>
+
               <div id="brief" className="font-normal">
                 {experience.description.brief}
               </div>
+
               <hr className="my-8 h-px border-0 bg-gray-200" />
             </div>
 
             <ShowIf isExist={experience.description.detail}>
               <div id="detail" className="mb-8 w-full px-4 text-white">
                 <h1 className="w-full text-2xl font-semibold">Detail</h1>
+
                 <div className="w-full text-start text-sm text-white">
                   {experience.description.detail?.map((detail, item) => (
                     <div key={item} className="w-full">
@@ -144,9 +153,11 @@ export default function ExperienceDetailPage() {
               <h1 className="mb-2 w-fit rounded-full bg-primary py-1 px-2 text-xs capitalize text-white">
                 {experience.type}
               </h1>
+
               <div className="text-4xl font-semibold capitalize text-primary">
                 {experience.title}
               </div>
+
               <p className="w-full text-start font-normal text-gray-500">
                 {experience.period}
               </p>
@@ -158,21 +169,26 @@ export default function ExperienceDetailPage() {
                   <p className="text-2xl font-semibold">
                     {experience.association.name}
                   </p>
+
                   <p className="text-lg">{experience.location}</p>
                 </div>
 
                 <div id="brief" className="px-4 text-white">
                   <hr className="my-4 h-px border-0 bg-gray-200" />
+
                   <h1 className="text-2xl font-semibold ">Brief</h1>
+
                   <div id="brief" className="font-normal">
                     {experience.description.brief}
                   </div>
+
                   <hr className="my-8 h-px border-0 bg-gray-200" />
                 </div>
 
                 <ShowIf isExist={experience.description.detail}>
                   <div id="detail" className="mb-8 w-full px-4 text-white">
                     <h1 className="text-2xl font-semibold">Detail</h1>
+
                     <div className="w-full text-start text-sm text-white">
                       {experience.description.detail?.map((detail, item) => (
                         <div key={item} className="w-full">
