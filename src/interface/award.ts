@@ -1,3 +1,8 @@
+interface Refer {
+  id: number;
+  type: string;
+}
+
 interface Award {
   id: number;
   show: boolean;
@@ -6,9 +11,10 @@ interface Award {
   program: string;
   association: string;
   type: string;
-  refer?: string;
+  refer?: Refer;
   date: string;
   description: string;
+  image: boolean;
 }
 
 export default Award;
