@@ -7,6 +7,8 @@ import Image from "next/image";
 
 import LoadingPage from "../components/LoadingPage";
 import Head from "next/head";
+import Link from "next/link";
+import ShowIf from "../layout/ShowIf";
 
 const AwardDetailPage = () => {
   const router = useRouter();
@@ -90,15 +92,48 @@ const AwardDetailPage = () => {
               <p className="text-blk">{award.description}</p>
             </div>
 
-            <div id="illustration" className="place-items-center px-4 py-6">
-              <Image
-                src="/images/awards/groovydoodle.svg"
-                width={1000}
-                height={1000}
-                alt="groovy-doodle"
-                className="md:max-w-md"
-              />
-            </div>
+            <ShowIf isExist={award.refer}>
+              <div id="refer" className="w-full px-4 py-4 text-left text-white">
+                <p className="text-gray-500">
+                  Related to this award -{" "}
+                  <Link
+                    href={`/${award.refer?.type}s/${award.refer?.id}`}
+                    className="text-blu underline"
+                  >
+                    {award.refer?.type}
+                  </Link>
+                </p>
+              </div>
+            </ShowIf>
+
+            {award.image ? (
+              <div
+                id="image"
+                className="select-none place-items-center px-4 py-6"
+              >
+                <Image
+                  src={`/images/awards/${award.tag}.jpg`}
+                  width={1000}
+                  height={1000}
+                  alt="groovy-doodle"
+                  className="pointer-events-none rounded-md shadow-lg md:max-w-md"
+                  priority
+                />
+              </div>
+            ) : (
+              <div
+                id="image"
+                className="select-none place-items-center px-4 py-6"
+              >
+                <Image
+                  src="/images/awards/groovydoodle.svg"
+                  width={1000}
+                  height={1000}
+                  alt="groovy-doodle"
+                  className="pointer-events-none md:max-w-md"
+                />
+              </div>
+            )}
           </div>
         </div>
       )}

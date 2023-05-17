@@ -7,6 +7,7 @@
     "program": "Global Korea Scholarship (GKS) Non-degree",
     "association": "Korea Ministry of Education",
     "type": "scholarship",
+    "tag": "gks",
     "date": "February 2023",
     "description": "I have been selected as one of the three awardees from Binus University for the GKS exchange student program. This program offers me the opportunity to embark on a remarkable academic journey for one semester in Seoul, South Korea, commencing in February 2023.",
     "image": false
@@ -19,6 +20,7 @@
     "program": "Techfest Exhibition Competition",
     "association": "HIMTI Binus University",
     "type": "competition",
+    "tag": "techfest",
     "refer": {
       "id": 1,
       "type": "project"
@@ -36,6 +38,7 @@
     "program": "Hackathon SoCS",
     "association": "School of Computer Science Binus University",
     "type": "hackathon",
+    "tag": "hackathon",
     "refer": {
       "id": 1,
       "type": "project"
@@ -52,6 +55,7 @@
     "program": "Beasiswa SejutaCita Batch 1",
     "association": "SejutaCita Indonesia",
     "type": "scholarship",
+    "tag": "bsc",
     "refer": {
       "id": 7,
       "type": "experience"
@@ -68,6 +72,7 @@
     "program": "Friendship Without Barriers Poster Competition",
     "association": "Friends Care Community (FCC) Binus University",
     "type": "creative competition",
+    "tag": "fcc",
     "date": "September 2022",
     "description": "I was recognized as a winner in the Friendship Without Barriers Poster Competition for my poster design. This award highlights my creative skills and ability to convey powerful messages through visual art.",
     "image": true
@@ -80,6 +85,7 @@
     "program": "International Community Development Program (ICDP)",
     "association": "Binus University",
     "type": "short program",
+    "tag": "icdp",
     "refer": {
       "id": 2,
       "type": "project"
@@ -96,6 +102,7 @@
     "program": "Festival Band Temu Akrab Antar Penabur",
     "association": "BPK Penabur Cianjur",
     "type": "band competition",
+    "tag": "cianjur",
     "date": "January 2022",
     "description": "As the drummer of the HOI band, our collective talent and hard work were recognized by the judges.",
     "image": false
@@ -108,6 +115,7 @@
     "program": "Ruang Xpresi BINUS",
     "association": "First Year Program (FYP) Binus University",
     "type": "talent competition",
+    "tag": "ruangxpresi",
     "refer": {
       "id": 7,
       "type": "project"
@@ -124,6 +132,7 @@
     "program": "Groove In Beat Band Competition 2019 SKETSA",
     "association": "SMA Kristen Kalam Kudus",
     "type": "band competition",
+    "tag": "grooveinbeat",
     "date": "September 2019",
     "description": "The HOI band, in which I played the role of a drummer, achieved the remarkable feat of winning 1st place in the Groove In Beat Band Competition 2019 SKETSA.",
     "image": false
@@ -136,6 +145,7 @@
     "program": "Lomba CreatiVlog \"Aku dan Museum KAA\"",
     "association": "Museum Konferensi Asia Afrika (KAA)",
     "type": "video competition",
+    "tag": "kaa",
     "date": "April 2019",
     "description": "The project focused on creatively exploring the Museum Konferensi Asia Afrika (KAA) through a vlog format. Being recognized for my role as a videographer and editor is truly gratifying.",
     "image": false
@@ -148,6 +158,7 @@
     "program": "Lomba Film Layar Sejarah (LASER) Pekan Raya Sejarah",
     "association": "Himpunan Mahasiswa Sejarah (HIMAS) UPI",
     "type": "video competition",
+    "tag": "laser",
     "date": "March 2019",
     "description": "As an editor, I contributed to a captivating short movie that caught the attention of the judges. It's a great recognition of the effort and creativity poured into the project.",
     "image": false
@@ -160,9 +171,10 @@
     "program": "Noble Student Award",
     "association": "SMAK 1 BPK PENABUR Bandung",
     "type": "competition",
+    "tag": "nsa",
     "date": "January 2019",
     "description": "I am humbled and grateful to have received the Noble Student Award, a distinction given to the top-performing students in my high school. Out of more than 900 students, I was selected as a recipient during my sophomore year. This recognition early in my high school journey serves as a testament to my dedication and academic excellence.",
-    "image": false
+    "image": true
   },
   {
     "id": 10,
@@ -172,6 +184,7 @@
     "program": "L'AGIE TRIOP Team Supporter Challenge",
     "association": "SMA Trinitas",
     "type": "competition",
+    "tag": "lagietriop",
     "date": "November 2018",
     "description": "This award is given to my team as one of the best supporting team in L'AGIE TRIOP Team Supporter Challenge.",
     "image": false

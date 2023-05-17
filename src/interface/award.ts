@@ -12,6 +12,7 @@ interface Award {
   association: string;
   type: string;
   refer?: Refer;
+  tag: string;
   date: string;
   description: string;
   image: boolean;

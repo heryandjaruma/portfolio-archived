@@ -9,23 +9,26 @@ export default function Footer() {
         <div className="flex h-32 flex-row items-center justify-center gap-x-7">
           <Link href="https://github.com/heryandjaruma" className="bg-turq p-4">
             <Image
-              src="/images/particles/github_icon.svg"
+              src="/images/icons/github.svg"
               width={150}
               height={150}
               className="w-6"
               alt="github_icon"
+              priority
             />
           </Link>
+
           <Link
             href="https://www.linkedin.com/in/heryandjaruma/"
             className="bg-turq p-4"
           >
             <Image
-              src="/images/particles/linkedin_icon.svg"
+              src="/images/icons/linkedin.svg"
               width={150}
               height={150}
               className="w-6"
               alt="linkedin_icon"
+              priority
             />
           </Link>
         </div>

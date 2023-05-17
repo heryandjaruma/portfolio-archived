@@ -70,6 +70,7 @@ export default function ExperienceDetailPage() {
         <LoadingPage />
       ) : (
         <div>
+          {/* mobile */}
           <div
             className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-turq pb-10 font-display md:hidden`}
           >
@@ -105,7 +106,7 @@ export default function ExperienceDetailPage() {
               <hr className="my-8 h-px border-0 bg-gray-200" />
             </div>
 
-            <ShowIf isExist={experience.description.detail}>
+            {experience.description.detail ? (
               <div id="detail" className="mb-8 w-full px-4 text-white">
                 <h1 className="w-full text-2xl font-semibold">Detail</h1>
 
@@ -117,7 +118,9 @@ export default function ExperienceDetailPage() {
                   ))}
                 </div>
               </div>
-            </ShowIf>
+            ) : (
+              ""
+            )}
 
             <ShowIf isExist={experience.image}>
               <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-4">
@@ -146,6 +149,7 @@ export default function ExperienceDetailPage() {
             </ShowIf>
           </div>
 
+          {/* md */}
           <div
             className={`mx-auto hidden max-w-screen-2xl flex-col items-center bg-turq pb-10 font-display md:flex`}
           >

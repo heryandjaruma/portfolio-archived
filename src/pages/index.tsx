@@ -221,8 +221,6 @@ export default function Home({ news, educations, showcases }: Props) {
           </div>
         </div>
 
-        {/* <hr className="my-8 h-px w-11/12 border-0 bg-gray-400" /> */}
-
         <div
           id="education"
           className="bg-fill grid h-full w-full grid-cols-1 place-items-center p-16 px-4 md:grid-cols-2"
@@ -251,7 +249,7 @@ export default function Home({ news, educations, showcases }: Props) {
               <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-blk bg-blk"></div>
 
               <time className="mb-1 text-sm font-normal italic leading-none text-gray-400">
-                Exchange Student, February - July 2023
+                Exchange Student, February - Now
               </time>
 
               <h3 className="text-lg font-semibold text-blue">
@@ -304,8 +302,6 @@ export default function Home({ news, educations, showcases }: Props) {
             </div>
           </div>
         </div>
-
-        {/* <hr className="my-8 h-px w-11/12 border-0 bg-gray-400" /> */}
 
         <div
           id="mentions"
@@ -381,10 +377,76 @@ export default function Home({ news, educations, showcases }: Props) {
             </Swiper>
           </div>
         </div>
+
+        <div
+          id="contact"
+          className="grid w-full grid-cols-1 place-items-center px-4 text-center"
+        >
+          <hr className="my-8 h-px w-full border-0 bg-gray-300" />
+
+          <h1 className="py-4 font-display text-4xl font-semibold text-blue lg:text-5xl">
+            Let&apos;s be a mutual
+          </h1>
+
+          <p className="italic text-gray-700 md:text-lg">
+            Feel free to contact me on any of the platforms listed below :)
+          </p>
+
+          <div className="space-y-6 py-10 font-code text-gray-500">
+            <a
+              target="_blank"
+              href="https://github.com/heryandjaruma"
+              rel="noopener noreferrer"
+              className="flex w-full flex-row items-center justify-center space-x-4 bg-turq p-4 text-xl text-white hover:bg-darkturq"
+            >
+              <Image
+                src="/images/icons/github.svg"
+                width={150}
+                height={150}
+                className="w-10"
+                alt="github_icon"
+                priority
+              />
+              <p>/heryandjaruma</p>
+            </a>
+
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/heryandjaruma/"
+              rel="noopener noreferrer"
+              className="flex w-full flex-row items-center justify-center space-x-4 bg-turq p-4 text-xl text-white hover:bg-darkturq"
+            >
+              <Image
+                src="/images/icons/linkedin.svg"
+                width={150}
+                height={150}
+                className="w-10"
+                alt="linkedin_icon"
+                priority
+              />
+              <p>/in/heryandjaruma</p>
+            </a>
+
+            <a
+              target="_blank"
+              href="https://www.instagram.com/heryan612/"
+              rel="noopener noreferrer"
+              className="flex w-full flex-row items-center justify-center space-x-4 bg-turq p-4 text-xl text-white hover:bg-darkturq"
+            >
+              <Image
+                src="/images/icons/instagram.svg"
+                width={150}
+                height={150}
+                className="w-10"
+                alt="github_icon"
+                priority
+              />
+              <p>@heryan612</p>
+            </a>
+          </div>
+        </div>
       </div>
-      <div id="contact">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

@@ -286,9 +286,15 @@ export default function ProjectDetailPage() {
             </ShowIf>
 
             <ShowIf isExist={project.news}>
-              <div id="project-news" className="bg-blue px-4 py-14 text-white">
-                <h1 className="text-2xl font-medium">News</h1>
-                <div id="news-list" className="my-6">
+              <div
+                id="project-news"
+                className="grid grid-cols-1 place-items-center bg-blue px-4 py-14 text-white md:grid-cols-2"
+              >
+                <h1 className="mb-4 w-full text-left text-2xl font-medium md:mb-0 md:w-5/6 md:text-right md:text-4xl">
+                  News
+                </h1>
+
+                <div id="news-list" className="w-full md:w-5/6">
                   {project.news?.link && (
                     <a
                       target="_blank"
