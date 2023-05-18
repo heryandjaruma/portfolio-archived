@@ -21,7 +21,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Head from "next/head";
 
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 interface Props {
   news: Anews[];
@@ -103,15 +103,17 @@ export default function Home({ news, educations, showcases }: Props) {
           id="welcome"
           className="mt-16 flex w-full flex-col justify-center pt-14 font-display text-white"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
         >
           <div className="flex w-full flex-col items-center justify-center px-4 pb-8">
             <motion.h1
               className="text-center text-5xl font-bold text-blk md:text-5xl lg:text-6xl"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
+              viewport={{ once: true }}
             >
               Hello, I&apos;m
             </motion.h1>
@@ -119,8 +121,9 @@ export default function Home({ news, educations, showcases }: Props) {
             <motion.h1
               className="text-center text-5xl font-bold text-blue md:text-5xl lg:text-6xl"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.4 }}
+              viewport={{ once: true }}
             >
               Heryan Djaruma
             </motion.h1>
@@ -130,6 +133,7 @@ export default function Home({ news, educations, showcases }: Props) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.6 }}
+              viewport={{ once: true }}
             >
               A <span className="text-blue">Computer Science student</span> and
               an <span className="text-blue">enthusiastic learner</span> with a
@@ -139,8 +143,9 @@ export default function Home({ news, educations, showcases }: Props) {
             <motion.p
               className="w-full py-4 text-center text-sm font-light text-gray-600 md:max-w-2xl lg:text-base"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.8 }}
+              viewport={{ once: true }}
             >
               Some of my notable accomplishments include being awarded a
               scholarship, serving as a laboratory assistant, and receiving
@@ -151,8 +156,9 @@ export default function Home({ news, educations, showcases }: Props) {
             <motion.div
               className="mt-6 flex flex-row gap-x-6"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 1 }}
+              viewport={{ once: true }}
             >
               <button
                 className="rounded-full border-2 border-blk py-1 px-9 text-blk md:text-xl"
@@ -179,8 +185,9 @@ export default function Home({ news, educations, showcases }: Props) {
           <motion.div
             className="mt-8 flex w-full items-center justify-center p-4"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.2 }}
+            viewport={{ once: true }}
           >
             <Image
               src={`/images/index/welcome.png`}
@@ -197,9 +204,14 @@ export default function Home({ news, educations, showcases }: Props) {
           id="my-works"
           className="grid w-full grid-cols-1 place-items-center px-4 py-16 text-center"
         >
-          <h1 className="font-display text-4xl font-semibold text-primary lg:text-5xl">
+          <motion.div
+            className="font-display text-4xl font-semibold text-primary lg:text-5xl"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
             Works
-          </h1>
+          </motion.div>
 
           <div className="pt-4 pb-8 text-gray-700 md:max-w-2xl md:text-lg">
             From coding projects and teaching experiences to scholarship and

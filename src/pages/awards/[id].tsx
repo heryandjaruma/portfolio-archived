@@ -73,7 +73,8 @@ const AwardDetailPage = () => {
         <motion.div
           className="mx-auto flex max-w-screen-2xl flex-col items-center bg-primary pt-16 font-display"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.4 }}
         >
           <div
@@ -84,7 +85,8 @@ const AwardDetailPage = () => {
               id="title"
               className="w-full px-4 py-4 text-start"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <motion.h1 className="mb-8 w-fit rounded-full bg-turq py-1 px-2 text-xs capitalize text-white">
@@ -106,7 +108,8 @@ const AwardDetailPage = () => {
               id="description"
               className="px-4 py-4 text-white"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
               <motion.p className="text-blk">{award.description}</motion.p>
@@ -117,7 +120,8 @@ const AwardDetailPage = () => {
                 id="refer"
                 className="w-full px-4 py-4 text-left text-white"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.6 }}
               >
                 <motion.p className="text-gray-500">
@@ -137,7 +141,8 @@ const AwardDetailPage = () => {
                 id="image"
                 className="select-none place-items-center px-4 py-6"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.8 }}
               >
                 <Image
@@ -154,7 +159,8 @@ const AwardDetailPage = () => {
                 id="image"
                 className="select-none place-items-center px-4 py-6"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.8 }}
               >
                 <Image

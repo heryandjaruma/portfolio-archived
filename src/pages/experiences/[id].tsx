@@ -75,14 +75,16 @@ export default function ExperienceDetailPage() {
           <motion.div
             className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-turq pb-10 font-display md:hidden`}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
             <motion.div
               id="title"
               className="mt-16 w-full bg-white p-4"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <h1 className="mb-2 w-fit rounded-full bg-primary py-1 px-2 text-xs capitalize text-white">
@@ -96,7 +98,8 @@ export default function ExperienceDetailPage() {
               <motion.p
                 className="w-full text-start font-normal text-gray-500"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
               >
                 {experience.period}
@@ -107,7 +110,8 @@ export default function ExperienceDetailPage() {
               id="association"
               className="w-full bg-turq p-4 text-white"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.6 }}
             >
               <motion.p className="text-lg">
@@ -121,7 +125,8 @@ export default function ExperienceDetailPage() {
               id="brief"
               className="px-4 text-white"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.8 }}
             >
               <hr className="my-4 h-px border-0 bg-gray-200" />
@@ -140,7 +145,8 @@ export default function ExperienceDetailPage() {
                 id="detail"
                 className="mb-8 w-full px-4 text-white"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 1 }}
               >
                 <motion.h1 className="w-full text-2xl font-semibold">
@@ -153,7 +159,8 @@ export default function ExperienceDetailPage() {
                       key={item}
                       className="w-full"
                       initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: item * 0.1 + 1.2 }}
                     >
                       - {detail}
@@ -167,7 +174,8 @@ export default function ExperienceDetailPage() {
               <motion.div
                 className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-4"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 1.2 }}
               >
                 {experience.image && typeof experience.image === "number" && (
@@ -178,7 +186,8 @@ export default function ExperienceDetailPage() {
                         key={index}
                         className="col-span-1 row-span-1 px-4"
                         initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: index * 0.1 + 1.2 }}
                       >
                         <Image
@@ -202,14 +211,16 @@ export default function ExperienceDetailPage() {
           <motion.div
             className={`mx-auto hidden max-w-screen-2xl flex-col items-center bg-turq pb-10 font-display md:flex`}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.4 }}
           >
             <motion.div
               id="title"
               className="mt-16 w-full bg-white p-4"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <h1 className="mb-2 w-fit rounded-full bg-primary py-1 px-2 text-xs capitalize text-white">
@@ -223,7 +234,8 @@ export default function ExperienceDetailPage() {
               <motion.p
                 className="w-full text-start font-normal text-gray-500"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
               >
                 {experience.period}
@@ -234,14 +246,16 @@ export default function ExperienceDetailPage() {
               <motion.div
                 className="order-last col-span-1 row-span-1"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.6 }}
               >
                 <motion.div
                   id="association"
                   className="w-full bg-turq p-4 text-white"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
                 >
                   <motion.p className="text-2xl font-semibold">
@@ -255,7 +269,8 @@ export default function ExperienceDetailPage() {
                   id="brief"
                   className="px-4 text-white"
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
                 >
                   <hr className="my-4 h-px border-0 bg-gray-200" />
@@ -276,7 +291,8 @@ export default function ExperienceDetailPage() {
                     id="detail"
                     className="mb-8 w-full px-4 text-white"
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.4 }}
                   >
                     <motion.h1 className="text-2xl font-semibold">
@@ -289,7 +305,8 @@ export default function ExperienceDetailPage() {
                           key={item}
                           className="w-full"
                           initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: item * 0.1 }}
                         >
                           - {detail}
@@ -303,14 +320,16 @@ export default function ExperienceDetailPage() {
               <motion.div
                 className="col-span-1 row-span-1 select-none"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.8 }}
               >
                 <ShowIf isExist={experience.image}>
                   <motion.div
                     className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-2"
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.4 }}
                   >
                     {experience.image &&
@@ -321,7 +340,8 @@ export default function ExperienceDetailPage() {
                           key={index}
                           className="col-span-1 row-span-1"
                           initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: index * 0.1 }}
                         >
                           <Image
