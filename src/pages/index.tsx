@@ -21,6 +21,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Head from "next/head";
 
+import { motion } from "framer-motion";
+
 interface Props {
   news: Anews[];
   educations: Education[];
@@ -97,33 +99,61 @@ export default function Home({ news, educations, showcases }: Props) {
       <div
         className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-white font-display`}
       >
-        <div
+        <motion.div
           id="welcome"
           className="mt-16 flex w-full flex-col justify-center pt-14 font-display text-white"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
         >
           <div className="flex w-full flex-col items-center justify-center px-4 pb-8">
-            <h1 className="text-center text-5xl font-bold text-blk md:text-5xl lg:text-6xl">
+            <motion.h1
+              className="text-center text-5xl font-bold text-blk md:text-5xl lg:text-6xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
               Hello, I&apos;m
-            </h1>
+            </motion.h1>
 
-            <h1 className="text-center text-5xl font-bold text-blue md:text-5xl lg:text-6xl">
+            <motion.h1
+              className="text-center text-5xl font-bold text-blue md:text-5xl lg:text-6xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.4 }}
+            >
               Heryan Djaruma
-            </h1>
+            </motion.h1>
 
-            <p className="py-4 text-center font-normal text-gray-600 md:text-lg lg:text-xl">
+            <motion.p
+              className="py-4 text-center font-normal text-gray-600 md:text-lg lg:text-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+            >
               A <span className="text-blue">Computer Science student</span> and
               an <span className="text-blue">enthusiastic learner</span> with a
               series of professional works.
-            </p>
+            </motion.p>
 
-            <p className="w-full py-4 text-center text-sm font-light text-gray-600 md:max-w-2xl lg:text-base">
+            <motion.p
+              className="w-full py-4 text-center text-sm font-light text-gray-600 md:max-w-2xl lg:text-base"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.8 }}
+            >
               Some of my notable accomplishments include being awarded a
               scholarship, serving as a laboratory assistant, and receiving
               recognition for my project. Moreover, my diverse range of
               interests spans across leadership, graphic editing, and music.
-            </p>
+            </motion.p>
 
-            <div className="mt-6 flex flex-row gap-x-6">
+            <motion.div
+              className="mt-6 flex flex-row gap-x-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 1 }}
+            >
               <button
                 className="rounded-full border-2 border-blk py-1 px-9 text-blk md:text-xl"
                 onClick={() => handleScrollDown("my-works")}
@@ -143,10 +173,15 @@ export default function Home({ news, educations, showcases }: Props) {
                   height={100}
                 />
               </button>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="mt-8 flex w-full items-center justify-center p-4">
+          <motion.div
+            className="mt-8 flex w-full items-center justify-center p-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 1.2 }}
+          >
             <Image
               src={`/images/index/welcome.png`}
               width={1920}
@@ -155,8 +190,8 @@ export default function Home({ news, educations, showcases }: Props) {
               className="pointer-events-none w-full sm:w-3/4 md:w-2/3 lg:w-1/2"
               priority
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <div
           id="my-works"

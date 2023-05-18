@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Head from "next/head";
@@ -47,9 +48,12 @@ export default function Projects() {
         <div
           className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-blue font-display`}
         >
-          <div
+          <motion.div
             id="welcome"
             className="mt-16 flex w-full flex-col justify-center bg-blue px-4 pt-10 font-display font-semibold text-white lg:px-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
           >
             <div className="mb-10">
               <CodeIcon />
@@ -63,23 +67,40 @@ export default function Projects() {
                 Click on any card to view the details
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             id="contents"
             className="grid w-full grid-cols-1 place-items-center gap-4 bg-blue px-4 pb-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
-            {projects.map((project) => (
-              <div
+            {projects.map((project, index) => (
+              <motion.div
                 key={project.id}
                 onClick={() =>
                   handleButtonClick(router, `/projects/${project.id}`)
                 }
                 className="relative col-span-1 row-span-1 aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100 shadow-xl duration-150 lg:hover:scale-95 lg:hover:bg-slate-200"
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                transition={{
+                  duration: 0.2,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
               >
-                <div
+                <motion.div
                   id="title"
                   className="h-full  w-full p-6 text-2xl font-semibold text-blk shadow-xl"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeInOut",
+                    delay: index * 0.1,
+                  }}
                 >
                   <h1 className="mb-2 w-fit rounded-full bg-turq py-1 px-2 text-xs capitalize text-white">
                     {project.type}
@@ -106,7 +127,7 @@ export default function Projects() {
                   >
                     {project.description.brief}
                   </div>
-                </div>
+                </motion.div>
 
                 <div
                   id="logo"
@@ -132,9 +153,9 @@ export default function Projects() {
                     />
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
           <NextPage next="experiences" />
         </div>
       )}

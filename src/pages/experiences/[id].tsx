@@ -7,6 +7,7 @@ import Footer from "../layout/Footer";
 import ShowIf from "../layout/ShowIf";
 import Image from "next/image";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function ExperienceDetailPage() {
   const router = useRouter();
@@ -71,10 +72,19 @@ export default function ExperienceDetailPage() {
       ) : (
         <div>
           {/* mobile */}
-          <div
+          <motion.div
             className={`mx-auto flex max-w-screen-2xl flex-col items-center bg-turq pb-10 font-display md:hidden`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            <div id="title" className="mt-16 w-full bg-white p-4">
+            <motion.div
+              id="title"
+              className="mt-16 w-full bg-white p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
               <h1 className="mb-2 w-fit rounded-full bg-primary py-1 px-2 text-xs capitalize text-white">
                 {experience.type}
               </h1>
@@ -83,54 +93,93 @@ export default function ExperienceDetailPage() {
                 {experience.title}
               </div>
 
-              <p className="w-full text-start font-normal text-gray-500">
+              <motion.p
+                className="w-full text-start font-normal text-gray-500"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+              >
                 {experience.period}
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
-            <div id="association" className="w-full bg-turq p-4 text-white">
-              <p className="text-lg">{experience.association.name}</p>
+            <motion.div
+              id="association"
+              className="w-full bg-turq p-4 text-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.6 }}
+            >
+              <motion.p className="text-lg">
+                {experience.association.name}
+              </motion.p>
 
-              <p className="text-sm">{experience.location}</p>
-            </div>
+              <motion.p className="text-sm">{experience.location}</motion.p>
+            </motion.div>
 
-            <div id="brief" className="px-4 text-white">
+            <motion.div
+              id="brief"
+              className="px-4 text-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.8 }}
+            >
               <hr className="my-4 h-px border-0 bg-gray-200" />
 
-              <h1 className="text-2xl font-semibold ">Brief</h1>
+              <motion.h1 className="text-2xl font-semibold ">Brief</motion.h1>
 
               <div id="brief" className="font-normal">
                 {experience.description.brief}
               </div>
 
               <hr className="my-8 h-px border-0 bg-gray-200" />
-            </div>
+            </motion.div>
 
-            {experience.description.detail ? (
-              <div id="detail" className="mb-8 w-full px-4 text-white">
-                <h1 className="w-full text-2xl font-semibold">Detail</h1>
+            <ShowIf isExist={experience.description.detail}>
+              <motion.div
+                id="detail"
+                className="mb-8 w-full px-4 text-white"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 1 }}
+              >
+                <motion.h1 className="w-full text-2xl font-semibold">
+                  Detail
+                </motion.h1>
 
-                <div className="w-full text-start text-sm text-white">
+                <motion.div className="w-full text-start text-sm text-white">
                   {experience.description.detail?.map((detail, item) => (
-                    <div key={item} className="w-full">
+                    <motion.div
+                      key={item}
+                      className="w-full"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: item * 0.1 + 1.2 }}
+                    >
                       - {detail}
-                    </div>
+                    </motion.div>
                   ))}
-                </div>
-              </div>
-            ) : (
-              ""
-            )}
+                </motion.div>
+              </motion.div>
+            </ShowIf>
 
             <ShowIf isExist={experience.image}>
-              <div className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-4">
+              <motion.div
+                className="grid grid-cols-1 gap-y-4 md:grid-cols-2 lg:grid-cols-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 1.2 }}
+              >
                 {experience.image && typeof experience.image === "number" && (
                   <>
                     {Array.from({ length: experience.image }, (_, index) => (
-                      <div
+                      <motion.div
                         id="image"
                         key={index}
                         className="col-span-1 row-span-1 px-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 + 1.2 }}
                       >
                         <Image
                           src={`/images/experiences/${experience.tag}_${
@@ -141,19 +190,28 @@ export default function ExperienceDetailPage() {
                           height={1080}
                           className="pointer-events-none w-96 rounded-lg object-cover shadow-xl"
                         />
-                      </div>
+                      </motion.div>
                     ))}
                   </>
                 )}
-              </div>
+              </motion.div>
             </ShowIf>
-          </div>
+          </motion.div>
 
           {/* md */}
-          <div
+          <motion.div
             className={`mx-auto hidden max-w-screen-2xl flex-col items-center bg-turq pb-10 font-display md:flex`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            <div id="title" className="mt-16 w-full bg-white p-4">
+            <motion.div
+              id="title"
+              className="mt-16 w-full bg-white p-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
               <h1 className="mb-2 w-fit rounded-full bg-primary py-1 px-2 text-xs capitalize text-white">
                 {experience.type}
               </h1>
@@ -162,91 +220,127 @@ export default function ExperienceDetailPage() {
                 {experience.title}
               </div>
 
-              <p className="w-full text-start font-normal text-gray-500">
+              <motion.p
+                className="w-full text-start font-normal text-gray-500"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
+              >
                 {experience.period}
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
             <div className="grid grid-cols-2 place-items-center">
-              <div className="order-last col-span-1 row-span-1">
-                <div id="association" className="w-full bg-turq p-4 text-white">
-                  <p className="text-2xl font-semibold">
+              <motion.div
+                className="order-last col-span-1 row-span-1"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
+              >
+                <motion.div
+                  id="association"
+                  className="w-full bg-turq p-4 text-white"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <motion.p className="text-2xl font-semibold">
                     {experience.association.name}
-                  </p>
+                  </motion.p>
 
-                  <p className="text-lg">{experience.location}</p>
-                </div>
+                  <motion.p className="text-lg">{experience.location}</motion.p>
+                </motion.div>
 
-                <div id="brief" className="px-4 text-white">
+                <motion.div
+                  id="brief"
+                  className="px-4 text-white"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                >
                   <hr className="my-4 h-px border-0 bg-gray-200" />
 
-                  <h1 className="text-2xl font-semibold ">Brief</h1>
+                  <motion.h1 className="text-2xl font-semibold ">
+                    Brief
+                  </motion.h1>
 
                   <div id="brief" className="font-normal">
                     {experience.description.brief}
                   </div>
 
                   <hr className="my-8 h-px border-0 bg-gray-200" />
-                </div>
+                </motion.div>
 
                 <ShowIf isExist={experience.description.detail}>
-                  <div id="detail" className="mb-8 w-full px-4 text-white">
-                    <h1 className="text-2xl font-semibold">Detail</h1>
+                  <motion.div
+                    id="detail"
+                    className="mb-8 w-full px-4 text-white"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <motion.h1 className="text-2xl font-semibold">
+                      Detail
+                    </motion.h1>
 
-                    <div className="w-full text-start text-sm text-white">
+                    <motion.div className="w-full text-start text-sm text-white">
                       {experience.description.detail?.map((detail, item) => (
-                        <div key={item} className="w-full">
+                        <motion.div
+                          key={item}
+                          className="w-full"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.4, delay: item * 0.1 }}
+                        >
                           - {detail}
-                        </div>
+                        </motion.div>
                       ))}
-                    </div>
-                  </div>
+                    </motion.div>
+                  </motion.div>
                 </ShowIf>
-              </div>
+              </motion.div>
 
-              <div className="col-span-1 row-span-1 select-none">
-                {experience.image ? (
-                  <div className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-2">
+              <motion.div
+                className="col-span-1 row-span-1 select-none"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.8 }}
+              >
+                <ShowIf isExist={experience.image}>
+                  <motion.div
+                    className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-2"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                  >
                     {experience.image &&
-                      typeof experience.image === "number" && (
-                        <>
-                          {Array.from(
-                            { length: experience.image },
-                            (_, index) => (
-                              <div
-                                id="image"
-                                key={index}
-                                className="col-span-1 row-span-1"
-                              >
-                                <Image
-                                  src={`/images/experiences/${experience.tag}_${
-                                    index + 1
-                                  }.jpg`}
-                                  alt={`Image ${index}`}
-                                  width={1080}
-                                  height={1080}
-                                  className="pointer-events-none rounded-lg object-cover shadow-xl"
-                                  priority
-                                />
-                              </div>
-                            )
-                          )}
-                        </>
-                      )}
-                  </div>
-                ) : (
-                  <Image
-                    src={`/images/doodles/experience_doodle.svg`}
-                    alt={`experience-doodle`}
-                    width={1080}
-                    height={1080}
-                    className="pointer-events-none max-w-lg object-cover"
-                    priority
-                  />
-                )}
-              </div>
+                      typeof experience.image === "number" &&
+                      Array.from({ length: experience.image }, (_, index) => (
+                        <motion.div
+                          id="image"
+                          key={index}
+                          className="col-span-1 row-span-1"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.4, delay: index * 0.1 }}
+                        >
+                          <Image
+                            src={`/images/experiences/${experience.tag}_${
+                              index + 1
+                            }.jpg`}
+                            alt={`Image ${index}`}
+                            width={1080}
+                            height={1080}
+                            className="pointer-events-none rounded-lg object-cover shadow-xl"
+                            priority
+                          />
+                        </motion.div>
+                      ))}
+                  </motion.div>
+                </ShowIf>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
       <Footer />

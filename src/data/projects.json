@@ -183,9 +183,14 @@
       "brief": "AI sound detection project",
       "problem": "In 2022, I was professionally recruited as a project assistant by Professor R (initial) of Computer Science Binus University to assist in completing her doctoral dissertation at Institut Teknologi Bandung (ITB). The focus of the dissertation was on Seldnet DCASE 2020,  a research project centered around Sound Event Localization and Detection Evaluated in Real Spatial Sound Scenes using Artificial Intelligence.",
       "solution": "In my role within the project, I was responsible for performing audio separation using the Nussl library. Additionally, I worked on overlaying specific audio based on the requirements set by Professor R to enhance the training data. After the training process was completed by Professor R using TensorFlow, we successfully achieved an accuracy rate of 70% in identifying 13 different types of sound. This exceeded our target of 65% accuracy, demonstrating the effectiveness of our approach.",
-      "problemimage": false,
-      "solutionimage": false,
+      "problemimage": true,
+      "solutionimage": true,
       "topiclink": "https://dcase.community/challenge2020/task-sound-event-localization-and-detection"
+    },
+    "result": {
+      "link": "https://github.com/heryandjaruma/tp-project",
+      "properplatform": "Github",
+      "type": "repository"
     },
     "techstack": ["Python"]
   },
@@ -201,7 +206,9 @@
     "description": {
       "brief": "Personal web portfolio",
       "problem": "This project has been specifically designed to cater to the requirements of the professional work field and serve as a portfolio showcase.",
-      "solution": "The web portfolio design prioritizes the maximum UI/UX experience, emphasizing important points while maintaining readability and accessibility. It incorporates vibrant colors that catch the eye, along with design principles that create a clean look despite the abundance of information. The website utilizes Next.js technology, which offers the advantage of serving both the front-end and back-end, making it easier to maintain and scale in the future. Additionally, Tailwind CSS is employed for its versatility, enabling the creation of custom React components from scratch for this website."
+      "solution": "The web portfolio design prioritizes the maximum UI/UX experience, emphasizing important points while maintaining readability and accessibility. It incorporates vibrant colors that catch the eye, along with design principles that create a clean look despite the abundance of information. The website utilizes Next.js technology, which offers the advantage of serving both the front-end and back-end, making it easier to maintain and scale in the future. Additionally, Tailwind CSS is employed for its versatility, enabling the creation of custom React components from scratch for this website.",
+      "problemimage": true,
+      "solutionimage": true
     },
     "techstack": ["Next", "Typescript", "Tailwind"],
     "result": {
@@ -222,7 +229,9 @@
     "description": {
       "brief": "Solo live arrangement",
       "problem": "This project began as my active participation initiative as a freshman in Binus University. With just 2 days of arranging, recording, and editing, the outcome was amazing, reaching a wide audience and receiving positive feedback from colleagues.",
-      "solution": "This project had a significant impact and was recognized with an award for being one of the best projects among other freshman projects. As a testament to its success, the video was showcased at TEDxBinusUniversity in 2021."
+      "solution": "This project had a significant impact and was recognized with an award for being one of the best projects among other freshman projects. As a testament to its success, the video was showcased at TEDxBinusUniversity in 2021.",
+      "problemimage": true,
+      "solutionimage": true
     },
     "techstack": ["Cubase"],
     "result": {

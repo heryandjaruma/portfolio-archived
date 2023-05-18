@@ -7,6 +7,7 @@ import Project from "@/interface/project";
 import Image from "next/image";
 import ShowIf from "../layout/ShowIf";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function ProjectDetailPage() {
   const router = useRouter();
@@ -122,25 +123,31 @@ export default function ProjectDetailPage() {
                 <div className="text-left">{project.description?.problem}</div>
               </div>
 
-              {project.description.problemimage ? (
-                <div className="pt-4">
-                  <Image
-                    src={`/images/projects/${project.tag}_cover.jpg`}
-                    alt={`${project.tag}-cover`}
-                    width={960}
-                    height={960}
-                    className="pointer-events-none w-full rounded-lg shadow-md md:max-h-screen"
-                  />
-                </div>
-              ) : (
-                <Image
-                  src={`/images/doodles/problem_doodle.svg`}
-                  alt={`problem-doodle`}
-                  width={960}
-                  height={960}
-                  className="pointer-events-none mt-8 w-full max-w-sm rounded-lg md:max-w-md"
-                />
-              )}
+              <div className="pt-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  {project.description.problemimage ? (
+                    <Image
+                      src={`/images/projects/${project.tag}_cover.jpg`}
+                      alt={`${project.tag}-cover`}
+                      width={960}
+                      height={960}
+                      className="pointer-events-none w-full rounded-lg shadow-md md:max-h-screen"
+                    />
+                  ) : (
+                    <Image
+                      src={`/images/doodles/problem_doodle.svg`}
+                      alt={`problem-doodle`}
+                      width={960}
+                      height={960}
+                      className="pointer-events-none mt-8 w-full max-w-sm rounded-lg md:max-w-md"
+                    />
+                  )}
+                </motion.div>
+              </div>
             </div>
 
             <ShowIf isExist={project.description?.solution}>
@@ -166,30 +173,35 @@ export default function ProjectDetailPage() {
                       >
                         this link
                       </a>
-                      .
                     </p>
                   </ShowIf>
                 </div>
 
-                {project.description.problemimage ? (
-                  <div className="pt-4">
-                    <Image
-                      src={`/images/projects/${project.tag}_solution.jpg`}
-                      alt={`${project.tag}-solution`}
-                      width={960}
-                      height={960}
-                      className="pointer-events-none w-full rounded-lg shadow-md md:max-h-screen"
-                    />
-                  </div>
-                ) : (
-                  <Image
-                    src={`/images/doodles/solution_doodle.svg`}
-                    alt={`solution-doodle`}
-                    width={960}
-                    height={960}
-                    className="pointer-events-none mt-8 w-full max-w-sm rounded-lg md:max-w-md"
-                  />
-                )}
+                <div className="pt-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                  >
+                    {project.description.solutionimage ? (
+                      <Image
+                        src={`/images/projects/${project.tag}_solution.jpg`}
+                        alt={`${project.tag}-solution`}
+                        width={960}
+                        height={960}
+                        className="pointer-events-none w-full rounded-lg shadow-md md:max-h-screen"
+                      />
+                    ) : (
+                      <Image
+                        src={`/images/doodles/solution_doodle.svg`}
+                        alt={`solution-doodle`}
+                        width={960}
+                        height={960}
+                        className="pointer-events-none mt-8 w-full max-w-sm rounded-lg md:max-w-md"
+                      />
+                    )}
+                  </motion.div>
+                </div>
               </div>
             </ShowIf>
 
