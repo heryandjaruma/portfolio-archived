@@ -13,7 +13,11 @@
     "location": "Seoul, South Korea",
     "type": "Teaching",
     "description": {
-      "brief": "As an exchange student, I have been fortunate to serve as a Teaching Assistant. My role involves actively participating in the university's official program known as the Global Lounge. This program facilitates weekly meetings where Korean and international students can come together, explore various themes, and engage in different activities. Working alongside fellow Indonesian, Japanese, and Korean students, we collaboratively organize and manage this program on a weekly basis, fostering a vibrant and inclusive campus environment."
+      "brief": "As an exchange student, I have been fortunate to serve as a Teaching Assistant. My role involves actively participating in the university's official program known as the Global Lounge. This program facilitates weekly meetings where Korean and international students can come together, explore various themes, and engage in different activities. Working alongside fellow Indonesian, Japanese, and Korean TA's and Supporters, we collaboratively organize and manage this program on a weekly basis, fostering a vibrant and inclusive campus environment.",
+      "detail": [
+        "In total 9 meetings with different kind of themes",
+        "Weekly participation rate about 30 students from various major and nationalities"
+      ]
     },
     "image": 4
   },
@@ -32,7 +36,10 @@
     "type": "Teaching",
     "description": {
       "brief": "I had the opportunity to serve as a trainer for HIMTI's PBP Techno programming class, where I engaged with over 40 freshmen in an online setting.",
-      "detail": ["Entry-Level Programming in C Language", "Over 40 attendees"]
+      "detail": [
+        "Entry-Level Programming in C Language",
+        "Over 40 attendees primarily from Binus Kemanggisan and Alam Sutera"
+      ]
     },
     "image": 2
   },

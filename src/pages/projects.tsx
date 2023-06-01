@@ -156,7 +156,11 @@ export default function Projects() {
               </motion.div>
             ))}
           </motion.div>
-          <NextPage next="experiences" />
+          <NextPage
+            next="experiences"
+            bgcolor="bg-turq"
+            textcolor="text-primary"
+          />
         </div>
       )}
       <Footer />

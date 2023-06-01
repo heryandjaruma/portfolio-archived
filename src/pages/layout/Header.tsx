@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -108,48 +109,58 @@ export default function Header() {
             </div>
           </div>
           {isMobileMenuOpen && (
-            <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 sm:px-3">
-                <Link href="/">
-                  <p
-                    className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
-                      router.pathname === "/" ? "text-indigo-700 " : ""
-                    }`}
-                  >
-                    Home
-                  </p>
-                </Link>
-                <Link href="/projects">
-                  <p
-                    className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
-                      router.pathname === "/projects" ? "text-indigo-700 " : ""
-                    }`}
-                  >
-                    Projects
-                  </p>
-                </Link>
-                <Link href="/experiences">
-                  <p
-                    className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
-                      router.pathname === "/experiences"
-                        ? "text-indigo-700 "
-                        : ""
-                    }`}
-                  >
-                    Experiences
-                  </p>
-                </Link>
-                <Link href="/awards">
-                  <p
-                    className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
-                      router.pathname === "/awards" ? "text-indigo-700 " : ""
-                    }`}
-                  >
-                    Awards
-                  </p>
-                </Link>
-              </div>
-            </div>
+            <AnimatePresence>
+              <motion.div
+                className="md:hidden"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="px-2 pt-2 pb-3 sm:px-3">
+                  <Link href="/">
+                    <p
+                      className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
+                        router.pathname === "/" ? "text-indigo-700 " : ""
+                      }`}
+                    >
+                      Home
+                    </p>
+                  </Link>
+                  <Link href="/projects">
+                    <p
+                      className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
+                        router.pathname === "/projects"
+                          ? "text-indigo-700 "
+                          : ""
+                      }`}
+                    >
+                      Projects
+                    </p>
+                  </Link>
+                  <Link href="/experiences">
+                    <p
+                      className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
+                        router.pathname === "/experiences"
+                          ? "text-indigo-700 "
+                          : ""
+                      }`}
+                    >
+                      Experiences
+                    </p>
+                  </Link>
+                  <Link href="/awards">
+                    <p
+                      className={`rounded-md px-3 py-2 text-xl text-blue duration-200 hover:scale-95 hover:text-turq ${
+                        router.pathname === "/awards" ? "text-indigo-700 " : ""
+                      }`}
+                    >
+                      Awards
+                    </p>
+                  </Link>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           )}
         </div>
       </nav>

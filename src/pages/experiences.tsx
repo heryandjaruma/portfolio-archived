@@ -74,7 +74,7 @@ export default function Experiences() {
 
           <motion.div
             id="contents"
-            className="grid w-full grid-cols-1 place-items-center gap-4 px-4 font-display md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            className="grid w-full grid-cols-1 place-items-center gap-4 px-4 pb-8 font-display md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.2 }}
@@ -143,9 +143,14 @@ export default function Experiences() {
               </motion.div>
             ))}
           </motion.div>
+
+          <NextPage
+            next="awards"
+            bgcolor={`bg-blu`}
+            textcolor="text-lightturq"
+          />
         </div>
       )}
-      <NextPage next="awards" />
       <Footer />
     </>
   );
